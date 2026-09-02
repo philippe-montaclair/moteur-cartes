@@ -1,0 +1,591 @@
+/* =========================================================================
+   Cartes de révision — feuille de style
+   -------------------------------------------------------------------------
+   Organisation :
+     1. Jetons (couleurs, espacements, typographie)
+     2. Socle (corps, en-tête, mise en page)
+     3. Tuiles de choix (matières, niveaux)
+     4. Session (progression, carte, saisie, boutons)
+     5. Retour de correction
+     6. Fin de session, erreurs, utilitaires
+     7. Écrans étroits
+
+   Règle de maintenance : aucune couleur n'est écrite en dur hors de la
+   section 1. Pour changer l'apparence, on ne touche qu'aux jetons.
+   ========================================================================= */
+
+/* =========================================================================
+   1. JETONS
+   ========================================================================= */
+
+:root {
+  /* --- Thème sombre (par défaut) --- */
+  --fond:            #0e1117;
+  --fond-voile:      #141924;
+  --panneau:         #171d29;
+  --panneau-clair:   #1f2634;
+  --panneau-creux:   #12171f;
+  --bordure:         #2a3244;
+  --bordure-douce:   #222938;
+
+  --texte:           #e8ecf4;
+  --texte-doux:      #97a1b5;
+  --texte-faible:    #6b7488;
+
+  --accent:          #6293f5;
+  --accent-vif:      #7ba5ff;
+  --accent-sourd:    rgba(98, 147, 245, 0.14);
+  --accent-contour:  rgba(98, 147, 245, 0.35);
+
+  --vert:            #43c98d;
+  --vert-fond:       rgba(67, 201, 141, 0.12);
+  --orange:          #e8a951;
+  --orange-fond:     rgba(232, 169, 81, 0.12);
+  --rouge:           #ec7166;
+  --rouge-fond:      rgba(236, 113, 102, 0.12);
+
+  --ombre-douce:     0 1px 2px rgba(0, 0, 0, 0.3);
+  --ombre-carte:     0 4px 24px -8px rgba(0, 0, 0, 0.5),
+                     0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* --- Rythme --- */
+  --rayon:           14px;
+  --rayon-petit:     9px;
+  --rayon-pilule:    999px;
+  --largeur:         46rem;
+
+  /* --- Typographie --- */
+  --police: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif;
+  --police-code: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas,
+                 monospace;
+}
+
+/* Thème clair : on ne redéfinit que ce qui change. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --fond:          #f4f6fa;
+    --fond-voile:    #eceff6;
+    --panneau:       #ffffff;
+    --panneau-clair: #f2f5fa;
+    --panneau-creux: #f7f9fc;
+    --bordure:       #dfe4ee;
+    --bordure-douce: #e9edf4;
+
+    --texte:         #131722;
+    --texte-doux:    #5a6479;
+    --texte-faible:  #8a93a6;
+
+    --accent:        #3a6fdb;
+    --accent-vif:    #2b5cc4;
+    --accent-sourd:  rgba(58, 111, 219, 0.09);
+    --accent-contour:rgba(58, 111, 219, 0.28);
+
+    --vert:          #1a9c6a;
+    --vert-fond:     rgba(26, 156, 106, 0.10);
+    --orange:        #b7791f;
+    --orange-fond:   rgba(183, 121, 31, 0.10);
+    --rouge:         #d0463a;
+    --rouge-fond:    rgba(208, 70, 58, 0.09);
+
+    --ombre-douce:   0 1px 2px rgba(19, 23, 34, 0.06);
+    --ombre-carte:   0 8px 28px -12px rgba(19, 23, 34, 0.18),
+                     0 1px 3px rgba(19, 23, 34, 0.05);
+  }
+}
+
+/* =========================================================================
+   2. SOCLE
+   ========================================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 5rem;
+  min-height: 100vh;
+  background: var(--fond);
+  /* Halo discret derrière l'en-tête : donne une profondeur sans image. */
+  background-image:
+    radial-gradient(70rem 32rem at 50% -14rem, var(--accent-sourd), transparent 70%);
+  background-repeat: no-repeat;
+  color: var(--texte);
+  font-family: var(--police);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.entete {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 3rem 0 1.75rem;
+}
+
+.entete h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.1rem);
+  font-weight: 680;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.sous-titre {
+  margin: 0.4rem 0 0;
+  color: var(--texte-doux);
+  font-size: 1rem;
+}
+
+.conteneur { max-width: var(--largeur); margin: 0 auto; }
+
+/* Le panneau est la surface de base : une matière, un niveau, une carte. */
+.carte-panneau {
+  background: var(--panneau);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre-carte);
+  padding: 1.9rem;
+  margin-bottom: 1.25rem;
+  animation: apparition 0.28s ease both;
+}
+
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.carte-panneau h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+}
+
+/* =========================================================================
+   3. TUILES DE CHOIX
+   ========================================================================= */
+
+.niveaux {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.7rem;
+  margin: 1.25rem 0;
+}
+
+.bouton-niveau {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background: var(--panneau-clair);
+  border: 1px solid var(--bordure-douce);
+  border-radius: var(--rayon-petit);
+  color: var(--texte);
+  cursor: pointer;
+  font: inherit;
+  padding: 1rem 1.1rem;
+  text-align: left;
+  transition: border-color 0.16s, background 0.16s,
+              transform 0.16s, box-shadow 0.16s;
+}
+
+.bouton-niveau::after {
+  content: "→";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--texte-faible);
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.16s, transform 0.16s;
+}
+
+.bouton-niveau:hover,
+.bouton-niveau:focus-visible {
+  background: var(--panneau);
+  border-color: var(--accent-contour);
+  transform: translateY(-2px);
+  box-shadow: var(--ombre-douce);
+  outline: none;
+}
+
+.bouton-niveau:hover::after,
+.bouton-niveau:focus-visible::after { opacity: 1; transform: none; }
+
+.bouton-niveau:active { transform: translateY(0); }
+
+.bouton-niveau strong {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.bouton-niveau span {
+  color: var(--texte-doux);
+  font-size: 0.85rem;
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--texte-doux);
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.option input { accent-color: var(--accent); width: 1rem; height: 1rem; }
+
+/* =========================================================================
+   4. SESSION
+   ========================================================================= */
+
+.barre-progression {
+  background: var(--panneau-creux);
+  border: 1px solid var(--bordure-douce);
+  border-radius: var(--rayon-pilule);
+  height: 7px;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+}
+
+.progression-remplie {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-vif));
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ligne-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.meta {
+  color: var(--texte-doux);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ligne-meta .lien { margin-left: auto; }
+
+.lien {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.lien:hover { color: var(--accent-vif); border-bottom-color: currentColor; }
+.lien:focus-visible { outline: 2px solid var(--accent-contour); outline-offset: 3px; }
+
+/* --- Étiquettes --------------------------------------------------------- */
+
+.etiquettes {
+  margin: 0 0 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.etiquette {
+  background: var(--panneau-clair);
+  border: 1px solid var(--bordure-douce);
+  border-radius: var(--rayon-pilule);
+  color: var(--texte-doux);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.22rem 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* La matière porte l'accent : c'est le repère de contexte. */
+.etiquette:first-child {
+  background: var(--accent-sourd);
+  border-color: var(--accent-contour);
+  color: var(--accent);
+}
+
+.etiquette-pale { opacity: 0.75; }
+
+/* --- Question ----------------------------------------------------------- */
+
+#titre-carte {
+  margin: 0 0 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+}
+
+.question {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin: 0 0 1.4rem;
+  letter-spacing: -0.005em;
+}
+
+/* --- Saisie ------------------------------------------------------------- */
+
+textarea {
+  display: block;
+  width: 100%;
+  background: var(--panneau-creux);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon-petit);
+  color: var(--texte);
+  font-family: var(--police-code);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0.9rem 1rem;
+  resize: vertical;
+  min-height: 5.5rem;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+textarea::placeholder { color: var(--texte-faible); }
+
+textarea:focus {
+  background: var(--panneau);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-sourd);
+  outline: none;
+}
+
+textarea:disabled { opacity: 0.65; cursor: default; }
+
+/* --- Boutons ------------------------------------------------------------ */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+button.principal,
+button.secondaire {
+  border-radius: var(--rayon-petit);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 560;
+  padding: 0.65rem 1.3rem;
+  transition: background 0.15s, border-color 0.15s,
+              color 0.15s, transform 0.1s;
+}
+
+button.principal {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  box-shadow: var(--ombre-douce);
+}
+
+button.principal:hover:not(:disabled) { background: var(--accent-vif); border-color: var(--accent-vif); }
+button.principal:active:not(:disabled) { transform: translateY(1px); }
+
+button.secondaire {
+  background: transparent;
+  border: 1px solid var(--bordure);
+  color: var(--texte-doux);
+}
+
+button.secondaire:hover:not(:disabled) {
+  border-color: var(--accent-contour);
+  color: var(--texte);
+  background: var(--panneau-clair);
+}
+
+button:focus-visible { outline: 2px solid var(--accent-contour); outline-offset: 2px; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* =========================================================================
+   5. RETOUR DE CORRECTION
+   ========================================================================= */
+
+.indice {
+  background: var(--orange-fond);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 var(--rayon-petit) var(--rayon-petit) 0;
+  color: var(--texte);
+  margin: 1.1rem 0 0;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.95rem;
+  animation: apparition 0.22s ease both;
+}
+
+.retour {
+  border-top: 1px solid var(--bordure-douce);
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  animation: apparition 0.28s ease both;
+}
+
+/* Le verdict est le moment fort : bandeau plein, pas une ligne de texte. */
+.retour-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 620;
+  margin: 0 0 1.4rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--rayon-petit);
+  border: 1px solid transparent;
+  letter-spacing: -0.005em;
+}
+
+.retour-message::before {
+  font-size: 1.05rem;
+  line-height: 1.45;
+  flex: none;
+}
+
+.retour-message.correct {
+  color: var(--vert);
+  background: var(--vert-fond);
+  border-color: color-mix(in srgb, var(--vert) 30%, transparent);
+}
+.retour-message.correct::before { content: "✓"; }
+
+.retour-message.proche {
+  color: var(--orange);
+  background: var(--orange-fond);
+  border-color: color-mix(in srgb, var(--orange) 30%, transparent);
+}
+.retour-message.proche::before { content: "≈"; }
+
+.retour-message.incorrect {
+  color: var(--rouge);
+  background: var(--rouge-fond);
+  border-color: color-mix(in srgb, var(--rouge) 30%, transparent);
+}
+.retour-message.incorrect::before { content: "✕"; }
+
+/* Rythme du retour : chaque bloc respire d'un cran, et le premier intitulé
+   d'un bloc ne rajoute pas sa propre marge par-dessus celle du bloc. */
+.retour > div { margin-top: 1.4rem; }
+
+.libelle {
+  color: var(--texte-faible);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  margin: 1.25rem 0 0.45rem;
+  text-transform: uppercase;
+}
+
+.retour > div > .libelle:first-child { margin-top: 0; }
+
+.bloc-code {
+  background: var(--panneau-creux);
+  border: 1px solid var(--bordure-douce);
+  border-radius: var(--rayon-petit);
+  font-family: var(--police-code);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0.9rem 1.1rem;
+  white-space: pre-wrap;
+  tab-size: 4;
+}
+
+/* La sortie du programme se distingue de la source : filet vert à gauche. */
+.bloc-sortie {
+  color: var(--texte-doux);
+  border-left: 3px solid color-mix(in srgb, var(--vert) 55%, transparent);
+}
+
+#bloc-explication p:not(.libelle) { margin: 0; }
+
+.piege {
+  margin: 0;
+  color: var(--texte-doux);
+  border-left: 3px solid color-mix(in srgb, var(--rouge) 45%, transparent);
+  padding-left: 0.9rem;
+}
+
+#btn-suivant { margin-top: 1.75rem; }
+
+/* =========================================================================
+   6. FIN DE SESSION, ERREURS, UTILITAIRES
+   ========================================================================= */
+
+.bilan {
+  font-size: 1.1rem;
+  color: var(--texte-doux);
+  margin: 0.5rem 0 1.5rem;
+}
+
+.bilan strong { color: var(--texte); font-size: 1.35rem; font-weight: 660; }
+
+.erreur {
+  background: var(--rouge-fond);
+  border: 1px solid color-mix(in srgb, var(--rouge) 40%, transparent);
+  border-radius: var(--rayon-petit);
+  color: var(--rouge);
+  padding: 0.9rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+.chargement { color: var(--texte-faible); font-size: 0.9rem; }
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* =========================================================================
+   7. ÉCRANS ÉTROITS
+   ========================================================================= */
+
+@media (max-width: 34rem) {
+  body { padding: 0 0.9rem 3.5rem; }
+  .entete { padding: 2rem 0 1.25rem; }
+  .carte-panneau { padding: 1.35rem 1.15rem; border-radius: 12px; }
+  .niveaux { grid-template-columns: 1fr; }
+  .question { font-size: 1.08rem; }
+
+  /* Sur téléphone, les actions occupent toute la largeur : cibles sûres. */
+  .actions { gap: 0.5rem; }
+  .actions button { flex: 1 1 auto; min-height: 2.9rem; }
+  button.principal { flex-basis: 100%; }
+
+  /* La ligne compteur / score / lien ne tient pas sur une seule ligne :
+     on la laisse passer à deux plutôt que d'écraser les trois éléments. */
+  .ligne-meta {
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+    margin-bottom: 1.1rem;
+  }
+  .ligne-meta .lien { margin-left: 0; flex-basis: 100%; }
+}
+
+/* Respect du réglage système : aucune animation si l'utilisateur n'en veut pas. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

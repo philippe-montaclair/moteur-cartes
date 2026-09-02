@@ -1,0 +1,8 @@
+{
+  "matiere": "python",
+  "nom": "Python",
+  "description": "Les fondamentaux de Python 3, du premier print() aux fonctions.",
+  "langue_enseignement": "fr",
+  "type_defaut": "texte",
+  "code_executable": true
+}

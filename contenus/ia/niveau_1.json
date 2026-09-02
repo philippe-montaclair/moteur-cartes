@@ -1,0 +1,938 @@
+[
+  {
+    "explication": "L'intelligence artificielle est un champ de l'informatique qui cherche à développer des systèmes capables de simuler des comportements intelligents. Elle inclut des sous-domaines comme le machine learning.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre l'IA avec la robotique, alors que l'IA peut exister sans support physique.",
+    "indice": "Deux mots souvent abrégés en deux lettres majuscules.",
+    "mots_cles": [
+      [
+        "intelligence artificielle",
+        "ia"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Concepts de base",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "intelligence artificielle",
+      "IA",
+      "l'intelligence artificielle",
+      "l'IA",
+      "artificial intelligence"
+    ],
+    "niveau": 1,
+    "titre": "Domaine informatique imitant les capacités cognitives",
+    "question": "Quel domaine de l'informatique vise à créer des systèmes capables de réaliser des tâches nécessitant normalement l'intelligence humaine ?",
+    "reponse": "intelligence artificielle",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un algorithme est une méthode structurée pour résoudre un problème. En IA, il permet d'entraîner des modèles ou de faire des prédictions.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un algorithme est spécifique à l'IA, alors qu'il est utilisé dans toute l'informatique.",
+    "indice": "Un mot de 9 lettres commençant par 'a'.",
+    "mots_cles": [
+      [
+        "algorithme"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Concepts de base",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "algorithme",
+      "un algorithme",
+      "la séquence algorithmique",
+      "procédure calculable",
+      "méthode automatisée"
+    ],
+    "niveau": 1,
+    "titre": "Séquence d'étapes pour résoudre un problème",
+    "question": "Quelle suite finie d'instructions permet à un ordinateur d'exécuter une tâche ou de résoudre un problème de manière systématique ?",
+    "reponse": "algorithme",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un modèle est une abstraction mathématique entraînée sur des données pour généraliser à de nouvelles situations.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre modèle avec algorithme : le modèle est le résultat de l'apprentissage, l'algorithme est la méthode.",
+    "indice": "6 lettres, synonyme de 'schéma' en mathématiques.",
+    "mots_cles": [
+      [
+        "modele"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Concepts de base",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "modèle",
+      "un modèle",
+      "le modèle mathématique",
+      "représentation apprise",
+      "modèle prédictif"
+    ],
+    "niveau": 1,
+    "titre": "Représentation mathématique pour la prédiction",
+    "question": "Quel terme désigne une représentation mathématique ou statistique utilisée pour faire des prédictions ou des décisions en IA ?",
+    "reponse": "modèle",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les données sont l'aliment de base des systèmes d'IA. Sans données de qualité, un modèle ne peut pas apprendre efficacement.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que plus de données suffisent toujours, sans se soucier de leur pertinence ou qualité.",
+    "indice": "Mot féminin pluriel, 7 lettres.",
+    "mots_cles": [
+      [
+        "donnees",
+        "data"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Concepts de base",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "données",
+      "les données",
+      "jeu de données",
+      "data",
+      "informations brutes"
+    ],
+    "niveau": 1,
+    "titre": "Éléments nécessaires à l'apprentissage",
+    "question": "Quel terme désigne les informations brutes utilisées pour entraîner un système d'IA ?",
+    "reponse": "données",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "La prédiction est le résultat concret produit par le modèle lorsqu'il est utilisé sur de nouvelles données.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que toutes les prédictions sont toujours exactes, alors qu'elles contiennent une part d'incertitude.",
+    "indice": "10 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "prediction",
+        "output"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Processus",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "prédiction",
+      "une prédiction",
+      "sortie du modèle",
+      "output",
+      "résultat prédit"
+    ],
+    "niveau": 1,
+    "titre": "Résultat produit par le modèle",
+    "question": "Quel terme désigne la sortie générée par un modèle d'IA après son entraînement, comme une classification ou une réponse ?",
+    "reponse": "prédiction",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'inférence est l'étape où le modèle utilise ce qu'il a appris pour traiter de nouvelles données non vues pendant l'entraînement.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre inférence avec entraînement : l'inférence ne modifie pas le modèle.",
+    "indice": "9 lettres, commence par 'i'.",
+    "mots_cles": [
+      [
+        "inference"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Processus",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "inférence",
+      "l'inférence",
+      "phase d'inférence",
+      "déduction",
+      "inference"
+    ],
+    "niveau": 1,
+    "titre": "Utilisation du modèle entraîné",
+    "question": "Quel terme désigne le processus d'application d'un modèle entraîné à de nouvelles données pour obtenir des résultats ?",
+    "reponse": "inférence",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'automatisation permet de déléguer des tâches répétitives ou complexes à des systèmes informatiques, y compris en IA.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que l'automatisation supprime tous les emplois, alors qu'elle en transforme souvent la nature.",
+    "indice": "13 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "automatisation",
+        "automation"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Applications",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "automatisation",
+      "l'automatisation",
+      "processus automatique",
+      "automation",
+      "exécution automatique"
+    ],
+    "niveau": 1,
+    "titre": "Exécution automatique de tâches",
+    "question": "Quel terme désigne la capacité d'un système à effectuer des tâches sans intervention humaine directe ?",
+    "reponse": "automatisation",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'IA faible, ou étroite, est la forme la plus courante aujourd'hui : elle excelle dans une tâche précise (ex : reconnaissance d'images) mais ne comprend pas au-delà.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre IA faible avec IA forte (générale), qui n'existe pas encore.",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "ia faible",
+        "weak ai",
+        "narrow ai"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Types d'IA",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "IA faible",
+      "intelligence artificielle faible",
+      "weak AI",
+      "IA étroite",
+      "narrow AI"
+    ],
+    "niveau": 1,
+    "titre": "IA spécialisée dans une tâche précise",
+    "question": "Quel terme désigne une IA conçue pour accomplir une seule tâche spécifique, sans conscience ni généralisation ?",
+    "reponse": "IA faible",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les IA génératives, comme les modèles de langage, créent du contenu nouveau à partir de motifs appris dans les données d'entraînement.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que les IA génératives 'comprennent' vraiment ce qu'elles produisent.",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "ia generative",
+        "generative ai"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Types d'IA",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "IA générative",
+      "intelligence artificielle générative",
+      "generative AI",
+      "IA créative",
+      "modèle génératif"
+    ],
+    "niveau": 1,
+    "titre": "IA capable de créer du contenu nouveau",
+    "question": "Quel terme désigne une IA capable de produire du texte, des images ou d'autres contenus originaux ?",
+    "reponse": "IA générative",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le machine learning est une approche où les modèles apprennent des motifs à partir de données. C'est la base de la plupart des applications modernes d'IA.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre machine learning avec programmation traditionnelle, où les règles sont définies explicitement.",
+    "indice": "Deux mots en anglais, souvent abrégés en ML.",
+    "mots_cles": [
+      [
+        "machine learning",
+        "apprentissage automatique"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "machine learning",
+      "apprentissage automatique",
+      "ML",
+      "apprentissage machine",
+      "learning machine"
+    ],
+    "niveau": 1,
+    "titre": "Approche d'apprentissage à partir de données",
+    "question": "Quel sous-domaine de l'IA permet aux systèmes d'apprendre à partir de données sans être explicitement programmés ?",
+    "reponse": "machine learning",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le deep learning utilise des architectures de réseaux de neurones complexes pour traiter des données non structurées comme les images ou le texte.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le deep learning est toujours supérieur aux autres méthodes, alors que son efficacité dépend du problème et des données disponibles.",
+    "indice": "Deux mots en anglais, le premier signifie 'profond'.",
+    "mots_cles": [
+      [
+        "deep learning",
+        "apprentissage profond"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "deep learning",
+      "apprentissage profond",
+      "DL",
+      "réseaux profonds",
+      "deep neural networks"
+    ],
+    "niveau": 1,
+    "titre": "Méthode avec réseaux de neurones profonds",
+    "question": "Quel sous-domaine du machine learning utilise des réseaux de neurones artificiels avec de nombreuses couches cachées ?",
+    "reponse": "deep learning",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un réseau de neurones est un modèle composé de couches de neurones artificiels interconnectés. Il est capable d'apprendre des représentations hiérarchiques des données.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un réseau de neurones fonctionne exactement comme un cerveau humain, alors qu'il s'agit d'une simplification mathématique.",
+    "indice": "Trois mots, le dernier est au pluriel.",
+    "mots_cles": [
+      [
+        "reseau de neurones",
+        "neural network"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "réseau de neurones",
+      "neural network",
+      "réseau neuronal",
+      "réseau de neurones artificiels",
+      "perceptron multicouche"
+    ],
+    "niveau": 1,
+    "titre": "Structure inspirée du cerveau humain",
+    "question": "Quel terme désigne une architecture informatique composée de nœuds interconnectés, inspirée des neurones biologiques ?",
+    "reponse": "réseau de neurones",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un modèle de langage est entraîné sur d'énormes quantités de texte pour prédire la probabilité des mots dans une phrase.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que les modèles de langage 'comprennent' le texte comme un humain.",
+    "indice": "Trois mots, le dernier est 'langage'.",
+    "mots_cles": [
+      [
+        "modele de langage",
+        "language model",
+        "llm"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Modèles",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "modèle de langage",
+      "language model",
+      "LLM",
+      "grand modèle de langage",
+      "modèle linguistique"
+    ],
+    "niveau": 1,
+    "titre": "Modèle spécialisé dans le texte",
+    "question": "Quel type de modèle d'IA est spécialement conçu pour comprendre et générer du langage naturel ?",
+    "reponse": "modèle de langage",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "La multimodalité permet à une IA de comprendre et générer des contenus combinant plusieurs modalités (ex : décrire une image et répondre à des questions à son sujet).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre multimodalité avec multitâche (exécuter plusieurs tâches en parallèle).",
+    "indice": "13 lettres, commence par 'multi'.",
+    "mots_cles": [
+      [
+        "multimodalite",
+        "multimodal"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Modèles",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "multimodalité",
+      "multimodal",
+      "approche multimodale",
+      "traitement multimodal",
+      "multi-modal"
+    ],
+    "niveau": 1,
+    "titre": "Capacité à traiter plusieurs types de données",
+    "question": "Quel terme désigne la capacité d'un système d'IA à traiter et combiner plusieurs types de données (texte, image, son) ?",
+    "reponse": "multimodalité",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une IA actuelle traite des données et produit des résultats à partir de calculs statistiques, sans vécu intérieur ni compréhension du sens comme un être humain. Cette confusion vient du fait que ses réponses paraissent parfois naturelles ou réfléchies.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire qu'une IA « comprend » ce qu'elle dit comme un humain, alors qu'elle manipule des régularités apprises dans des données sans conscience ni compréhension véritable.",
+    "indice": "Elle simule mais ne vit rien intérieurement.",
+    "mots_cles": [
+      [
+        "non",
+        "aucune",
+        "pas"
+      ],
+      [
+        "conscience",
+        "consciente",
+        "conscient",
+        "comprehension"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Nature de l'IA",
+    "type": "texte",
+    "reponses_acceptees": [
+      "non, elle n'a pas de conscience",
+      "non, une IA n'a pas de conscience",
+      "non, elle n'est pas consciente",
+      "non, elle n'a pas de comprehension comme un humain",
+      "non, elle n'a pas de vecu conscient"
+    ],
+    "niveau": 1,
+    "titre": "Une confusion fréquente sur la nature de l'IA",
+    "question": "Une intelligence artificielle actuelle possède-t-elle une conscience ou une compréhension du monde comparable à celle d'un être humain ?",
+    "reponse": "non, elle n'a pas de conscience",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'IA est étudiée comme discipline scientifique depuis le milieu du XXe siècle, avec des périodes d'essor et de ralentissement dans la recherche. Les progrès récents s'appuient donc sur plusieurs décennies de travaux antérieurs.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que l'intelligence artificielle est une invention récente des dernières années, alors que la discipline existe depuis plusieurs décennies.",
+    "indice": "C'est plus ancien qu'on ne le pense souvent, bien avant l'apparition des ordinateurs personnels.",
+    "mots_cles": [
+      [
+        "1950",
+        "cinquante",
+        "xxe",
+        "70"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Histoire de l'IA",
+    "type": "texte",
+    "reponses_acceptees": [
+      "depuis les années 1950",
+      "depuis le milieu du XXe siècle",
+      "depuis plus de 70 ans",
+      "depuis les années cinquante",
+      "depuis environ 1950"
+    ],
+    "niveau": 1,
+    "titre": "L'ancienneté du domaine de l'intelligence artificielle",
+    "question": "Le domaine de l'intelligence artificielle, en tant que discipline scientifique reconnue, existe depuis environ combien de temps ?",
+    "reponse": "depuis les années 1950",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'IA forte désigne un objectif de recherche non atteint : une machine capable de raisonner et d'apprendre dans n'importe quel domaine comme un humain. Toutes les IA actuellement en usage restent spécialisées, même les plus impressionnantes.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre l'IA forte, purement hypothétique, avec les IA génératives actuelles, qui restent spécialisées dans des tâches précises.",
+    "indice": "Elle n'existe qu'en théorie et n'a jamais été réalisée.",
+    "mots_cles": [
+      [
+        "forte"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Types d'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "IA forte",
+      "intelligence artificielle forte",
+      "une IA forte",
+      "IA générale forte",
+      "système d'IA forte"
+    ],
+    "niveau": 1,
+    "titre": "Un type d'intelligence artificielle hypothétique, jamais atteint à ce jour",
+    "question": "Comment appelle-t-on une intelligence artificielle hypothétique qui aurait une intelligence générale, comparable ou supérieure à celle d'un humain, dans tous les domaines à la fois ?",
+    "reponse": "IA forte",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Ce type de programme utilise l'IA pour interpréter une demande formulée en langage naturel et produire une réponse adaptée, à l'écrit ou à l'oral. Il sert aujourd'hui à répondre à des questions, rédiger du texte ou automatiser des échanges simples.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire que ce type de programme comprend réellement ce qu'il dit, alors qu'il génère des réponses à partir de régularités apprises dans des données.",
+    "indice": "On lui parle ou on lui écrit, et il répond dans la foulée.",
+    "mots_cles": [
+      [
+        "conversationnel",
+        "chatbot"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Usages de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "assistant conversationnel",
+      "agent conversationnel",
+      "chatbot",
+      "assistant virtuel conversationnel",
+      "agent virtuel conversationnel"
+    ],
+    "niveau": 1,
+    "titre": "Un programme d'IA qui répond aux questions échangées en langage naturel avec un utilisateur",
+    "question": "Comment appelle-t-on un programme d'intelligence artificielle conçu pour dialoguer avec un utilisateur, en répondant à ses questions ou à ses demandes formulées en langage naturel ?",
+    "reponse": "assistant conversationnel",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "La reconnaissance d'image permet à un système d'IA de repérer et classer des éléments visuels après avoir appris à partir de très nombreux exemples. Elle sert par exemple à trier des photos ou à détecter un obstacle.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire que le système « voit » et comprend une scène comme un humain, alors qu'il détecte des motifs de pixels associés statistiquement à des catégories apprises.",
+    "indice": "Elle permet à une machine de dire ce qui apparaît sur un cliché.",
+    "mots_cles": [
+      [
+        "reconnaissance"
+      ],
+      [
+        "image",
+        "images",
+        "visuelle",
+        "visuel"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Usages de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "reconnaissance d'image",
+      "reconnaissance d'images",
+      "reconnaissance visuelle",
+      "reconnaissance d'objets dans une image",
+      "reconnaissance des images"
+    ],
+    "niveau": 1,
+    "titre": "La capacité d'un système d'IA à identifier ce qui figure sur une photo ou une vidéo",
+    "question": "Comment appelle-t-on la capacité d'un système d'IA à identifier des objets, des visages ou des scènes dans une photo ou une vidéo ?",
+    "reponse": "reconnaissance d'image",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "La reconnaissance vocale convertit un signal sonore de parole en texte exploitable par une machine, à partir d'un modèle construit sur de nombreux enregistrements. Elle est à la base des commandes vocales et de la dictée automatique.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre la reconnaissance vocale, qui comprend ce qui est dit, avec la synthèse vocale, qui fait l'inverse en transformant du texte en parole.",
+    "indice": "Elle permet de dicter un message au lieu de le taper.",
+    "mots_cles": [
+      [
+        "reconnaissance",
+        "transcription"
+      ],
+      [
+        "vocale",
+        "voix",
+        "parole"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Usages de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "reconnaissance vocale",
+      "reconnaissance de la parole",
+      "reconnaissance de la voix",
+      "transcription vocale automatique",
+      "reconnaissance de la parole humaine"
+    ],
+    "niveau": 1,
+    "titre": "La capacité d'un système d'IA à transformer la parole en texte",
+    "question": "Comment appelle-t-on la capacité d'un système d'IA à comprendre et transcrire la parole humaine en texte ?",
+    "reponse": "reconnaissance vocale",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "La traduction automatique repose sur un modèle construit à partir de très grandes quantités de textes bilingues pour convertir un contenu d'une langue vers une autre. La qualité obtenue varie selon les langues et le contexte du texte d'origine.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire que la traduction produite est toujours fidèle au sens d'origine, alors qu'elle peut déformer des expressions idiomatiques ou un contexte culturel.",
+    "indice": "Elle permet de lire un texte écrit dans une langue qu'on ne comprend pas.",
+    "mots_cles": [
+      [
+        "traduction"
+      ],
+      [
+        "automatique",
+        "automatisee",
+        "machine"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Usages de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "traduction automatique",
+      "traduction automatisée",
+      "traduction machine",
+      "traduction automatique d'un texte",
+      "traduction automatique de la langue"
+    ],
+    "niveau": 1,
+    "titre": "Le passage d'un texte d'une langue à une autre, réalisé sans intervention humaine par un système d'IA",
+    "question": "Comment appelle-t-on le fait, pour un système d'IA, de faire passer un texte ou une parole d'une langue à une autre sans intervention humaine ?",
+    "reponse": "traduction automatique",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un système de recommandation analyse l'historique et les préférences d'un utilisateur pour lui proposer des contenus ou produits susceptibles de l'intéresser. Il est très utilisé dans le commerce en ligne et le streaming.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que ces suggestions sont neutres ou objectives, alors qu'elles reflètent les choix passés de l'utilisateur et peuvent l'enfermer dans les mêmes types de contenus.",
+    "indice": "Il suggère « ce qui pourrait aussi vous intéresser ».",
+    "mots_cles": [
+      [
+        "recommandation",
+        "recommande",
+        "recommandations"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Usages de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "système de recommandation",
+      "système de recommandations",
+      "moteur de recommandation",
+      "système qui recommande des contenus",
+      "outil de recommandation"
+    ],
+    "niveau": 1,
+    "titre": "Ce qui suggère des contenus adaptés aux habitudes d'un utilisateur, sur la base de ses choix passés",
+    "question": "Comment appelle-t-on un système d'IA qui suggère des produits, vidéos ou contenus en fonction des goûts et des habitudes passées d'un utilisateur ?",
+    "reponse": "système de recommandation",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un véhicule autonome utilise des capteurs et des systèmes d'IA pour percevoir son environnement et décider de ses actions de conduite sans intervention humaine directe. Le niveau d'autonomie varie fortement selon les systèmes existants.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire qu'un véhicule autonome actuel peut circuler sans aucune supervision ni limite, alors que la plupart restent encadrés à des conditions précises.",
+    "indice": "Personne ne tient le volant, mais le trajet se fait quand même.",
+    "mots_cles": [
+      [
+        "vehicule",
+        "voiture"
+      ],
+      [
+        "autonome",
+        "conducteur"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Usages de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "véhicule autonome",
+      "voiture autonome",
+      "véhicule sans conducteur",
+      "voiture sans conducteur",
+      "véhicule à conduite autonome"
+    ],
+    "niveau": 1,
+    "titre": "Un moyen de transport qui peut circuler sans conducteur humain grâce à l'IA",
+    "question": "Comment appelle-t-on un véhicule capable de se déplacer et de prendre des décisions de conduite sans intervention humaine, grâce à l'IA ?",
+    "reponse": "véhicule autonome",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "En santé, l'IA est notamment utilisée pour analyser des images médicales et repérer des signes de maladie, en appui du diagnostic établi par un professionnel. Elle accélère le repérage mais ne remplace pas la décision médicale finale.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'une IA médicale pose un diagnostic seule et remplace le médecin, alors qu'elle sert d'outil d'aide à la décision sous supervision humaine.",
+    "indice": "Elle peut repérer des anomalies sur une radiographie plus vite qu'un œil humain, mais ne décide pas seule.",
+    "mots_cles": [
+      [
+        "diagnostic",
+        "detection",
+        "maladie",
+        "maladies"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "IA par secteur",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "aide au diagnostic médical",
+      "aide au diagnostic",
+      "détection de maladies par l'IA",
+      "analyse d'images médicales pour détecter une maladie",
+      "repérage de maladies grâce à l'IA"
+    ],
+    "niveau": 1,
+    "titre": "Un exemple d'apport de l'intelligence artificielle dans le secteur de la santé",
+    "question": "Cite un usage concret de l'intelligence artificielle dans le domaine de la santé, par exemple pour aider les professionnels à repérer une maladie.",
+    "reponse": "aide au diagnostic médical",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "En entreprise, l'IA est utilisée pour analyser de grands volumes de transactions et repérer des schémas inhabituels pouvant indiquer une fraude. Une personne vérifie ensuite les cas signalés avant de décider d'une action.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que ce type de système bloque automatiquement toute opération suspecte, alors qu'il signale surtout des cas à vérifier par une personne.",
+    "indice": "Elle repère des transactions qui sortent de l'ordinaire, comme un achat inhabituel.",
+    "mots_cles": [
+      [
+        "fraude",
+        "fraudes",
+        "frauduleuses"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "IA par secteur",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "détection de fraude",
+      "détection des fraudes",
+      "repérage de transactions frauduleuses",
+      "détection d'anomalies liées à la fraude",
+      "repérage de fraudes"
+    ],
+    "niveau": 1,
+    "titre": "Un exemple d'usage de l'IA pour sécuriser les opérations d'une entreprise",
+    "question": "Cite un usage courant de l'intelligence artificielle en entreprise, par exemple pour repérer automatiquement des opérations suspectes parmi un grand nombre de transactions.",
+    "reponse": "détection de fraude",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "De nombreux systèmes d'IA, notamment les plus complexes, fonctionnent comme une « boîte noire » : ils produisent un résultat sans qu'on puisse détailler simplement le raisonnement suivi. Cela complique la vérification et la confiance dans certaines décisions automatisées.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre cette limite avec une erreur du système : le résultat peut être juste, mais son cheminement interne reste difficile à retracer précisément.",
+    "indice": "Le résultat sort, mais le chemin pour y arriver reste opaque.",
+    "mots_cles": [
+      [
+        "explicabilite",
+        "boite",
+        "expliquer"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Limites de l'IA",
+    "type": "texte",
+    "reponses_acceptees": [
+      "manque d'explicabilité",
+      "absence d'explicabilité",
+      "effet boîte noire",
+      "fonctionnement en boîte noire",
+      "difficulté à expliquer son raisonnement"
+    ],
+    "niveau": 1,
+    "titre": "Une limite fréquente des systèmes d'IA actuels, liée à la difficulté de comprendre leurs décisions",
+    "question": "Un système d'IA peut produire un résultat correct sans qu'on puisse toujours savoir précisément comment il l'a obtenu. Comment appelle-t-on cette limite ?",
+    "reponse": "manque d'explicabilité",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une hallucination désigne un contenu inventé par une IA générative, présenté comme un fait alors qu'il est faux ou inexistant. Elle survient car le système génère la suite la plus probable d'un texte, sans vérifier la véracité de l'information produite.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire qu'une IA générative signale quand elle n'est pas sûre de sa réponse, alors qu'elle peut présenter une information inventée avec la même assurance qu'une information vraie.",
+    "indice": "Le mot évoque une perception qui n'existe pas dans la réalité.",
+    "mots_cles": [
+      [
+        "hallucination",
+        "hallucinations",
+        "hallucinee",
+        "hallucine"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Limites de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "hallucination",
+      "une hallucination",
+      "hallucination de l'IA",
+      "réponse hallucinée",
+      "hallucination du système"
+    ],
+    "niveau": 1,
+    "titre": "Ce que produit une IA générative quand elle invente une information fausse avec assurance",
+    "question": "Comment appelle-t-on le fait, pour un système d'IA générative, de produire une information fausse ou inventée tout en la présentant comme vraie et avec assurance ?",
+    "reponse": "hallucination",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un biais est une tendance systématique d'un système à produire des résultats déséquilibrés, le plus souvent parce que les données utilisées reflétaient déjà ce déséquilibre. Il peut avoir des conséquences concrètes, par exemple dans le tri de candidatures.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire qu'un système d'IA est neutre par nature, alors qu'il peut reproduire ou amplifier des déséquilibres déjà présents dans les données utilisées pour le construire.",
+    "indice": "Il penche systématiquement d'un côté, souvent sans qu'on l'ait voulu.",
+    "mots_cles": [
+      [
+        "biais"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Limites de l'IA",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "biais",
+      "un biais",
+      "biais du système",
+      "biais algorithmique",
+      "biais lié aux données"
+    ],
+    "niveau": 1,
+    "titre": "Une tendance systématique d'un système d'IA à favoriser certains résultats, souvent héritée des données",
+    "question": "Comment appelle-t-on une tendance systématique d'un système d'IA à favoriser ou défavoriser certains résultats, souvent héritée des données utilisées ?",
+    "reponse": "biais",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les données personnelles désignent toute information se rapportant à une personne identifiée ou identifiable, comme son nom ou son adresse. Un système d'IA qui les traite doit respecter des règles particulières de protection.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que seules les données très sensibles, comme la santé, sont concernées, alors que le nom ou l'adresse électronique en font déjà partie.",
+    "indice": "Elles permettent de dire « c'est telle personne, et pas une autre ».",
+    "mots_cles": [
+      [
+        "donnees",
+        "informations"
+      ],
+      [
+        "personnelles",
+        "personnel",
+        "identifiantes"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "IA et société",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "données personnelles",
+      "informations personnelles",
+      "données à caractère personnel",
+      "données identifiantes",
+      "informations identifiantes"
+    ],
+    "niveau": 1,
+    "titre": "Ce que la loi protège particulièrement lorsqu'un système traite des éléments concernant un individu précis",
+    "question": "Comment appelle-t-on les informations qui permettent d'identifier une personne, comme son nom, son adresse ou son numéro de téléphone, lorsqu'elles sont traitées par un système d'IA ?",
+    "reponse": "données personnelles",
+    "matiere": "ia",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le consentement est l'accord qu'une personne donne, librement et de façon informée, pour que ses données soient collectées ou utilisées. C'est l'une des bases qui encadrent légalement le traitement des données personnelles.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Croire qu'accepter des conditions générales sans les lire équivaut à un consentement réellement informé, alors que sa validité suppose une information claire et compréhensible.",
+    "indice": "Sans lui, la collecte de certaines données n'est pas légale.",
+    "mots_cles": [
+      [
+        "consentement",
+        "accord"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "IA et société",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "consentement",
+      "le consentement",
+      "accord explicite de la personne",
+      "consentement de l'utilisateur",
+      "consentement éclairé"
+    ],
+    "niveau": 1,
+    "titre": "Ce qu'un utilisateur doit donner explicitement avant la collecte ou l'utilisation de ses données par un système d'IA",
+    "question": "Comment appelle-t-on l'accord explicite qu'une personne doit donner avant que ses données personnelles soient collectées ou utilisées par un système ?",
+    "reponse": "consentement",
+    "matiere": "ia",
+    "langue": "fr"
+  }
+]

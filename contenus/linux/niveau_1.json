@@ -1,0 +1,890 @@
+[
+  {
+    "explication": "Linux est un système d'exploitation libre et open source, basé sur le noyau Linux. Il est utilisé dans de nombreux environnements, des serveurs aux smartphones.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre Linux avec Unix, alors que Linux est une réimplémentation libre d'Unix.",
+    "indice": "5 lettres, commence par 'L'.",
+    "mots_cles": [
+      [
+        "linux"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Système",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Linux",
+      "le système Linux",
+      "GNU/Linux",
+      "distribution Linux",
+      "OS Linux"
+    ],
+    "niveau": 1,
+    "titre": "Système d'exploitation open source basé sur Unix",
+    "question": "Quel système d'exploitation open source, basé sur le noyau Linux, est largement utilisé sur les serveurs et les postes de travail ?",
+    "reponse": "Linux",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le noyau est le composant principal d'un système d'exploitation. Il gère la mémoire, les processus et les périphériques matériels.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le noyau est un programme utilisateur, alors qu'il s'exécute en mode privilégié.",
+    "indice": "6 lettres, synonyme de 'cœur'.",
+    "mots_cles": [
+      [
+        "noyau",
+        "kernel"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Système",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "noyau",
+      "le noyau",
+      "kernel",
+      "noyau du système",
+      "cœur du système"
+    ],
+    "niveau": 1,
+    "titre": "Cœur du système d'exploitation",
+    "question": "Quelle partie centrale d'un système d'exploitation gère les ressources matérielles et fournit des services aux logiciels ?",
+    "reponse": "noyau",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une distribution Linux est un ensemble cohérent comprenant le noyau, des outils système et des logiciels applicatifs.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que toutes les distributions sont identiques, alors qu'elles diffèrent par leur gestion des paquets et leur philosophie.",
+    "indice": "13 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "distribution",
+        "distro"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Système",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "distribution",
+      "une distribution",
+      "distro",
+      "version de Linux",
+      "système Linux complet"
+    ],
+    "niveau": 1,
+    "titre": "Version complète de Linux avec logiciels",
+    "question": "Quel terme désigne une version de Linux incluant le noyau et une collection de logiciels préinstallés ?",
+    "reponse": "distribution",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Ubuntu est une distribution Linux grand public, sponsorisée par Canonical. Elle est appréciée pour sa simplicité et sa documentation abondante.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'Ubuntu est le seul système Linux, alors qu'il en existe des centaines.",
+    "indice": "7 lettres, nom propre.",
+    "mots_cles": [
+      [
+        "ubuntu"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Distributions",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Ubuntu",
+      "la distribution Ubuntu",
+      "Ubuntu Linux",
+      "OS Ubuntu"
+    ],
+    "niveau": 1,
+    "titre": "Distribution Linux basée sur Debian",
+    "question": "Quelle distribution Linux populaire, basée sur Debian, est connue pour sa facilité d'utilisation et son support communautaire ?",
+    "reponse": "Ubuntu",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Debian est une distribution non commerciale maintenue par une communauté de bénévoles. Elle est réputée pour sa stabilité et son respect des principes du logiciel libre.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre Debian avec Ubuntu, alors qu'Ubuntu est basée sur Debian.",
+    "indice": "7 lettres, nom propre.",
+    "mots_cles": [
+      [
+        "debian"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Distributions",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Debian",
+      "la distribution Debian",
+      "Debian GNU/Linux",
+      "projet Debian"
+    ],
+    "niveau": 1,
+    "titre": "Distribution Linux stable et communautaire",
+    "question": "Quelle distribution Linux, connue pour sa stabilité et sa gestion communautaire, est à l'origine de nombreuses autres distributions ?",
+    "reponse": "Debian",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Fedora est une distribution orientée vers les dernières technologies, souvent utilisée comme banc d'essai pour Red Hat Enterprise Linux.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que Fedora est une version payante de Linux, alors qu'elle est entièrement gratuite et open source.",
+    "indice": "7 lettres, nom propre.",
+    "mots_cles": [
+      [
+        "fedora"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Distributions",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Fedora",
+      "la distribution Fedora",
+      "Fedora Linux",
+      "projet Fedora"
+    ],
+    "niveau": 1,
+    "titre": "Distribution Linux sponsorisée par Red Hat",
+    "question": "Quelle distribution Linux, sponsorisée par Red Hat, est connue pour son innovation et son utilisation de RPM comme gestionnaire de paquets ?",
+    "reponse": "Fedora",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Arch Linux est une distribution légère et flexible, où l'utilisateur construit son système à partir de zéro.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'Arch Linux est adapté aux débutants, alors qu'il nécessite des connaissances avancées.",
+    "indice": "Deux mots, le premier a 4 lettres.",
+    "mots_cles": [
+      [
+        "arch linux",
+        "arch"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Distributions",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Arch Linux",
+      "Arch",
+      "la distribution Arch",
+      "Arch Linux OS"
+    ],
+    "niveau": 1,
+    "titre": "Distribution Linux minimaliste et personnalisable",
+    "question": "Quelle distribution Linux, connue pour sa simplicité et son approche minimaliste, permet une personnalisation avancée ?",
+    "reponse": "Arch Linux",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le terminal est une interface qui permet d'exécuter des commandes textuelles pour contrôler le système.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre terminal avec shell : le terminal est l'interface, le shell est le programme qui interprète les commandes.",
+    "indice": "8 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "terminal",
+        "console"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Interface",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "terminal",
+      "le terminal",
+      "console",
+      "interface en ligne de commande",
+      "CLI"
+    ],
+    "niveau": 1,
+    "titre": "Interface texte pour interagir avec le système",
+    "question": "Quel terme désigne l'interface en mode texte permettant d'interagir avec un système Linux ?",
+    "reponse": "terminal",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le shell est l'interface entre l'utilisateur et le noyau. Il lit les commandes et les transmet au système.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que shell et terminal sont synonymes, alors que le shell est un programme qui s'exécute dans le terminal.",
+    "indice": "5 lettres, mot anglais.",
+    "mots_cles": [
+      [
+        "shell"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Interface",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "shell",
+      "le shell",
+      "interpréteur de commandes",
+      "command shell",
+      "CLI shell"
+    ],
+    "niveau": 1,
+    "titre": "Programme interprétant les commandes",
+    "question": "Quel terme désigne le programme qui interprète et exécute les commandes saisies dans un terminal ?",
+    "reponse": "shell",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Bash est un shell compatible avec sh, offrant des fonctionnalités avancées comme l'historique des commandes et la complétion automatique.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Écrire 'bash' en minuscules dans une commande, alors qu'il est sensible à la casse.",
+    "indice": "4 lettres, acronyme.",
+    "mots_cles": [
+      [
+        "bash"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Interface",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Bash",
+      "le Bash",
+      "Bourne Again Shell",
+      "shell Bash",
+      "GNU Bash"
+    ],
+    "niveau": 1,
+    "titre": "Shell par défaut sur de nombreuses distributions",
+    "question": "Quel shell, acronyme de 'Bourne Again SHell', est le plus couramment utilisé par défaut sur les distributions Linux ?",
+    "reponse": "Bash",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'invite de commande (ou prompt) signale à l'utilisateur que le shell attend une entrée. Elle peut être personnalisée.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que l'invite de commande est toujours '$' ou '#', alors qu'elle peut être modifiée.",
+    "indice": "Trois mots, le dernier est 'commande'.",
+    "mots_cles": [
+      [
+        "invite de commande",
+        "prompt"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Interface",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "invite de commande",
+      "prompt",
+      "l'invite",
+      "symbole du shell",
+      "indicateurs de commande"
+    ],
+    "niveau": 1,
+    "titre": "Indication prête à recevoir une commande",
+    "question": "Quel terme désigne le symbole ou le texte affiché par le shell pour indiquer qu'il est prêt à recevoir une commande ?",
+    "reponse": "invite de commande",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un utilisateur est une entité identifiée par un nom et un identifiant unique, avec des droits limités pour des raisons de sécurité.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un utilisateur standard peut modifier des fichiers système critiques.",
+    "indice": "10 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "utilisateur",
+        "user"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Utilisateurs",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "utilisateur",
+      "un utilisateur",
+      "compte utilisateur",
+      "user",
+      "compte standard"
+    ],
+    "niveau": 1,
+    "titre": "Compte standard pour utiliser le système",
+    "question": "Quel terme désigne un compte standard permettant à une personne d'utiliser un système Linux avec des permissions limitées ?",
+    "reponse": "utilisateur",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le superutilisateur (souvent appelé 'root') a des privilèges illimités et peut exécuter toute commande, y compris celles dangereuses pour le système.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser le compte superutilisateur pour des tâches quotidiennes, ce qui expose le système à des risques de sécurité.",
+    "indice": "15 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "superutilisateur",
+        "super user"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Utilisateurs",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "superutilisateur",
+      "le superutilisateur",
+      "super user",
+      "compte administrateur",
+      "sudoer"
+    ],
+    "niveau": 1,
+    "titre": "Compte avec tous les droits",
+    "question": "Quel terme désigne un compte utilisateur disposant de tous les droits sur un système Linux ?",
+    "reponse": "superutilisateur",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le compte root est le superutilisateur par défaut sur Linux. Son mot de passe doit être protégé car il permet un contrôle total sur le système.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que 'root' est un répertoire système, alors que c'est aussi un nom d'utilisateur.",
+    "indice": "4 lettres, mot anglais.",
+    "mots_cles": [
+      [
+        "root"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Utilisateurs",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "root",
+      "le compte root",
+      "utilisateur root",
+      "superutilisateur root"
+    ],
+    "niveau": 1,
+    "titre": "Nom du compte superutilisateur",
+    "question": "Quel est le nom du compte superutilisateur par défaut sur un système Linux ?",
+    "reponse": "root",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une commande est une instruction textuelle donnée au shell pour exécuter une action (ex : lister des fichiers, créer un répertoire).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Oublier que les commandes sont sensibles à la casse (ex : 'Ls' ≠ 'ls').",
+    "indice": "8 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "commande"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Commandes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "commande",
+      "une commande",
+      "instruction",
+      "ordre",
+      "commande shell"
+    ],
+    "niveau": 1,
+    "titre": "Instruction exécutée dans le terminal",
+    "question": "Quel terme désigne une instruction ou un programme exécuté dans un terminal Linux ?",
+    "reponse": "commande",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un argument est une donnée fournie à une commande pour préciser son action (ex : le nom d'un fichier à supprimer avec 'rm').",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre argument avec option : un argument est une valeur, une option est un flag (ex : '-r' dans 'rm -r').",
+    "indice": "8 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "argument"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Commandes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "argument",
+      "un argument",
+      "paramètre",
+      "valeur d'entrée",
+      "input"
+    ],
+    "niveau": 1,
+    "titre": "Information supplémentaire pour une commande",
+    "question": "Quel terme désigne une valeur ou un paramètre passé à une commande pour modifier son comportement ?",
+    "reponse": "argument",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une option est un paramètre qui active ou désactive une fonctionnalité spécifique d'une commande (ex : '-a' pour afficher les fichiers cachés).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que les options sont toujours précédées d'un double tiret (--), alors qu'un seul tiret (-) est aussi utilisé.",
+    "indice": "6 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "option",
+        "flag"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Commandes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "option",
+      "une option",
+      "flag",
+      "paramètre optionnel",
+      "modificateur"
+    ],
+    "niveau": 1,
+    "titre": "Paramètre modifiant le comportement d'une commande",
+    "question": "Quel terme désigne un flag ou un modificateur qui change la manière dont une commande s'exécute (ex : -l pour ls) ?",
+    "reponse": "option",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un chemin est une adresse qui permet de localiser un fichier ou un dossier dans l'arborescence du système.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre chemin avec nom de fichier : le chemin inclut les répertoires parents.",
+    "indice": "6 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "chemin",
+        "path"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Système de fichiers",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "chemin",
+      "un chemin",
+      "path",
+      "emplacement",
+      "adresse du fichier"
+    ],
+    "niveau": 1,
+    "titre": "Emplacement d'un fichier ou dossier",
+    "question": "Quel terme désigne la séquence de répertoires menant à un fichier ou un dossier dans un système de fichiers ?",
+    "reponse": "chemin",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un chemin absolu spécifie l'emplacement exact d'un fichier ou dossier à partir de la racine (/), indépendamment du répertoire courant.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un chemin absolu commence toujours par '/home', alors qu'il peut commencer par n'importe quel répertoire racine.",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "chemin absolu",
+        "absolute path"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Système de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "chemin absolu",
+      "un chemin absolu",
+      "absolute path",
+      "chemin complet",
+      "chemin depuis la racine"
+    ],
+    "niveau": 1,
+    "titre": "Chemin partant de la racine",
+    "question": "Quel terme désigne un chemin qui commence à la racine du système de fichiers (ex : /home/utilisateur) ?",
+    "reponse": "chemin absolu",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un chemin relatif dépend du répertoire courant : il est interprété par rapport à l'endroit où l'utilisateur se trouve dans l'arborescence.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser un chemin relatif alors que le répertoire courant a changé, ce qui rend la commande inefficace.",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "chemin relatif",
+        "relative path"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Système de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "chemin relatif",
+      "un chemin relatif",
+      "relative path",
+      "chemin partiel",
+      "chemin local"
+    ],
+    "niveau": 1,
+    "titre": "Chemin partant du répertoire courant",
+    "question": "Quel terme désigne un chemin qui commence à partir du répertoire courant (ex : documents/fichier.txt) ?",
+    "reponse": "chemin relatif",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le répertoire courant est le dossier actif dans le terminal. Il peut être affiché avec la commande 'pwd'.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le répertoire courant est toujours le répertoire personnel, alors qu'il change avec la commande 'cd'.",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "repertoire courant",
+        "current directory"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Système de fichiers",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "répertoire courant",
+      "le répertoire courant",
+      "current directory",
+      "dossier courant",
+      "pwd"
+    ],
+    "niveau": 1,
+    "titre": "Répertoire où l'utilisateur se trouve",
+    "question": "Quel terme désigne le répertoire dans lequel l'utilisateur est actuellement situé dans le système de fichiers ?",
+    "reponse": "répertoire courant",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le système de fichiers est la structure logique qui organise les données sur un disque. Linux supporte plusieurs types (ext4, XFS, etc.).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre système de fichiers avec partition, alors que le système de fichiers est une couche logique au-dessus de la partition.",
+    "indice": "Trois mots, le dernier est au pluriel.",
+    "mots_cles": [
+      [
+        "systeme de fichiers",
+        "filesystem"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Système de fichiers",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "système de fichiers",
+      "le système de fichiers",
+      "filesystem",
+      "hiérarchie de fichiers",
+      "arborescence"
+    ],
+    "niveau": 1,
+    "titre": "Structure d'organisation des fichiers",
+    "question": "Quel terme désigne la manière dont les fichiers et répertoires sont organisés et stockés sur un système Linux ?",
+    "reponse": "système de fichiers",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un processus est une instance d'un programme en cours d'exécution. Le système gère plusieurs processus simultanément.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un processus est la même chose qu'un programme, alors qu'un programme peut lancer plusieurs processus.",
+    "indice": "9 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "processus",
+        "process"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Processus",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "processus",
+      "un processus",
+      "process",
+      "tâche en cours",
+      "instance de programme"
+    ],
+    "niveau": 1,
+    "titre": "Programme en cours d'exécution",
+    "question": "Quel terme désigne un programme en cours d'exécution dans le système, avec son propre identifiant (PID) ?",
+    "reponse": "processus",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un paquet logiciel contient les fichiers nécessaires à l'installation d'un logiciel, ainsi que des métadonnées comme les dépendances.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre paquet logiciel avec archive (un paquet est géré par un gestionnaire comme apt ou yum, une archive est un simple fichier compressé).",
+    "indice": "Deux mots, le premier est 'paquet'.",
+    "mots_cles": [
+      [
+        "paquet logiciel",
+        "package"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Logiciels",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "paquet logiciel",
+      "un paquet",
+      "package",
+      "paquet",
+      "logiciel empaqueté"
+    ],
+    "niveau": 1,
+    "titre": "Logiciel installé via un gestionnaire",
+    "question": "Quel terme désigne un logiciel ou une application empaquetée pour être installée sur un système Linux ?",
+    "reponse": "paquet logiciel",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un dépôt (ou repository) est une source centralisée de paquets logiciels. Les gestionnaires comme apt ou yum s'y connectent pour installer des logiciels.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un dépôt est un simple dossier local, alors qu'il s'agit généralement d'un serveur distant.",
+    "indice": "6 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "depot",
+        "repository"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Logiciels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "dépôt",
+      "un dépôt",
+      "repository",
+      "dépôt de paquets",
+      "source de logiciels"
+    ],
+    "niveau": 1,
+    "titre": "Stockage centralisé de paquets logiciels",
+    "question": "Quel terme désigne un serveur ou un ensemble de serveurs hébergeant des paquets logiciels disponibles pour installation ?",
+    "reponse": "dépôt",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un serveur est un système conçu pour répondre aux requêtes des clients (ex : serveur web, serveur de fichiers).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un serveur est toujours un matériel dédié, alors qu'un ordinateur standard peut aussi agir comme serveur.",
+    "indice": "7 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "serveur",
+        "server"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Réseau",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "serveur",
+      "un serveur",
+      "server",
+      "machine serveur",
+      "hôte serveur"
+    ],
+    "niveau": 1,
+    "titre": "Ordinateur fournissant des services",
+    "question": "Quel terme désigne un ordinateur ou un système qui fournit des ressources, des données ou des services à d'autres ordinateurs sur un réseau ?",
+    "reponse": "serveur",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un client est une entité qui envoie des requêtes à un serveur pour obtenir des données ou des services (ex : navigateur web).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre client avec serveur : le client demande, le serveur fournit.",
+    "indice": "6 lettres, mot masculin.",
+    "mots_cles": [
+      [
+        "client"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Réseau",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "client",
+      "un client",
+      "client machine",
+      "poste client",
+      "user agent"
+    ],
+    "niveau": 1,
+    "titre": "Ordinateur utilisant des services",
+    "question": "Quel terme désigne un ordinateur ou un programme qui demande des ressources ou des services à un serveur ?",
+    "reponse": "client",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un logiciel libre respecte les quatre libertés fondamentales : utiliser, étudier, modifier et redistribuer le code.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre logiciel libre avec logiciel gratuit (free as in freedom, not as in free beer).",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "logiciel libre",
+        "free software"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Philosophie",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "logiciel libre",
+      "free software",
+      "logiciel open source",
+      "FOSS",
+      "libre et open source"
+    ],
+    "niveau": 1,
+    "titre": "Logiciel respectant les libertés des utilisateurs",
+    "question": "Quel terme désigne un logiciel dont le code source est accessible, modifiable et distribuable librement ?",
+    "reponse": "logiciel libre",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une licence open source permet aux utilisateurs d'accéder au code source et de l'utiliser selon des termes définis (ex : GPL, MIT, Apache).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que toutes les licences open source sont identiques, alors qu'elles ont des restrictions différentes.",
+    "indice": "Deux mots, le second est un nom composé.",
+    "mots_cles": [
+      [
+        "licence open source",
+        "licence libre"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Philosophie",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "licence open source",
+      "licence libre",
+      "open source license",
+      "licence OSI",
+      "licence de logiciel libre"
+    ],
+    "niveau": 1,
+    "titre": "Autorisation légale pour un logiciel libre",
+    "question": "Quel terme désigne le document juridique qui définit les conditions d'utilisation, de modification et de redistribution d'un logiciel libre ?",
+    "reponse": "licence open source",
+    "matiere": "linux",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le noyau Linux est le cœur du système, mais un système d'exploitation complet nécessite aussi des outils comme ceux du projet GNU (ex : shell, compilateurs).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser 'Linux' pour désigner tout le système, alors que techniquement il s'agit de GNU/Linux.",
+    "indice": "Pensez aux composants : noyau vs outils.",
+    "mots_cles": [
+      [
+        "linux",
+        "gnu"
+      ],
+      [
+        "noyau",
+        "systeme complet"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Philosophie",
+    "type": "texte",
+    "reponses_acceptees": [
+      "Linux désigne le noyau, GNU/Linux désigne le système d'exploitation complet incluant les outils GNU",
+      "Linux est le noyau, GNU/Linux est le système complet",
+      "GNU/Linux inclut le noyau Linux et les outils GNU",
+      "Linux seul fait référence au noyau, GNU/Linux au système complet"
+    ],
+    "niveau": 1,
+    "titre": "Différence entre Linux et GNU/Linux",
+    "question": "Quelle est la différence principale entre les termes 'Linux' et 'GNU/Linux' ?",
+    "reponse": "Linux désigne le noyau, GNU/Linux désigne le système d'exploitation complet incluant les outils GNU",
+    "matiere": "linux",
+    "langue": "fr"
+  }
+]

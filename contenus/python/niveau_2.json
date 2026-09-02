@@ -1,0 +1,1464 @@
+[
+  {
+    "niveau": 2,
+    "categorie": "Conditions",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Poser une condition",
+    "question": "Quel mot-clé introduit une condition en Python ?",
+    "reponse": "if",
+    "reponses_acceptees": [
+      "if",
+      "le mot-clé if",
+      "si"
+    ],
+    "mots_cles": [
+      [
+        "if"
+      ]
+    ],
+    "explication": "if exécute un bloc uniquement si la condition vaut True. Le bloc est indenté.",
+    "exemple_code": "age = 20\nif age >= 18:\n    print(\"majeur\")",
+    "sortie_attendue": "majeur",
+    "erreur_frequente": "Oublier les deux-points en fin de ligne.",
+    "indice": "Deux lettres, le mot anglais pour « si »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Conditions",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Le cas contraire",
+    "question": "Quel mot-clé exécute un bloc quand la condition du if est fausse ?",
+    "reponse": "else",
+    "reponses_acceptees": [
+      "else",
+      "le mot-clé else",
+      "sinon"
+    ],
+    "mots_cles": [
+      [
+        "else"
+      ]
+    ],
+    "explication": "else n'a pas de condition : il attrape tous les cas restants.",
+    "exemple_code": "age = 15\nif age >= 18:\n    print(\"majeur\")\nelse:\n    print(\"mineur\")",
+    "sortie_attendue": "mineur",
+    "erreur_frequente": "Écrire une condition après else : else n'en accepte pas.",
+    "indice": "Le mot anglais pour « sinon »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Conditions",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Enchaîner les conditions",
+    "question": "Quel mot-clé teste une seconde condition après un if ?",
+    "reponse": "elif",
+    "reponses_acceptees": [
+      "elif",
+      "le mot-clé elif",
+      "sinon si"
+    ],
+    "mots_cles": [
+      [
+        "elif"
+      ]
+    ],
+    "explication": "elif est la contraction de « else if ». On peut en enchaîner autant qu'on veut.",
+    "exemple_code": "note = 12\nif note >= 16:\n    print(\"très bien\")\nelif note >= 10:\n    print(\"admis\")\nelse:\n    print(\"ajourné\")",
+    "sortie_attendue": "admis",
+    "erreur_frequente": "Écrire elseif ou else if : en Python c'est elif, en un seul mot.",
+    "indice": "La contraction de else et if."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Exiger deux conditions",
+    "question": "Quel opérateur exige que deux conditions soient vraies en même temps ?",
+    "reponse": "and",
+    "reponses_acceptees": [
+      "and",
+      "l'opérateur and",
+      "l'opérateur et"
+    ],
+    "mots_cles": [
+      [
+        "and"
+      ]
+    ],
+    "explication": "and ne renvoie True que si les deux côtés sont vrais.",
+    "exemple_code": "age = 25\nprint(age > 18 and age < 65)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Écrire && comme en C ou JavaScript : Python utilise and.",
+    "indice": "Le mot anglais pour « et »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Accepter l'une ou l'autre",
+    "question": "Quel opérateur est vrai dès qu'au moins une des deux conditions est vraie ?",
+    "reponse": "or",
+    "reponses_acceptees": [
+      "or",
+      "l'opérateur or",
+      "ou"
+    ],
+    "mots_cles": [
+      [
+        "or"
+      ]
+    ],
+    "explication": "or renvoie True si au moins un des deux côtés est vrai.",
+    "exemple_code": "jour = \"samedi\"\nprint(jour == \"samedi\" or jour == \"dimanche\")",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Écrire || comme en JavaScript : Python utilise or.",
+    "indice": "Le mot anglais pour « ou »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Inverser une condition",
+    "question": "Quel mot-clé inverse la valeur d'un booléen ?",
+    "reponse": "not",
+    "reponses_acceptees": [
+      "not",
+      "l'opérateur not",
+      "négation"
+    ],
+    "mots_cles": [
+      [
+        "not",
+        "negation"
+      ]
+    ],
+    "explication": "not True vaut False, et inversement.",
+    "exemple_code": "print(not True)",
+    "sortie_attendue": "False",
+    "erreur_frequente": "Écrire ! comme en JavaScript : Python utilise not.",
+    "indice": "Le mot anglais pour « ne pas »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Boucles",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Répéter avec while",
+    "question": "Quel mot-clé répète un bloc tant qu'une condition reste vraie ?",
+    "reponse": "while",
+    "reponses_acceptees": [
+      "while",
+      "le mot-clé while",
+      "la boucle while",
+      "tant que"
+    ],
+    "mots_cles": [
+      [
+        "while"
+      ]
+    ],
+    "explication": "while reteste sa condition avant chaque tour. Il faut que quelque chose la fasse devenir fausse.",
+    "exemple_code": "i = 0\nwhile i < 3:\n    print(i)\n    i += 1",
+    "sortie_attendue": "0\n1\n2",
+    "erreur_frequente": "Oublier d'incrémenter i : la boucle tourne à l'infini.",
+    "indice": "Le mot anglais pour « tant que »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Boucles",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Parcourir avec for",
+    "question": "Quel mot-clé parcourt les éléments d'une liste un par un ?",
+    "reponse": "for",
+    "reponses_acceptees": [
+      "for",
+      "le mot-clé for",
+      "la boucle for",
+      "pour"
+    ],
+    "mots_cles": [
+      [
+        "for"
+      ]
+    ],
+    "explication": "for parcourt tout objet itérable : liste, chaîne, dictionnaire, range...",
+    "exemple_code": "for lettre in \"abc\":\n    print(lettre)",
+    "sortie_attendue": "a\nb\nc",
+    "erreur_frequente": "Écrire for (i = 0; i < 3; i++) : cette syntaxe n'existe pas en Python.",
+    "indice": "Le mot anglais pour « pour »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Boucles",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Compter des répétitions",
+    "question": "Combien de fois print est-il exécuté dans : for i in range(3): print(i) ?",
+    "reponse": "print est exécuté 3 fois",
+    "reponses_acceptees": [
+      "print est exécuté 3 fois",
+      "3 fois",
+      "trois fois"
+    ],
+    "mots_cles": [
+      [
+        "3",
+        "trois"
+      ],
+      [
+        "fois"
+      ]
+    ],
+    "explication": "range(3) produit 0, 1 puis 2 : trois valeurs, donc trois tours de boucle.",
+    "exemple_code": "for i in range(3):\n    print(i)",
+    "sortie_attendue": "0\n1\n2",
+    "erreur_frequente": "Compter 4 tours en croyant que range(3) va jusqu'à 3 inclus.",
+    "indice": "Compte les valeurs produites par range(3)."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Boucles",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Comprendre range",
+    "question": "Quelles valeurs produit range(1, 5) ?",
+    "reponse": "1, 2, 3 et 4",
+    "reponses_acceptees": [
+      "1, 2, 3 et 4",
+      "1 2 3 4",
+      "1,2,3,4",
+      "de 1 à 4"
+    ],
+    "mots_cles": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ],
+      [
+        "3"
+      ],
+      [
+        "4"
+      ]
+    ],
+    "explication": "La borne de départ est incluse, la borne de fin est exclue.",
+    "exemple_code": "print(list(range(1, 5)))",
+    "sortie_attendue": "[1, 2, 3, 4]",
+    "erreur_frequente": "Inclure 5 : la borne de fin n'est jamais atteinte.",
+    "indice": "La première borne est incluse, la seconde non."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Boucles",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Sortir d'une boucle",
+    "question": "Quel mot-clé interrompt immédiatement une boucle ?",
+    "reponse": "break",
+    "reponses_acceptees": [
+      "break",
+      "le mot-clé break"
+    ],
+    "mots_cles": [
+      [
+        "break"
+      ]
+    ],
+    "explication": "break quitte la boucle en cours, sans exécuter les tours restants.",
+    "exemple_code": "for i in range(10):\n    if i == 2:\n        break\n    print(i)",
+    "sortie_attendue": "0\n1",
+    "erreur_frequente": "Confondre break (sortir) et continue (passer au tour suivant).",
+    "indice": "Le mot anglais pour « casser »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Boucles",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Passer au tour suivant",
+    "question": "Quel mot-clé saute la fin du tour en cours et passe au suivant ?",
+    "reponse": "continue",
+    "reponses_acceptees": [
+      "continue",
+      "le mot-clé continue"
+    ],
+    "mots_cles": [
+      [
+        "continue"
+      ]
+    ],
+    "explication": "continue abandonne le tour courant mais laisse la boucle se poursuivre.",
+    "exemple_code": "for i in range(4):\n    if i == 1:\n        continue\n    print(i)",
+    "sortie_attendue": "0\n2\n3",
+    "erreur_frequente": "Utiliser continue en croyant sortir de la boucle : c'est break qu'il faut.",
+    "indice": "Le mot anglais pour « continuer »."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Dictionnaires",
+    "type": "texte",
+    "difficulte": 3,
+    "titre": "Parcourir un dictionnaire",
+    "question": "Soit le dictionnaire personne = {\"nom\": \"Ada\", \"age\": 36}. Que parcourt la boucle for x in personne ?",
+    "reponse": "les clés du dictionnaire",
+    "reponses_acceptees": [
+      "les clés du dictionnaire",
+      "les clés",
+      "les clefs",
+      "les keys",
+      "nom et age",
+      "les noms des clés"
+    ],
+    "mots_cles": [],
+    "explication": "Par défaut, itérer sur un dictionnaire parcourt ses clés, ici \"nom\" puis \"age\". Utilisez .values() pour les valeurs et .items() pour les deux.",
+    "exemple_code": "personne = {\"nom\": \"Ada\", \"age\": 36}\nfor x in personne:\n    print(x)",
+    "sortie_attendue": "nom\nage",
+    "erreur_frequente": "Croire qu'on obtient les valeurs : il faut personne.values().",
+    "indice": "Pas les valeurs, mais ce qui permet d'y accéder."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Opérateurs",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Incrémenter une variable",
+    "question": "Quelle écriture courte augmente la variable compteur de 1 ?",
+    "reponse": "compteur += 1",
+    "reponses_acceptees": [
+      "compteur += 1",
+      "compteur = compteur + 1"
+    ],
+    "explication": "+= est un raccourci pour « ajouter à soi-même ».",
+    "exemple_code": "compteur = 0\ncompteur += 1\nprint(compteur)",
+    "sortie_attendue": "1",
+    "erreur_frequente": "Écrire compteur++ : cette syntaxe n'existe pas en Python.",
+    "indice": "Le signe plus collé au signe égal."
+  },
+  {
+    "niveau": 2,
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Tester une appartenance",
+    "question": "Quel mot-clé vérifie qu'une valeur se trouve dans une liste ?",
+    "reponse": "in",
+    "reponses_acceptees": [
+      "in",
+      "le mot-clé in",
+      "l'opérateur in"
+    ],
+    "mots_cles": [
+      [
+        "in"
+      ]
+    ],
+    "explication": "in renvoie True si la valeur est présente. Fonctionne aussi sur les chaînes et les dictionnaires.",
+    "exemple_code": "nombres = [1, 2, 3]\nprint(2 in nombres)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Utiliser contains() : cette méthode n'est pas l'usage courant en Python.",
+    "indice": "Deux lettres, le mot anglais pour « dans »."
+  },
+  {
+    "explication": "Les opérateurs de comparaison produisent une valeur booléenne en confrontant deux opérandes.",
+    "exemple_code": "a = 7\nb = 10\nprint(a < b)\nprint(a == b)",
+    "sortie_attendue": "True\nFalse",
+    "erreur_frequente": "Confondre ==, qui compare, avec =, qui affecte une valeur.",
+    "indice": "Ils servent à savoir si une relation entre deux valeurs est vraie.",
+    "mots_cles": [
+      [
+        "comparaison",
+        "comparatifs",
+        "relationnels"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "opérateurs de comparaison",
+      "les opérateurs comparatifs",
+      "symboles de comparaison",
+      "opérateurs relationnels"
+    ],
+    "niveau": 2,
+    "titre": "Comparer des valeurs",
+    "question": "Comment nomme-t-on les symboles ==, !=, <, >, <= et >= qui confrontent deux valeurs ?",
+    "reponse": "opérateurs de comparaison",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Python interprète notamment les chaînes non vides et les nombres non nuls comme truthy ; 0, None, False et les collections vides sont falsy.",
+    "exemple_code": "if []:\n    print('vrai')\nelse:\n    print('faux')",
+    "sortie_attendue": "faux",
+    "erreur_frequente": "Croire qu'une chaîne contenant « False » est falsy : elle n'est pas vide, donc elle est truthy.",
+    "indice": "Les deux termes anglais se terminent par « y ».",
+    "mots_cles": [
+      [
+        "truthy",
+        "falsy",
+        "vraie",
+        "fausse"
+      ],
+      [
+        "valeur"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "valeur truthy ou falsy",
+      "valeur truthy/falsy",
+      "valeur interprétée comme vraie ou fausse",
+      "valeur vraie ou fausse"
+    ],
+    "niveau": 2,
+    "titre": "Évaluer un objet seul",
+    "question": "Comment appelle-t-on une valeur considérée comme vraie ou fausse dans un contexte conditionnel, sans comparaison explicite ?",
+    "reponse": "valeur truthy ou falsy",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Avec un seul argument, range(n) produit 0, 1, ..., n-1. La borne n'est pas incluse.",
+    "exemple_code": "for i in range(4):\n    print(i)",
+    "sortie_attendue": "0\n1\n2\n3",
+    "erreur_frequente": "S'attendre à obtenir 4 dans range(4), ou convertir inutilement la plage en liste dans une boucle.",
+    "indice": "Un seul argument indique le nombre de valeurs, en commençant à zéro.",
+    "mots_cles": [
+      [
+        "range"
+      ],
+      [
+        "4"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "code",
+    "reponses_acceptees": [
+      "range(4)",
+      "l'appel range(4)",
+      "range avec 4",
+      "une plage range(4)"
+    ],
+    "niveau": 2,
+    "titre": "Produire une suite bornée",
+    "question": "Quelle expression Python produit les entiers de 0 inclus à 4 exclu pour piloter une boucle ?",
+    "reponse": "range(4)",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une boucle imbriquée exécute entièrement la boucle intérieure pour chaque tour de la boucle extérieure.",
+    "exemple_code": "for ligne in range(2):\n    for colonne in range(3):\n        print(ligne, colonne)",
+    "sortie_attendue": "0 0\n0 1\n0 2\n1 0\n1 1\n1 2",
+    "erreur_frequente": "Mélanger les variables ou les indentations des deux niveaux de boucle.",
+    "indice": "Le premier mot décrit la répétition, le second l'inclusion dans une autre.",
+    "mots_cles": [
+      [
+        "boucle",
+        "boucles"
+      ],
+      [
+        "imbriquée",
+        "imbriquées",
+        "imbrication"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "boucle imbriquée",
+      "boucles imbriquées",
+      "une boucle imbriquée",
+      "imbrication de boucles"
+    ],
+    "niveau": 2,
+    "titre": "Répéter à deux niveaux",
+    "question": "Comment nomme-t-on une boucle placée dans le bloc d'une autre boucle ?",
+    "reponse": "boucle imbriquée",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un accumulateur est initialisé avec une valeur de départ puis mis à jour à chaque tour, par exemple total += prix.",
+    "exemple_code": "total = 0\nfor prix in [2, 3, 4]:\n    total += prix\nprint(total)",
+    "sortie_attendue": "9",
+    "erreur_frequente": "L'initialiser dans la boucle, ce qui efface le résultat précédent.",
+    "indice": "Il garde ce qui s'est accumulé.",
+    "mots_cles": [
+      [
+        "accumulateur",
+        "accumulation",
+        "accumulatrice"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "accumulateur",
+      "une variable accumulatrice",
+      "variable d'accumulation",
+      "accumulation progressive"
+    ],
+    "niveau": 2,
+    "titre": "Additionner progressivement",
+    "question": "Comment appelle-t-on une variable qui conserve un résultat en lui ajoutant successivement de nouvelles valeurs ?",
+    "reponse": "accumulateur",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La validation teste le format ou les limites d'une donnée et peut recommencer tant que la valeur n'est pas acceptable.",
+    "exemple_code": "valeurs = [0, -1, 5]\nfor valeur in valeurs:\n    if valeur > 0:\n        print('acceptée')\n    else:\n        print('refusée')",
+    "sortie_attendue": "refusée\nrefusée\nacceptée",
+    "erreur_frequente": "Utiliser la donnée avant d'avoir vérifié ses contraintes.",
+    "indice": "On contrôle ce qu'une personne a fourni.",
+    "mots_cles": [
+      [
+        "validation",
+        "valider",
+        "contrôle",
+        "vérification"
+      ],
+      [
+        "saisie",
+        "entrée"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Contrôle",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "validation d'une saisie",
+      "valider une saisie",
+      "contrôle de saisie",
+      "vérification d'une entrée"
+    ],
+    "niveau": 2,
+    "titre": "Contrôler la donnée",
+    "question": "Comment appelle-t-on la vérification répétée qui s'assure qu'une donnée fournie respecte une règle avant de l'utiliser ?",
+    "reponse": "validation d'une saisie",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une recherche dans une séquence examine ses éléments, souvent avec for et une condition, jusqu'à trouver la valeur.",
+    "exemple_code": "nombres = [4, 8, 12]\ntrouve = False\nfor nombre in nombres:\n    if nombre == 8:\n        trouve = True\nprint(trouve)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Afficher « trouvé » sans arrêter ou mémoriser correctement le résultat de la recherche.",
+    "indice": "Il s'agit de trouver quelque chose en parcourant une suite.",
+    "mots_cles": [
+      [
+        "recherche",
+        "chercher"
+      ],
+      [
+        "séquence",
+        "séquentielle"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Séquences",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "recherche dans une séquence",
+      "chercher dans une séquence",
+      "recherche séquentielle",
+      "recherche dans une séquence par parcours"
+    ],
+    "niveau": 2,
+    "titre": "Repérer un élément",
+    "question": "Comment appelle-t-on l'action de parcourir une séquence afin de trouver une valeur donnée ?",
+    "reponse": "recherche dans une séquence",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le contrôle d'un programme regroupe notamment les choix conditionnels et les répétitions qui orientent son déroulement.",
+    "exemple_code": "for nombre in [1, 2, 3]:\n    if nombre % 2 == 0:\n        print('pair')\n    else:\n        print('impair')",
+    "sortie_attendue": "impair\npair\nimpair",
+    "erreur_frequente": "Confondre le contrôle du flux avec l'affectation d'une variable.",
+    "indice": "Cela décrit le pilotage du déroulement du code.",
+    "mots_cles": [
+      [
+        "contrôle",
+        "pilotage"
+      ],
+      [
+        "programme",
+        "exécution"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Contrôle",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "contrôle d'un programme",
+      "contrôle du programme",
+      "structures de contrôle du programme",
+      "pilotage de l'exécution"
+    ],
+    "niveau": 2,
+    "titre": "Piloter l'exécution",
+    "question": "Comment appelle-t-on l'ensemble des conditions et boucles qui détermine quelles instructions s'exécutent et combien de fois ?",
+    "reponse": "contrôle d'un programme",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Ces erreurs touchent la syntaxe ou la logique des tests et peuvent produire une erreur ou un résultat inattendu.",
+    "exemple_code": "x = 3\nif x == 3:\n    print('correct')",
+    "sortie_attendue": "correct",
+    "erreur_frequente": "Employer une affectation dans un test, oublier les deux-points ou inverser une comparaison.",
+    "indice": "La réponse commence par ce qui peut être fréquent, puis précise le domaine.",
+    "mots_cles": [
+      [
+        "erreurs",
+        "pièges",
+        "fautes"
+      ],
+      [
+        "conditions",
+        "tests"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "erreurs fréquentes dans les conditions",
+      "pièges des conditions",
+      "erreurs courantes des tests",
+      "fautes dans les conditions"
+    ],
+    "niveau": 2,
+    "titre": "Repérer un piège de test",
+    "question": "Comment nomme-t-on les problèmes courants comme confondre = et ==, ou mal indenter un bloc conditionnel ?",
+    "reponse": "erreurs fréquentes dans les conditions",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les exercices de logique entraînent à décomposer une règle en tests et en étapes répétées, puis à prévoir le résultat.",
+    "exemple_code": "for nombre in range(1, 5):\n    if nombre % 2 == 0:\n        print(nombre, 'pair')",
+    "sortie_attendue": "2 pair\n4 pair",
+    "erreur_frequente": "Coder directement sans simuler quelques cas simples sur papier.",
+    "indice": "Ce sont des activités d'entraînement fondées sur le raisonnement.",
+    "mots_cles": [
+      [
+        "exercices",
+        "problèmes",
+        "entraînements"
+      ],
+      [
+        "logique",
+        "raisonnement"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Logique",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "exercices de logique",
+      "exercices logiques",
+      "problèmes de logique",
+      "entraînements au raisonnement"
+    ],
+    "niveau": 2,
+    "titre": "Résoudre par raisonnement",
+    "question": "Comment appelle-t-on des activités où l'on combine conditions, comparaisons et répétitions pour déduire un résultat ?",
+    "reponse": "exercices de logique",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une chaîne if/elif/else sélectionne le premier bloc dont la condition est vraie, puis ignore les autres branches.",
+    "exemple_code": "age = 70\nif age < 18:\n    print('enfant')\nelif age < 65:\n    print('adulte')\nelse:\n    print('senior')",
+    "sortie_attendue": "senior",
+    "erreur_frequente": "Utiliser trois if indépendants alors qu'une seule catégorie doit être affichée.",
+    "indice": "La structure comporte un premier test, un test intermédiaire et un cas par défaut.",
+    "mots_cles": [
+      [
+        "if",
+        "elif",
+        "else"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "code",
+    "reponses_acceptees": [
+      "if elif else",
+      "une structure if elif else",
+      "enchaînement if, elif et else",
+      "condition avec elif et else"
+    ],
+    "niveau": 2,
+    "titre": "Choisir une catégorie d'âge",
+    "question": "Quelle structure permet d'afficher « enfant », « adulte » ou « senior » selon l'âge, avec des seuils exclusifs ?",
+    "reponse": "if elif else",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "and exige que les deux tests soient vrais : l'appartenance puis la longueur minimale.",
+    "exemple_code": "mots = ['python', 'code']\nmot = 'python'\nprint(mot in mots and len(mot) >= 5)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Tester len(mots) au lieu de len(mot), ou oublier que l'élément doit être dans la liste.",
+    "indice": "Reliez un test d'appartenance à un test de longueur.",
+    "mots_cles": [
+      [
+        "in"
+      ],
+      [
+        "and"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "code",
+    "reponses_acceptees": [
+      "mot in mots and len(mot) >= 5",
+      "appartenance in et longueur avec and",
+      "in combiné à len avec and",
+      "tester la présence in et la taille avec and"
+    ],
+    "niveau": 2,
+    "titre": "Combiner présence et taille",
+    "question": "Quelle expression vérifie qu'un mot appartient à une liste et possède au moins cinq caractères ?",
+    "reponse": "mot in mots and len(mot) >= 5",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une liste vide est falsy ; not liste vaut donc True exactement dans ce cas.",
+    "exemple_code": "liste = []\nif not liste:\n    print('vide')",
+    "sortie_attendue": "vide",
+    "erreur_frequente": "Écrire not liste == [] sans comprendre la priorité des opérateurs ou tester la mauvaise variable.",
+    "indice": "Inversez la valeur truthy/falsy de la liste.",
+    "mots_cles": [
+      [
+        "not"
+      ],
+      [
+        "liste"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "code",
+    "reponses_acceptees": [
+      "if not liste",
+      "tester not liste",
+      "la condition if not liste",
+      "utiliser not sur la liste"
+    ],
+    "niveau": 2,
+    "titre": "Distinguer une collection vide",
+    "question": "Que faut-il tester directement pour afficher « vide » quand une liste ne contient aucun élément ?",
+    "reponse": "if not liste",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La boucle examine chaque nombre ; la condition filtre les pairs avant de les ajouter à l'accumulateur.",
+    "exemple_code": "total = 0\nfor nombre in [1, 2, 3, 4, 5]:\n    if nombre % 2 == 0:\n        total += nombre\nprint(total)",
+    "sortie_attendue": "6",
+    "erreur_frequente": "Ajouter tous les nombres ou réinitialiser total à chaque tour.",
+    "indice": "Parcourez, filtrez, puis additionnez.",
+    "mots_cles": [
+      [
+        "for"
+      ],
+      [
+        "if"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "code",
+    "reponses_acceptees": [
+      "for avec if et accumulateur",
+      "boucle for avec if et total",
+      "accumuler les pairs avec for et if",
+      "for, if et somme"
+    ],
+    "niveau": 2,
+    "titre": "Additionner les nombres pairs",
+    "question": "Quelle combinaison parcourt les nombres et ajoute seulement ceux qui sont divisibles par deux ?",
+    "reponse": "for avec if et accumulateur",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "break évite de parcourir les éléments restants après avoir trouvé la première occurrence.",
+    "exemple_code": "trouve = False\nfor valeur in [3, 7, 9]:\n    if valeur == 7:\n        trouve = True\n        break\nprint(trouve)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Mettre break hors de la boucle ou utiliser continue, qui ne l'arrête pas.",
+    "indice": "Cette instruction quitte immédiatement la boucle.",
+    "mots_cles": [
+      [
+        "break"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "code",
+    "reponses_acceptees": [
+      "arrêt immédiat avec break",
+      "utiliser break pour arrêter",
+      "l'instruction break dans la boucle",
+      "quitter la boucle avec break"
+    ],
+    "niveau": 2,
+    "titre": "Arrêter au premier résultat",
+    "question": "Quelle instruction permet de s'arrêter dès que la valeur recherchée est trouvée dans une boucle ?",
+    "reponse": "arrêt immédiat avec break",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "continue passe directement au tour suivant, ce qui permet d'ignorer seulement la valeur courante.",
+    "exemple_code": "for valeur in [0, 1, 2]:\n    if valeur == 0:\n        continue\n    print(valeur)",
+    "sortie_attendue": "1\n2",
+    "erreur_frequente": "Employer break et supprimer les tours suivants au lieu de filtrer un seul élément.",
+    "indice": "Elle signifie de poursuivre la répétition.",
+    "mots_cles": [
+      [
+        "continue"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "code",
+    "reponses_acceptees": [
+      "passage au tour suivant avec continue",
+      "passer directement à l’itération suivante",
+      "sauter au tour suivant",
+      "ignorer le tour courant avec continue",
+      "continuer avec le tour suivant"
+    ],
+    "niveau": 2,
+    "titre": "Ignorer les valeurs interdites",
+    "question": "Quelle instruction permet de ne pas afficher zéro tout en poursuivant la boucle ?",
+    "reponse": "passage au tour suivant avec continue",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La boucle extérieure contrôle les lignes et la boucle intérieure répète l'affichage des étoiles sur chaque ligne.",
+    "exemple_code": "for ligne in range(2):\n    texte = ''\n    for colonne in range(3):\n        texte += '*'\n    print(texte)",
+    "sortie_attendue": "***\n***",
+    "erreur_frequente": "Placer la boucle intérieure au mauvais niveau d'indentation.",
+    "indice": "Une répétition est placée dans une autre.",
+    "mots_cles": [
+      [
+        "for"
+      ],
+      [
+        "imbriquées",
+        "imbrication"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "code",
+    "reponses_acceptees": [
+      "boucles for imbriquées",
+      "deux boucles for imbriquées",
+      "for avec boucles imbriquées",
+      "imbrication de boucles for"
+    ],
+    "niveau": 2,
+    "titre": "Construire un rectangle d'étoiles",
+    "question": "Comment utiliser deux niveaux de répétition pour afficher deux lignes contenant chacune trois étoiles ?",
+    "reponse": "boucles for imbriquées",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "while parcourt les positions tant qu'il reste des valeurs ; break interrompt le parcours dès que la règle est violée.",
+    "exemple_code": "valeurs = [4, 2, -1, 8]\ni = 0\nwhile i < len(valeurs):\n    if valeurs[i] < 0:\n        print('invalide')\n        break\n    i += 1",
+    "sortie_attendue": "invalide",
+    "erreur_frequente": "Oublier d'augmenter l'index, ce qui bloque la boucle sur le même élément.",
+    "indice": "Il faut une boucle conditionnelle et une sortie immédiate.",
+    "mots_cles": [
+      [
+        "while"
+      ],
+      [
+        "break"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Contrôle",
+    "type": "code",
+    "reponses_acceptees": [
+      "while avec break",
+      "boucle while et break",
+      "while qui quitte avec break",
+      "contrôle par while et break"
+    ],
+    "niveau": 2,
+    "titre": "Contrôler une plage valide",
+    "question": "Quelle boucle vérifie une série de valeurs et s'arrête dès qu'elle en rencontre une négative ?",
+    "reponse": "while avec break",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Python permet de chaîner les comparaisons : 0 <= note <= 20 signifie que les deux inégalités doivent être vraies.",
+    "exemple_code": "note = 20\nprint(0 <= note <= 20)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Exclure une borne avec < ou écrire 0 <= note or note <= 20.",
+    "indice": "La valeur est entre zéro et vingt, inclusivement.",
+    "mots_cles": [
+      [
+        "note"
+      ],
+      [
+        "20"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "code",
+    "reponses_acceptees": [
+      "0 <= note <= 20",
+      "comparaison chaînée de note de 0 à 20",
+      "note entre 0 et 20 inclus",
+      "tester note avec deux bornes dont 20"
+    ],
+    "niveau": 2,
+    "titre": "Vérifier une condition exclusive",
+    "question": "Quelle comparaison permet d'accepter uniquement une note comprise entre 0 et 20, bornes incluses ?",
+    "reponse": "0 <= note <= 20",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "On initialise le compteur avant la boucle et on l'incrémente uniquement quand l'élément correspond à la cible.",
+    "exemple_code": "reponses = ['oui', 'non', 'oui']\ncompteur = 0\nfor reponse in reponses:\n    if reponse == 'oui':\n        compteur += 1\nprint(compteur)",
+    "sortie_attendue": "2",
+    "erreur_frequente": "Incrémenter pour chaque élément au lieu de seulement pour les correspondances.",
+    "indice": "Parcourez, testez la valeur, puis augmentez une variable dédiée.",
+    "mots_cles": [
+      [
+        "compteur",
+        "compter"
+      ],
+      [
+        "for",
+        "boucle"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "code",
+    "reponses_acceptees": [
+      "compteur avec for et if",
+      "for et if avec un compteur",
+      "compter avec une boucle conditionnelle",
+      "incrémenter un compteur avec for pour les oui"
+    ],
+    "niveau": 2,
+    "titre": "Compter les occurrences ciblées",
+    "question": "Comment compter le nombre de fois où le mot « oui » apparaît dans une liste en parcourant ses éléments ?",
+    "reponse": "compteur avec for et if",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La documentation officielle précise qu'une séquence if…elif…elif… est équivalente aux instructions switch ou case disponibles dans d'autres langages, que Python ne possède pas sous cette forme.",
+    "exemple_code": "x = 2\nif x == 0:\n    print('Zero')\nelif x == 1:\n    print('Single')\nelse:\n    print('More')",
+    "sortie_attendue": "More",
+    "erreur_frequente": "Chercher un mot-clé switch en Python et conclure, à tort, qu'aucun équivalent n'existe.",
+    "indice": "Deux mots anglais utilisés dans d'autres langages pour choisir entre plusieurs cas.",
+    "mots_cles": [
+      [
+        "switch",
+        "case"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "switch ou case",
+      "une instruction switch",
+      "un bloc case comme dans d'autres langages",
+      "switch/case",
+      "des instructions comme switch ou case"
+    ],
+    "niveau": 2,
+    "titre": "L'équivalent dans d'autres langages de programmation",
+    "question": "En Python, il n'existe pas de mot-clé switch. À quelles instructions d'autres langages une chaîne if / elif / elif / ... est-elle comparée dans la documentation officielle ?",
+    "reponse": "switch ou case",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La documentation indique qu'il peut y avoir un nombre quelconque de parties elif après un if : Python n'impose aucun maximum au nombre de branches.",
+    "exemple_code": "n = 3\nif n == 1:\n    print('a')\nelif n == 2:\n    print('b')\nelif n == 3:\n    print('c')\nelif n == 4:\n    print('d')\nelse:\n    print('e')",
+    "sortie_attendue": "c",
+    "erreur_frequente": "Croire qu'on ne peut utiliser qu'un seul elif, comme s'il fallait ensuite repartir avec un nouveau if.",
+    "indice": "Regarde le mot « quelconque » employé dans la documentation : que suggère-t-il sur une éventuelle limite ?",
+    "mots_cles": [
+      [
+        "illimite",
+        "limite"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "illimité",
+      "un nombre illimité",
+      "sans limite précise",
+      "aucune limite fixée",
+      "autant qu'on veut, sans limite"
+    ],
+    "niveau": 2,
+    "titre": "La quantité de blocs elif possibles après un if",
+    "question": "Combien de blocs elif au maximum peut-on enchaîner après un if, d'après la documentation Python ?",
+    "reponse": "illimité",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La documentation précise que la partie else est facultative dans une instruction if. On peut donc écrire un if seul, un if/elif, ou un if/else, selon le besoin.",
+    "exemple_code": "x = -5\nif x < 0:\n    print('negatif')",
+    "sortie_attendue": "negatif",
+    "erreur_frequente": "Ajouter un else vide « juste pour la forme », en pensant qu'il est syntaxiquement obligatoire.",
+    "indice": "Le contraire d'obligatoire, en un seul mot.",
+    "mots_cles": [
+      [
+        "facultative",
+        "facultatif",
+        "optionnelle",
+        "optionnel"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Conditions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "non, elle est facultative",
+      "non, elle est optionnelle",
+      "elle est facultative, pas obligatoire",
+      "non, un if peut ne pas avoir de else : il est facultatif",
+      "facultative"
+    ],
+    "niveau": 2,
+    "titre": "Le caractère obligatoire ou non du dernier bloc",
+    "question": "Faut-il obligatoirement écrire un bloc else après un if (et ses éventuels elif) en Python ?",
+    "reponse": "non, elle est facultative",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La documentation officielle dénombre exactement huit opérations de comparaison en Python : <, <=, >, >=, ==, !=, is et is not.",
+    "exemple_code": "ops = ['<', '<=', '>', '>=', '==', '!=', 'is', 'is not']\nprint(len(ops))",
+    "sortie_attendue": "8",
+    "erreur_frequente": "Oublier is et is not dans le compte, et n'en trouver que six.",
+    "indice": "Un chiffre entre cinq et dix.",
+    "mots_cles": [
+      [
+        "huit",
+        "8"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "huit",
+      "8",
+      "il y en a huit",
+      "huit opérations de comparaison",
+      "8, exactement huit"
+    ],
+    "niveau": 2,
+    "titre": "Le nombre total d'opérations de ce type",
+    "question": "Combien d'opérations de comparaison Python propose-t-il nativement (<, <=, >, >=, ==, !=, is, is not), d'après la documentation ?",
+    "reponse": "huit",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "or et and sont des opérateurs court-circuit : ils ne recalculent pas un booléen, ils renvoient telle quelle l'opérande qui a déterminé le résultat. Seules les fonctions natives à résultat booléen renvoient 0/False ou 1/True.",
+    "exemple_code": "print(3 or 0)",
+    "sortie_attendue": "3",
+    "erreur_frequente": "Croire que 3 or 0 vaut True, alors que Python renvoie 3 lui-même, l'opérande, pas un booléen.",
+    "indice": "Regarde ce qu'affiche print(3 or 0) : est-ce True ?",
+    "mots_cles": [
+      [
+        "operande",
+        "operandes"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "texte",
+    "reponses_acceptees": [
+      "l'une de ses opérandes",
+      "une des deux opérandes d'origine",
+      "l'opérande elle-même, pas un booléen",
+      "la valeur d'une des opérandes, telle quelle",
+      "x ou y directement, une des opérandes"
+    ],
+    "niveau": 2,
+    "titre": "Ce que renvoient réellement or et and",
+    "question": "Quand Python évalue x or y (ou x and y), le résultat est-il un booléen True/False recalculé, ou autre chose ?",
+    "reponse": "l'une de ses opérandes",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un objet est vrai par défaut, sauf si sa classe définit __bool__() renvoyant False, ou, à défaut, __len__() renvoyant zéro.",
+    "exemple_code": "class Vide:\n    def __bool__(self):\n        return False\n\nprint(bool(Vide()))",
+    "sortie_attendue": "False",
+    "erreur_frequente": "Penser qu'il faut redéfinir __eq__ ou __str__ pour changer la valeur de vérité d'un objet, alors que c'est __bool__ (ou __len__) qui est utilisé.",
+    "indice": "Le nom de la méthode contient directement le mot anglais pour « booléen ».",
+    "mots_cles": [
+      [
+        "bool"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Valeurs de vérité",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "__bool__()",
+      "la méthode __bool__",
+      "__bool__",
+      "une méthode __bool__ qui renvoie False",
+      "__bool__, sinon __len__"
+    ],
+    "niveau": 2,
+    "titre": "La méthode spéciale qui décide de la valeur de vérité d'un objet",
+    "question": "Par défaut, un objet Python est considéré comme vrai. Quelle méthode spéciale sa classe peut-elle définir pour le rendre faux dans un test booléen ?",
+    "reponse": "__bool__()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "in et not in sont pris en charge par tout type itérable, ou par tout type qui implémente la méthode spéciale __contains__(). Ce n'est donc pas réservé aux listes : chaînes, dictionnaires, ensembles fonctionnent aussi.",
+    "exemple_code": "lettres = ['a', 'b', 'c']\nprint('b' in lettres)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Penser que in ne fonctionne que sur les listes, et être surpris qu'il fonctionne aussi sur une chaîne de caractères ou un dictionnaire.",
+    "indice": "Le mot commence par la même racine que « itération ».",
+    "mots_cles": [
+      [
+        "iterable",
+        "iterables"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "les types itérables",
+      "des objets itérables",
+      "tout objet itérable, comme une chaîne ou un dictionnaire",
+      "les itérables en général",
+      "tout type qui peut être parcouru (itérable)"
+    ],
+    "niveau": 2,
+    "titre": "Ce que doit posséder un objet pour supporter in",
+    "question": "Au-delà des listes, sur quelle catégorie générale d'objets les opérateurs in et not in fonctionnent-ils, d'après la documentation Python ?",
+    "reponse": "les types itérables",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'instruction for de Python itère directement sur les éléments d'une séquence (liste, chaîne…) dans l'ordre où ils apparaissent, contrairement au for du C ou du Pascal qui gère un compteur d'indices.",
+    "exemple_code": "mots = ['un', 'deux', 'trois']\nfor m in mots:\n    print(m)",
+    "sortie_attendue": "un\ndeux\ntrois",
+    "erreur_frequente": "S'attendre à ce que for i in ma_liste donne des indices comme en C, alors que i prend directement la valeur de chaque élément.",
+    "indice": "Pas un numéro de position : la chose elle-même.",
+    "mots_cles": [
+      [
+        "element",
+        "elements"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "texte",
+    "reponses_acceptees": [
+      "les éléments d'une séquence",
+      "directement les éléments de la liste ou de la chaîne parcourue",
+      "les éléments, pas des indices numériques",
+      "chaque élément de la collection, dans l'ordre où il apparaît",
+      "les éléments eux-mêmes de la séquence"
+    ],
+    "niveau": 2,
+    "titre": "La différence avec le for du langage C",
+    "question": "Contrairement au for du C ou du Pascal, qui itère sur une suite arithmétique d'indices, sur quoi porte directement l'itération d'un for Python ?",
+    "reponse": "les éléments d'une séquence",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La documentation précise que le dernier élément fourni en paramètre ne fait jamais partie de la suite générée par range() : range(a, b) s'arrête juste avant b.",
+    "exemple_code": "print(list(range(3, 7)))",
+    "sortie_attendue": "[3, 4, 5, 6]",
+    "erreur_frequente": "Croire que range(3, 7) inclut 7, et obtenir une valeur de trop dans une boucle.",
+    "indice": "Compare range(3, 7) à la liste [3, 4, 5, 6] : 7 y figure-t-il ?",
+    "mots_cles": [
+      [
+        "jamais",
+        "exclu"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "texte",
+    "reponses_acceptees": [
+      "non, elle n'en fait jamais partie",
+      "non, jamais",
+      "b est exclu de la suite générée",
+      "non, le dernier nombre indiqué est toujours exclu",
+      "non, il est exclu de la suite"
+    ],
+    "niveau": 2,
+    "titre": "Le sort du dernier nombre indiqué à range()",
+    "question": "Avec range(a, b), la valeur b fait-elle partie des nombres produits ?",
+    "reponse": "non, elle n'en fait jamais partie",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "break interrompt la boucle for ou while la plus profonde, c'est-à-dire celle dans laquelle il est écrit. Une boucle extérieure qui l'englobe continue normalement ses propres itérations.",
+    "exemple_code": "for n in range(4, 6):\n    for x in range(2, n):\n        if n % x == 0:\n            print(n, x)\n            break",
+    "sortie_attendue": "4 2",
+    "erreur_frequente": "Croire qu'un seul break suffit à sortir de toutes les boucles imbriquées d'un coup.",
+    "indice": "Pense à des poupées russes : laquelle s'ouvre en premier ?",
+    "mots_cles": [
+      [
+        "interieure",
+        "profonde"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "texte",
+    "reponses_acceptees": [
+      "seulement la boucle la plus profonde",
+      "seulement la boucle intérieure",
+      "uniquement la boucle interne, la plus profonde",
+      "la boucle intérieure seulement, pas celle de l'extérieur",
+      "juste la plus profonde des deux boucles"
+    ],
+    "niveau": 2,
+    "titre": "Ce qui s'arrête, entre deux répétitions imbriquées",
+    "question": "Si un break se trouve dans la boucle intérieure de deux boucles for imbriquées, quelle boucle s'arrête : seulement l'intérieure, ou aussi l'extérieure ?",
+    "reponse": "seulement la boucle la plus profonde",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "break met fin immédiatement à la boucle for ou while la plus profonde ; continue, lui, ne fait que passer à l'itération suivante de cette même boucle, sans l'arrêter.",
+    "exemple_code": "for i in range(5):\n    if i == 2:\n        continue\n    if i == 4:\n        break\n    print(i)",
+    "sortie_attendue": "0\n1\n3",
+    "erreur_frequente": "Confondre les deux et utiliser continue en pensant qu'il arrête complètement la boucle.",
+    "indice": "L'un ferme la porte, l'autre saute juste une marche.",
+    "mots_cles": [
+      [
+        "arrete",
+        "arret",
+        "stoppe",
+        "interrompt"
+      ],
+      [
+        "suivante",
+        "suivant",
+        "prochaine"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "texte",
+    "reponses_acceptees": [
+      "break arrête complètement la boucle, continue passe seulement à l'itération suivante",
+      "break stoppe toute la boucle, alors que continue saute au tour suivant",
+      "break interrompt la boucle entière ; continue saute juste à la prochaine itération",
+      "break arrête net la boucle, continue avance seulement à l'itération suivante",
+      "break met un arrêt total à la boucle, continue passe simplement à l'itération suivante"
+    ],
+    "niveau": 2,
+    "titre": "Deux façons différentes de modifier une répétition en cours",
+    "question": "Quelle est la différence de comportement entre break et continue dans une boucle ?",
+    "reponse": "break arrête complètement la boucle, continue passe seulement à l'itération suivante",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Sur les nombres 2 à 9, seuls 4, 6, 8 et 9 possèdent un facteur trouvé par la boucle intérieure (2, 3, 5, 7 sont premiers et ne déclenchent aucun print) : le code affiche donc exactement quatre lignes.",
+    "exemple_code": "for n in range(2, 10):\n    for x in range(2, n):\n        if n % x == 0:\n            print(f\"{n} equals {x} * {n//x}\")\n            break",
+    "sortie_attendue": "4 equals 2 * 2\n6 equals 2 * 3\n8 equals 2 * 4\n9 equals 3 * 3",
+    "erreur_frequente": "Compter huit lignes, une par valeur de n, en oubliant que les nombres premiers ne déclenchent aucun affichage.",
+    "indice": "Repère, parmi 2, 3, 4, 5, 6, 7, 8, 9, lesquels ne sont PAS des nombres premiers.",
+    "mots_cles": [
+      [
+        "quatre",
+        "4"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "texte",
+    "reponses_acceptees": [
+      "quatre",
+      "4",
+      "il affiche quatre lignes",
+      "4 lignes",
+      "quatre lignes au total"
+    ],
+    "niveau": 2,
+    "titre": "Le nombre total d'affichages produits par cette double boucle",
+    "question": "Ce code parcourt n de 2 à 9 et, pour chaque n, cherche un facteur x avec une boucle intérieure ; il affiche un message et sort de la boucle intérieure dès qu'un facteur est trouvé :\nfor n in range(2, 10):\n    for x in range(2, n):\n        if n % x == 0:\n            print(f\"{n} equals {x} * {n//x}\")\n            break\nCombien de lignes ce code affiche-t-il en tout ?",
+    "reponse": "quatre",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "pass ne fait rien. Elle est utilisée lorsqu'une instruction est syntaxiquement nécessaire (par exemple un corps de boucle ou de fonction) mais qu'aucune action ne doit encore être effectuée.",
+    "exemple_code": "for i in range(3):\n    pass\nprint('fin')",
+    "sortie_attendue": "fin",
+    "erreur_frequente": "Oublier pass dans un bloc vide et provoquer une erreur de syntaxe, faute d'un corps valide.",
+    "indice": "Le mot anglais veut dire « passer », comme laisser passer sans agir.",
+    "mots_cles": [
+      [
+        "rien"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Contrôle de flux",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "elle ne fait rien",
+      "elle n'exécute aucune action",
+      "à ne rien faire, quand une instruction est requise syntaxiquement",
+      "elle sert de bloc vide, sans action",
+      "rien du tout, elle est juste un espace réservé"
+    ],
+    "niveau": 2,
+    "titre": "Le rôle de l'instruction utilisée comme espace réservé",
+    "question": "À quoi sert l'instruction pass en Python, d'après la documentation ?",
+    "reponse": "elle ne fait rien",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une comparaison chaînée comme x < y <= z équivaut à x < y and y <= z, avec évaluation en court-circuit : si x < y est faux, le reste de la chaîne, y compris z, n'est jamais évalué.",
+    "exemple_code": "def boom():\n    print('evaluated')\n    return True\n\nresultat = 5 < 3 <= boom()\nprint(resultat)",
+    "sortie_attendue": "False",
+    "erreur_frequente": "Croire que Python calcule d'abord toutes les valeurs de la chaîne avant de comparer, alors que l'évaluation s'arrête dès le premier échec.",
+    "indice": "Pense au court-circuit des opérateurs and : que se passe-t-il pour le second opérande si le premier est faux ?",
+    "mots_cles": [
+      [
+        "evalue",
+        "evaluation"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "texte",
+    "reponses_acceptees": [
+      "non, z n'est jamais évalué",
+      "non, il n'est pas évalué du tout",
+      "non, z n'est pas calculé dans ce cas",
+      "non, l'évaluation de z est court-circuitée",
+      "non, jamais évalué si x < y est faux"
+    ],
+    "niveau": 2,
+    "titre": "Ce qui se passe avec le dernier terme quand la condition est fausse",
+    "question": "Dans une comparaison chaînée comme x < y <= z, si x < y est faux, z est-il quand même évalué par Python ?",
+    "reponse": "non, z n'est jamais évalué",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "range() accepte un pas négatif pour décroître : range(-10, -100, -30) part de -10 et descend par pas de -30, tant que la valeur reste strictement supérieure à -100, ce qui donne -10, -40, -70.",
+    "exemple_code": "print(list(range(-10, -100, -30)))",
+    "sortie_attendue": "[-10, -40, -70]",
+    "erreur_frequente": "Oublier que le pas négatif exige une borne de fin cohérente (inférieure au début), sinon range() ne produit aucune valeur.",
+    "indice": "Pars de -10 et retire 30 à chaque étape, tant que tu restes au-dessus de -100.",
+    "mots_cles": [
+      [
+        "10"
+      ],
+      [
+        "40"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Boucles",
+    "type": "texte",
+    "reponses_acceptees": [
+      "[-10, -40, -70]",
+      "-10, -40 et -70",
+      "la liste [-10, -40, -70]",
+      "-10, -40, -70",
+      "trois valeurs : -10, -40 et -70"
+    ],
+    "niveau": 2,
+    "titre": "Le résultat d'un pas négatif",
+    "question": "Que produit exactement list(range(-10, -100, -30)), d'après l'exemple de la documentation ?",
+    "reponse": "[-10, -40, -70]",
+    "matiere": "python",
+    "langue": "fr"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "matiere": "pandas",
+  "nom": "pandas",
+  "description": "Manipuler des données tabulaires en Python : DataFrame, sélection, nettoyage, regroupements.",
+  "langue_enseignement": "fr",
+  "langue_cible": "fr",
+  "type_defaut": "texte",
+  "code_executable": true,
+  "matieres_voisines": [
+    "python"
+  ]
+}

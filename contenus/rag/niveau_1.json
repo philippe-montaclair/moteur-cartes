@@ -1,0 +1,777 @@
+[
+  {
+    "niveau": 1,
+    "categorie": "Fondamentaux",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Intelligence artificielle",
+    "question": "Comment appelle-t-on l'ensemble des techniques qui permettent à une machine d'accomplir des tâches que l'on associe d'ordinaire à l'intelligence humaine ?",
+    "reponse": "l'intelligence artificielle",
+    "reponses_acceptees": [
+      "l'intelligence artificielle",
+      "intelligence artificielle",
+      "l'IA",
+      "IA"
+    ],
+    "mots_cles": [
+      [
+        "intelligence artificielle",
+        "ia"
+      ]
+    ],
+    "explication": "L'intelligence artificielle regroupe des méthodes très différentes — apprentissage automatique, systèmes à règles, modèles de langage. Un modèle de langage n'est donc qu'une des formes qu'elle prend, pas son synonyme.",
+    "erreur_frequente": "Employer « intelligence artificielle » et « modèle de langage » comme deux mots pour la même chose : le second est un cas particulier du premier.",
+    "indice": "Deux mots, que l'on abrège en deux lettres."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Modèle de langage",
+    "question": "Comment appelle-t-on un système entraîné sur de grandes quantités de texte pour prédire la suite d'un texte ?",
+    "reponse": "un modèle de langage",
+    "reponses_acceptees": [
+      "un modèle de langage",
+      "modèle de langage",
+      "un modèle linguistique",
+      "modèle linguistique"
+    ],
+    "mots_cles": [
+      [
+        "modele de langage",
+        "modele linguistique"
+      ]
+    ],
+    "explication": "Un modèle de langage apprend les régularités statistiques d'un très grand corpus, puis s'en sert pour prédire ce qui vient après un texte donné. Toute sa production découle de cette seule opération, répétée.",
+    "erreur_frequente": "Croire que le modèle consulte une base de faits au moment de répondre. Il ne consulte rien : il prédit — c'est justement ce que le RAG vient corriger.",
+    "indice": "Le terme dit ce qu'il modélise : la langue."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "LLM",
+    "question": "Quel sigle de trois lettres désigne un modèle de langage de très grande taille ?",
+    "reponse": "LLM",
+    "reponses_acceptees": [
+      "LLM",
+      "un LLM",
+      "large language model",
+      "grand modèle de langage"
+    ],
+    "mots_cles": [
+      [
+        "llm",
+        "large language model",
+        "grand modele de langage"
+      ]
+    ],
+    "explication": "LLM abrège « large language model », grand modèle de langage. Le qualificatif porte sur la taille du modèle et du corpus d'entraînement, pas sur une différence de nature avec les modèles plus petits.",
+    "erreur_frequente": "Traiter « modèle de langage » et « LLM » comme équivalents : tout LLM est un modèle de langage, l'inverse est faux.",
+    "indice": "Le premier L qualifie la taille."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Token",
+    "question": "Comment appelle-t-on l'unité élémentaire en laquelle un modèle découpe le texte avant de le traiter ?",
+    "reponse": "un token",
+    "reponses_acceptees": [
+      "un token",
+      "token",
+      "un jeton",
+      "jeton"
+    ],
+    "mots_cles": [
+      [
+        "token",
+        "jeton"
+      ]
+    ],
+    "explication": "Le texte est découpé en unités qui ne coïncident pas avec les mots : un mot courant en vaut souvent un seul, un mot rare ou accentué peut en valoir trois ou quatre. C'est cette unité que l'on compte pour mesurer la taille d'un contexte.",
+    "erreur_frequente": "Compter les mots là où le système compte ces unités — l'écart atteint facilement 30 % en français.",
+    "indice": "Un mot rare peut en contenir plusieurs."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Contexte",
+    "question": "Comment appelle-t-on l'ensemble du texte que le modèle a sous les yeux au moment de répondre — consigne, échanges précédents et documents fournis ?",
+    "reponse": "le contexte",
+    "reponses_acceptees": [
+      "le contexte",
+      "contexte",
+      "la fenêtre de contexte",
+      "fenêtre de contexte"
+    ],
+    "mots_cles": [
+      [
+        "contexte"
+      ]
+    ],
+    "explication": "Le contexte est la seule chose que le modèle « voit » réellement au moment de répondre, et il est de taille bornée. Tout ce qui n'y figure pas est hors de sa portée, quelles que soient ses connaissances.",
+    "erreur_frequente": "Le confondre avec une mémoire durable : il est reconstitué à chaque requête et disparaît ensuite.",
+    "indice": "C'est ce que l'on remplit, et qui a une taille maximale."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Prompt",
+    "question": "Comment appelle-t-on la consigne en langage naturel que l'on adresse au modèle pour obtenir une réponse ?",
+    "reponse": "un prompt",
+    "reponses_acceptees": [
+      "un prompt",
+      "prompt",
+      "une invite",
+      "l'invite",
+      "une consigne"
+    ],
+    "mots_cles": [
+      [
+        "prompt",
+        "invite"
+      ]
+    ],
+    "explication": "Le prompt est la partie du contexte que l'on rédige soi-même. Dans un système RAG, il n'est qu'une partie de ce qui est envoyé : les passages retrouvés viennent s'y ajouter.",
+    "erreur_frequente": "Le réduire à une question. Une consigne, un rôle, un format de sortie ou des exemples en font tout autant partie.",
+    "indice": "Terme anglais, passé tel quel dans l'usage français."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Génération",
+    "question": "Comment appelle-t-on la production du texte de réponse, une unité après l'autre, par le modèle ?",
+    "reponse": "la génération",
+    "reponses_acceptees": [
+      "la génération",
+      "génération",
+      "la génération de texte",
+      "génération de texte"
+    ],
+    "mots_cles": [
+      [
+        "generation"
+      ]
+    ],
+    "explication": "Le modèle choisit une unité, l'ajoute au texte, puis recommence en tenant compte de ce qu'il vient d'écrire. C'est le « G » de RAG : la génération est l'étape finale, celle qui suit la recherche.",
+    "erreur_frequente": "Imaginer que la réponse est conçue en entier puis rédigée. Elle se construit au fil de l'eau, sans plan préalable.",
+    "indice": "C'est la lettre G du sigle RAG."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Hallucination",
+    "question": "Comment appelle-t-on une réponse de modèle qui est fluide, plausible, et fausse ?",
+    "reponse": "une hallucination",
+    "reponses_acceptees": [
+      "une hallucination",
+      "hallucination",
+      "le modèle hallucine",
+      "une invention du modèle"
+    ],
+    "mots_cles": [
+      [
+        "hallucination",
+        "hallucine",
+        "invention",
+        "invente"
+      ]
+    ],
+    "explication": "Le modèle produit du texte vraisemblable, pas du texte vérifié. Sans source dans son contexte, rien ne l'oblige à avoir raison — c'est le problème que le RAG traite.",
+    "erreur_frequente": "Croire qu'une réponse détaillée et assurée est mieux fondée qu'une réponse courte. La longueur n'est pas une preuve.",
+    "indice": "Le mot vient de la perception : voir ce qui n'est pas là."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Température",
+    "question": "Quel réglage augmente ou réduit la part de hasard dans le choix de chaque unité produite ?",
+    "reponse": "la température",
+    "reponses_acceptees": [
+      "la température",
+      "température",
+      "le paramètre de température",
+      "paramètre de température"
+    ],
+    "mots_cles": [
+      [
+        "temperature"
+      ]
+    ],
+    "explication": "À une valeur basse, le modèle prend presque toujours l'unité la plus probable et devient répétitif mais stable ; à une valeur haute, il en explore d'autres et devient varié mais moins fiable. Pour une réponse fondée sur des sources, on la garde basse.",
+    "erreur_frequente": "La monter pour obtenir des réponses « plus intelligentes ». On obtient surtout des réponses plus variées, donc moins reproductibles.",
+    "indice": "Métaphore thermique de la créativité du modèle."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fondamentaux",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Modèle local",
+    "question": "Comment qualifie-t-on un modèle qui tourne sur ta propre machine, sans que les données sortent de chez toi ?",
+    "reponse": "un modèle local",
+    "reponses_acceptees": [
+      "un modèle local",
+      "modèle local",
+      "un modèle en local",
+      "modèle exécuté localement",
+      "local",
+      "en local"
+    ],
+    "mots_cles": [
+      [
+        "local",
+        "modele local",
+        "localement",
+        "en local"
+      ]
+    ],
+    "explication": "Exécuter le modèle localement donne la maîtrise des données et un coût d'usage nul, au prix de la puissance de calcul disponible. C'est l'argument décisif dès que les documents sont confidentiels.",
+    "erreur_frequente": "Confondre « local » et « moins performant ». La différence tient à la taille du modèle qu'on peut faire tourner, pas au fait qu'il soit local.",
+    "indice": "S'oppose à un modèle appelé à distance."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fondamentaux",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "API",
+    "question": "Quel sigle de trois lettres désigne l'interface par laquelle un programme appelle un service distant, par exemple un modèle hébergé ailleurs ?",
+    "reponse": "une API",
+    "reponses_acceptees": [
+      "une API",
+      "API",
+      "une interface de programmation",
+      "interface de programmation"
+    ],
+    "mots_cles": [
+      [
+        "api",
+        "interface de programmation"
+      ]
+    ],
+    "explication": "Une API fixe le format des requêtes et des réponses entre deux programmes. C'est ce qui permet de changer de fournisseur de modèle sans réécrire son application, à condition que le format soit le même.",
+    "erreur_frequente": "Prendre l'API pour le modèle. Elle n'est que la porte d'entrée : le modèle est derrière.",
+    "indice": "Sigle anglais commençant par « Application »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Inférence",
+    "question": "Comment appelle-t-on la phase d'utilisation d'un modèle déjà entraîné, par opposition à sa phase d'entraînement ?",
+    "reponse": "l'inférence",
+    "reponses_acceptees": [
+      "l'inférence",
+      "inférence",
+      "la phase d'inférence",
+      "phase d'inférence"
+    ],
+    "mots_cles": [
+      [
+        "inference"
+      ]
+    ],
+    "explication": "L'entraînement modifie le modèle une fois pour toutes et coûte cher ; l'inférence l'utilise sans le modifier, autant de fois qu'on veut. Un système RAG n'agit qu'à l'inférence : il ne touche jamais au modèle.",
+    "erreur_frequente": "Croire qu'un modèle « apprend » de vos échanges. À l'inférence, rien n'est retenu d'une requête à l'autre.",
+    "indice": "Le terme désigne l'acte de déduire à partir de ce qu'on sait déjà."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Base de connaissances",
+    "question": "Comment appelle-t-on l'ensemble organisé de documents dans lequel un système RAG va chercher avant de répondre ?",
+    "reponse": "une base de connaissances",
+    "reponses_acceptees": [
+      "une base de connaissances",
+      "base de connaissances",
+      "une base documentaire",
+      "base documentaire"
+    ],
+    "mots_cles": [
+      [
+        "base de connaissances",
+        "base documentaire"
+      ]
+    ],
+    "explication": "Elle est extérieure au modèle et lui reste inconnue tant qu'on ne lui en donne pas d'extraits. La mettre à jour ne demande aucune intervention sur le modèle : c'est tout l'intérêt de l'approche.",
+    "erreur_frequente": "Imaginer qu'on « charge » la base dans le modèle. On n'y prend que quelques passages, à chaque question.",
+    "indice": "C'est le fonds documentaire où l'on va puiser."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Connaissance interne",
+    "question": "Comment appelle-t-on ce que le modèle a retenu de son entraînement et qu'il peut restituer sans aucun document fourni ?",
+    "reponse": "ses connaissances internes",
+    "reponses_acceptees": [
+      "ses connaissances internes",
+      "connaissances internes",
+      "les connaissances internes du modèle",
+      "sa connaissance interne"
+    ],
+    "mots_cles": [
+      [
+        "connaissances internes",
+        "connaissance interne"
+      ]
+    ],
+    "explication": "Ces connaissances sont diffuses, non vérifiables et impossibles à citer : on ne peut pas demander au modèle d'où il tient une information apprise à l'entraînement. C'est pourquoi une réponse professionnelle s'appuie sur des documents fournis.",
+    "erreur_frequente": "Leur faire confiance parce qu'elles sont souvent justes. « Souvent juste » et « vérifiable » sont deux propriétés différentes.",
+    "indice": "S'oppose aux données externes."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Modèles de langage",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Connaissances figées",
+    "question": "Un modèle ignore ce qui s'est produit après une certaine date. Qu'est-ce qui fixe cette date ?",
+    "reponse": "la fin de son entraînement",
+    "reponses_acceptees": [
+      "la fin de son entraînement",
+      "la date de son entraînement",
+      "son entraînement s'est arrêté à cette date",
+      "il n'a rien appris après son entraînement"
+    ],
+    "mots_cles": [
+      [
+        "entrainement",
+        "entraine"
+      ]
+    ],
+    "explication": "Les connaissances internes sont figées au moment où l'entraînement s'achève ; le modèle ne se met pas à jour tout seul. Fournir des documents récents à l'inférence contourne cette limite sans réentraîner quoi que ce soit.",
+    "erreur_frequente": "Attendre d'un modèle qu'il connaisse l'actualité ou tes documents internes. Ni l'un ni l'autre n'était là pendant son entraînement.",
+    "indice": "La date correspond à la fin d'une phase, pas à la mise en service."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Données externes",
+    "question": "Dans un système RAG, comment qualifie-t-on les informations qui ne proviennent pas de l'entraînement du modèle mais qu'on lui fournit au moment de répondre ?",
+    "reponse": "des données externes",
+    "reponses_acceptees": [
+      "des données externes",
+      "données externes",
+      "des informations externes",
+      "des sources externes",
+      "externes",
+      "externe",
+      "des données externes fournies"
+    ],
+    "mots_cles": [
+      [
+        "donnees externes",
+        "informations externes",
+        "sources externes",
+        "connaissances externes"
+      ]
+    ],
+    "explication": "Ces données restent extérieures au modèle : elles transitent par le contexte, le temps d'une requête. On peut donc les corriger, les dater ou les retirer sans rien changer au modèle.",
+    "erreur_frequente": "Penser qu'une fois utilisées, elles sont mémorisées. À la requête suivante, si on ne les fournit pas, elles n'existent plus.",
+    "indice": "Le qualificatif s'oppose à « internes »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "RAG",
+    "question": "Quel sigle désigne l'architecture qui va d'abord chercher des passages pertinents, puis les donne au modèle pour qu'il rédige sa réponse ?",
+    "reponse": "le RAG",
+    "reponses_acceptees": [
+      "le RAG",
+      "RAG",
+      "retrieval augmented generation",
+      "génération augmentée par la recherche"
+    ],
+    "mots_cles": [
+      [
+        "rag",
+        "retrieval augmented generation",
+        "generation augmentee"
+      ]
+    ],
+    "explication": "Deux temps : on retrouve les passages utiles dans une base documentaire, puis on les place dans le contexte du modèle qui rédige à partir d'eux. Le modèle n'est pas modifié — seul ce qu'il a sous les yeux change.",
+    "erreur_frequente": "Croire que le RAG rend le modèle plus savant. Il ne change rien au modèle : il change ce qu'on lui donne à lire.",
+    "indice": "Trois lettres : recherche, augmentation, génération."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "Fine-tuning",
+    "question": "Comment appelle-t-on le fait de poursuivre l'entraînement d'un modèle existant sur un jeu de données spécialisé, ce qui modifie le modèle lui-même ?",
+    "reponse": "le fine-tuning",
+    "reponses_acceptees": [
+      "le fine-tuning",
+      "fine-tuning",
+      "l'affinage",
+      "affinage"
+    ],
+    "mots_cles": [
+      [
+        "fine tuning",
+        "affinage",
+        "affiner"
+      ]
+    ],
+    "explication": "L'affinage part d'un modèle déjà entraîné et ajuste ses paramètres sur un corpus ciblé. Il déplace le style et les réflexes du modèle, mais reste un mauvais moyen d'y injecter des faits : les faits changent, les paramètres non.",
+    "erreur_frequente": "Y recourir pour « apprendre ses documents » au modèle. Pour des faits qui doivent être exacts, cités et à jour, c'est le RAG qui répond.",
+    "indice": "En français, le terme évoque un réglage fin."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "Prompt engineering",
+    "question": "Comment appelle-t-on le travail qui consiste à formuler et structurer la consigne pour obtenir de meilleures réponses, sans toucher ni au modèle ni aux documents ?",
+    "reponse": "le prompt engineering",
+    "reponses_acceptees": [
+      "le prompt engineering",
+      "prompt engineering",
+      "l'ingénierie de prompt",
+      "ingénierie des prompts"
+    ],
+    "mots_cles": [
+      [
+        "prompt engineering",
+        "ingenierie de prompt",
+        "ingenierie des prompts"
+      ]
+    ],
+    "explication": "C'est le levier le moins coûteux des trois : on ne modifie ni le modèle, ni la base documentaire, seulement la façon de demander. Il améliore la forme et la fiabilité d'une réponse, mais n'ajoute aucune information dont le modèle ne dispose pas.",
+    "erreur_frequente": "En attendre des faits qu'il ne possède pas. Une meilleure formulation ne fait pas apparaître un document absent du contexte.",
+    "indice": "Le premier mot est celui de la consigne."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "RAG ou fine-tuning",
+    "question": "Sur quoi agit le RAG que le fine-tuning ne touche pas, et inversement ?",
+    "reponse": "le RAG agit sur les documents externes fournis, le fine-tuning agit sur le modèle lui-même",
+    "reponses_acceptees": [
+      "le RAG agit sur les documents externes fournis, le fine-tuning agit sur le modèle lui-même",
+      "le RAG ajoute des documents externes, le fine-tuning modifie le modèle",
+      "le RAG fournit des sources externes alors que le fine-tuning réentraîne le modèle",
+      "le RAG change les documents externes donnés, le fine-tuning change les paramètres du modèle"
+    ],
+    "mots_cles": [
+      [
+        "externes",
+        "documents",
+        "sources"
+      ],
+      [
+        "modele",
+        "parametres"
+      ]
+    ],
+    "explication": "Le RAG laisse le modèle intact et travaille sur ce qu'on lui donne à lire ; l'affinage laisse les documents de côté et travaille sur le modèle. D'où la règle usuelle : les faits par le RAG, le comportement par l'affinage.",
+    "erreur_frequente": "Les opposer comme deux solutions au même problème. Ils répondent à deux besoins différents et se combinent très bien.",
+    "indice": "L'un porte sur ce que le modèle lit, l'autre sur ce qu'il est."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Ancrage",
+    "question": "Comment appelle-t-on le fait de contraindre une réponse à s'appuyer sur des documents fournis plutôt que sur la mémoire du modèle ?",
+    "reponse": "l'ancrage",
+    "reponses_acceptees": [
+      "l'ancrage",
+      "ancrage",
+      "le grounding",
+      "grounding"
+    ],
+    "mots_cles": [
+      [
+        "ancrage",
+        "ancrer",
+        "grounding"
+      ]
+    ],
+    "explication": "Ancrer une réponse, c'est exiger que chaque affirmation vienne d'un passage présent dans le contexte — et accepter que le modèle réponde « je ne sais pas » quand ce passage manque. C'est la contrepartie qui rend la réponse vérifiable.",
+    "erreur_frequente": "Croire que fournir des documents suffit à ancrer la réponse. Sans consigne explicite, le modèle mêlera volontiers ses connaissances internes aux extraits.",
+    "indice": "Métaphore maritime : on empêche la réponse de dériver."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Sources et traçabilité",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Réponse fondée sur des sources",
+    "question": "Comment qualifie-t-on une réponse dont chaque affirmation provient des documents fournis, et non de la mémoire du modèle ?",
+    "reponse": "une réponse fondée sur des sources",
+    "reponses_acceptees": [
+      "une réponse fondée sur des sources",
+      "réponse fondée sur des sources",
+      "une réponse sourcée",
+      "réponse sourcée",
+      "sourcée",
+      "fondée sur des sources",
+      "ancrée"
+    ],
+    "mots_cles": [
+      [
+        "fondee sur des sources",
+        "sourcee",
+        "ancree"
+      ]
+    ],
+    "explication": "C'est le résultat visé par l'ancrage : le lecteur peut remonter à l'extrait d'origine et juger par lui-même. Une réponse juste mais sans source reste invérifiable, donc inutilisable dans un cadre professionnel.",
+    "erreur_frequente": "La supposer exacte du seul fait qu'elle cite des sources. Elle n'est fiable que si les sources le sont, et si elles disent bien ce qu'on leur fait dire.",
+    "indice": "L'adjectif est de la même famille que « source »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Sources et traçabilité",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Contexte documentaire",
+    "question": "Comment appelle-t-on les passages retrouvés que l'on insère dans le prompt pour que le modèle rédige à partir d'eux ?",
+    "reponse": "le contexte documentaire",
+    "reponses_acceptees": [
+      "le contexte documentaire",
+      "contexte documentaire",
+      "les documents fournis en contexte",
+      "les extraits fournis au modèle"
+    ],
+    "mots_cles": [
+      [
+        "contexte documentaire",
+        "documents fournis",
+        "extraits fournis"
+      ]
+    ],
+    "explication": "C'est la part du contexte occupée par les documents, distincte de la consigne et de l'historique. Sa taille est limitée : d'où le soin apporté au choix des passages plutôt qu'à leur quantité.",
+    "erreur_frequente": "Vouloir y mettre le document entier. Au-delà de quelques passages bien choisis, on encombre le contexte sans améliorer la réponse.",
+    "indice": "C'est la partie du contexte qui vient des documents."
+  },
+  {
+    "niveau": 1,
+    "categorie": "RAG et alternatives",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Pipeline",
+    "question": "Comment appelle-t-on la suite d'étapes ordonnées qui mène de la question posée à la réponse rendue ?",
+    "reponse": "un pipeline",
+    "reponses_acceptees": [
+      "un pipeline",
+      "pipeline",
+      "une chaîne de traitement",
+      "chaîne de traitement"
+    ],
+    "mots_cles": [
+      [
+        "pipeline",
+        "chaine de traitement"
+      ]
+    ],
+    "explication": "Dans un système RAG, le pipeline enchaîne l'ingestion des documents, leur découpage, leur indexation, la recherche, puis la génération. Nommer les étapes permet de savoir laquelle corriger quand une réponse est mauvaise.",
+    "erreur_frequente": "Traiter le système comme une boîte unique. Une mauvaise réponse vient presque toujours d'une étape identifiable, le plus souvent la recherche.",
+    "indice": "Métaphore de la conduite où le contenu circule d'un bout à l'autre."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fondamentaux",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Entrée",
+    "question": "Comment appelle-t-on ce qui est fourni à une étape du pipeline pour qu'elle produise son résultat ?",
+    "reponse": "l'entrée",
+    "reponses_acceptees": [
+      "l'entrée",
+      "entrée",
+      "l'input",
+      "input"
+    ],
+    "mots_cles": [
+      [
+        "entree",
+        "input"
+      ]
+    ],
+    "explication": "Chaque étape a une entrée et une sortie, et la sortie de l'une devient l'entrée de la suivante : les passages retrouvés par la recherche sont l'entrée de la génération. C'est ce chaînage qui définit un pipeline.",
+    "erreur_frequente": "Ne penser l'entrée qu'à l'échelle du système entier. Chaque étape a la sienne, et c'est là qu'on diagnostique une panne.",
+    "indice": "Le terme anglais est « input »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fondamentaux",
+    "type": "mot_cle",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Sortie",
+    "question": "Comment appelle-t-on ce qu'une étape du pipeline produit et transmet à la suivante ?",
+    "reponse": "la sortie",
+    "reponses_acceptees": [
+      "la sortie",
+      "sortie",
+      "l'output",
+      "output"
+    ],
+    "mots_cles": [
+      [
+        "sortie",
+        "output"
+      ]
+    ],
+    "explication": "La sortie d'une étape est l'entrée de la suivante ; celle de la dernière est la réponse rendue à l'utilisateur. Contraindre le format d'une sortie — du texte, une liste, du JSON — est la façon habituelle de rendre un système exploitable par un programme.",
+    "erreur_frequente": "Ne juger que la sortie finale. Quand elle est mauvaise, c'est souvent une sortie intermédiaire qui l'était déjà.",
+    "indice": "Le terme anglais est « output »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Sources et traçabilité",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Traçabilité",
+    "question": "Comment appelle-t-on la propriété d'un système qui permet de remonter, pour chaque affirmation, au document et au passage dont elle provient ?",
+    "reponse": "la traçabilité",
+    "reponses_acceptees": [
+      "la traçabilité",
+      "traçabilité",
+      "le suivi des sources",
+      "suivi des sources"
+    ],
+    "mots_cles": [
+      [
+        "tracabilite",
+        "suivi des sources"
+      ]
+    ],
+    "explication": "Elle se construit : il faut conserver, à chaque étape, l'identifiant du document et la position du passage. Ajoutée après coup, elle est presque impossible à obtenir — c'est une décision d'architecture, pas une option de fin de projet.",
+    "erreur_frequente": "La confondre avec la citation. La citation est ce que voit le lecteur ; la traçabilité est ce qui la rend possible et vérifiable.",
+    "indice": "Même famille que « tracer un chemin »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Sources et traçabilité",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Citation",
+    "question": "Comment appelle-t-on la référence explicite au document d'origine que l'on affiche à côté d'une affirmation ?",
+    "reponse": "une citation",
+    "reponses_acceptees": [
+      "une citation",
+      "citation",
+      "une référence",
+      "référence"
+    ],
+    "mots_cles": [
+      [
+        "citation",
+        "citer",
+        "reference"
+      ]
+    ],
+    "explication": "La citation est la partie visible de l'ancrage : elle transfère au lecteur la possibilité de vérifier. Sans elle, il ne lui reste qu'à croire le système sur parole.",
+    "erreur_frequente": "Se satisfaire d'une citation sans contrôler qu'elle dit bien ce qu'on lui prête. Un modèle peut citer un document réel à l'appui d'une affirmation qu'il ne contient pas.",
+    "indice": "C'est ce qui figure entre parenthèses ou en note."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Sources et traçabilité",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "Contrôle des sources",
+    "question": "Comment appelle-t-on le travail qui consiste à décider quels documents entrent dans la base, et à écarter ceux qui sont périmés ou peu fiables ?",
+    "reponse": "le contrôle des sources",
+    "reponses_acceptees": [
+      "le contrôle des sources",
+      "contrôle des sources",
+      "la vérification des sources",
+      "la sélection des sources"
+    ],
+    "mots_cles": [
+      [
+        "controle des sources",
+        "verification des sources",
+        "selection des sources"
+      ]
+    ],
+    "explication": "Un système RAG répond fidèlement à partir de ce qu'on lui a donné : s'il contient deux versions d'une procédure, il citera l'une ou l'autre sans savoir laquelle fait foi. La qualité des réponses est plafonnée par celle de la base.",
+    "erreur_frequente": "Tout verser dans la base pour « ne rien perdre ». Chaque document périmé devient une réponse fausse, correctement citée.",
+    "indice": "Cela se décide avant l'ingestion, pas après."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fondamentaux",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "Cas d'usage",
+    "question": "Comment appelle-t-on la situation concrète, décrite du point de vue de l'utilisateur, à laquelle un système doit répondre ?",
+    "reponse": "un cas d'usage",
+    "reponses_acceptees": [
+      "un cas d'usage",
+      "cas d'usage",
+      "un cas d'utilisation",
+      "cas d'utilisation"
+    ],
+    "mots_cles": [
+      [
+        "cas d'usage",
+        "cas d'utilisation"
+      ]
+    ],
+    "explication": "Un cas d'usage se formule par ce que quelqu'un cherche à obtenir — « retrouver la clause applicable à ce bail » — pas par la technique employée. C'est lui qui décide si un RAG est la bonne réponse, ou s'il en faut une autre.",
+    "erreur_frequente": "Partir de la technique disponible plutôt que du besoin. C'est la façon la plus sûre de construire un système que personne n'ouvre.",
+    "indice": "Se formule du point de vue de celui qui s'en sert."
+  }
+]

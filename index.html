@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartes de révision</title>
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0e1117">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="entete">
+    <h1>Cartes de révision</h1>
+    <p class="sous-titre">Une matière, une carte, une explication.</p>
+  </header>
+
+  <main class="conteneur">
+
+    <!-- Choix de la matière -->
+    <section id="ecran-matieres" class="carte-panneau">
+      <h2>Choisir une matière</h2>
+      <div id="liste-matieres" class="niveaux" aria-live="polite">
+        <p class="chargement">Chargement des matières…</p>
+      </div>
+      <p><a href="/qualite" class="lien">Tableau de bord qualité →</a></p>
+    </section>
+
+    <!-- Choix du niveau -->
+    <section id="ecran-accueil" class="carte-panneau" hidden>
+      <h2 id="titre-matiere">Choisir un niveau</h2>
+      <p id="description-matiere" class="meta"></p>
+      <div id="liste-niveaux" class="niveaux" aria-live="polite">
+        <p class="chargement">Chargement des niveaux…</p>
+      </div>
+      <label class="option">
+        <input type="checkbox" id="melanger" checked>
+        Mélanger l'ordre des questions
+      </label>
+      <p><button type="button" id="btn-changer-matiere" class="lien">← Changer de matière</button></p>
+    </section>
+
+    <!-- Session de révision -->
+    <section id="ecran-carte" class="carte-panneau" hidden>
+
+      <div class="barre-progression">
+        <div id="progression-remplie" class="progression-remplie"></div>
+      </div>
+
+      <div class="ligne-meta">
+        <span id="compteur" class="meta"></span>
+        <span id="score" class="meta"></span>
+        <button id="btn-quitter" class="lien" type="button">Changer de niveau</button>
+      </div>
+
+      <p class="etiquettes">
+        <span id="etq-matiere" class="etiquette"></span>
+        <span id="categorie" class="etiquette"></span>
+        <span id="difficulte" class="etiquette etiquette-pale"></span>
+      </p>
+
+      <h2 id="titre-carte"></h2>
+      <p id="question" class="question"></p>
+
+      <form id="formulaire" autocomplete="off">
+        <label for="saisie" class="visuellement-cache">Votre réponse</label>
+        <textarea id="saisie" rows="3"
+                  placeholder="Écrivez votre réponse…"></textarea>
+        <div class="actions">
+          <button type="submit" id="btn-verifier" class="principal">Vérifier</button>
+          <button type="button" id="btn-indice" class="secondaire">Indice</button>
+          <button type="button" id="btn-solution" class="secondaire">Voir la réponse</button>
+        </div>
+      </form>
+
+      <p id="indice" class="indice" hidden></p>
+
+      <div id="retour" class="retour" hidden>
+        <p id="retour-message" class="retour-message"></p>
+
+        <div id="bloc-solution" hidden>
+          <p class="libelle">Réponse attendue</p>
+          <pre id="solution" class="bloc-code"></pre>
+        </div>
+
+        <div id="bloc-explication" hidden>
+          <p class="libelle">Explication</p>
+          <p id="explication"></p>
+        </div>
+
+        <div id="bloc-exemple" hidden>
+          <p class="libelle">Exemple</p>
+          <pre id="exemple" class="bloc-code"></pre>
+          <p class="libelle">Sortie</p>
+          <pre id="sortie" class="bloc-code bloc-sortie"></pre>
+        </div>
+
+        <div id="bloc-piege" hidden>
+          <p class="libelle">Erreur fréquente</p>
+          <p id="piege" class="piege"></p>
+        </div>
+
+        <button type="button" id="btn-suivant" class="principal">Question suivante</button>
+      </div>
+    </section>
+
+    <!-- Fin de session -->
+    <section id="ecran-fin" class="carte-panneau" hidden>
+      <h2>Session terminée</h2>
+      <p id="bilan" class="bilan"></p>
+      <div class="actions">
+        <button type="button" id="btn-rejouer" class="principal">Recommencer</button>
+        <button type="button" id="btn-retour-accueil" class="secondaire">Changer de niveau</button>
+      </div>
+    </section>
+
+    <p id="erreur" class="erreur" hidden></p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

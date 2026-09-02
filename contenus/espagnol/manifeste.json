@@ -1,0 +1,8 @@
+{
+  "matiere": "espagnol",
+  "nom": "Espagnol",
+  "description": "Vocabulaire espagnol de base, par thèmes.",
+  "langue_enseignement": "fr",
+  "langue_cible": "es",
+  "type_defaut": "vocabulaire"
+}

@@ -1,0 +1,37 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Construire la base et contrôler les données
+        # Ce contrôle rejoue la réponse attendue de chaque carte à travers le
+        # validateur. Une carte dont la bonne réponse serait refusée fait
+        # échouer la CI, avant même les tests.
+        run: python database.py
+
+      - name: Tests
+        run: pytest -q

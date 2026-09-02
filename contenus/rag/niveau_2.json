@@ -1,0 +1,887 @@
+[
+  {
+    "explication": "L'ingestion est l'étape initiale où les documents sont lus, nettoyés et découpés en chunks avant d'être indexés. Elle prépare les données pour la recherche et la génération.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre ingestion avec indexation, alors que l'ingestion précède l'indexation et inclut le traitement des documents.",
+    "indice": "Un mot de 9 lettres lié à l'absorption de données.",
+    "mots_cles": [
+      [
+        "ingestion"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Ingestion",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "ingestion",
+      "le processus d'ingestion",
+      "l'ingestion des documents",
+      "chargement des documents",
+      "intégration des documents"
+    ],
+    "niveau": 2,
+    "titre": "Processus d'intégration des documents dans le système",
+    "question": "Quel terme désigne l'étape où les documents sont chargés, traités et préparés pour être utilisés dans un système RAG ?",
+    "reponse": "ingestion",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les fichiers texte (.txt) sont les plus simples : ils contiennent uniquement du texte sans structure ni métadonnées. Ils sont faciles à lire et à traiter, mais manquent de contexte visuel.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que les fichiers texte peuvent contenir des images ou des tableaux, alors qu'ils sont limités au texte brut.",
+    "indice": "Extension courante : .txt",
+    "mots_cles": [
+      [
+        "fichier texte",
+        "texte brut"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Formats de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "fichiers texte",
+      "fichier texte",
+      "texte brut",
+      "fichier .txt",
+      "plain text"
+    ],
+    "niveau": 2,
+    "titre": "Format de fichier texte brut",
+    "question": "Quel format de fichier contient uniquement du texte sans mise en forme ni balises ?",
+    "reponse": "fichiers texte",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Markdown est un langage de balisage léger qui permet d'ajouter une mise en forme (titres, listes, liens) à du texte brut. Il est largement utilisé pour la documentation et les fichiers lisibles par des humains.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre Markdown avec HTML, alors que Markdown est conçu pour être plus simple et lisible sans traitement.",
+    "indice": "Extension courante : .md",
+    "mots_cles": [
+      [
+        "markdown"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Formats de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "Markdown",
+      "fichier Markdown",
+      "syntaxe Markdown",
+      "fichier .md",
+      "langage Markdown"
+    ],
+    "niveau": 2,
+    "titre": "Format de fichier avec syntaxe légère pour la mise en forme",
+    "question": "Quel format de fichier utilise une syntaxe simple avec des symboles comme # ou * pour structurer le texte ?",
+    "reponse": "Markdown",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le PDF (Portable Document Format) préserve la mise en page, les polices et les images d'un document, indépendamment du logiciel ou du matériel utilisé. Il est souvent utilisé pour les documents officiels.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le texte dans un PDF est toujours facilement extractable, alors que certains PDF sont des images scannées nécessitant une OCR.",
+    "indice": "Extension courante : .pdf",
+    "mots_cles": [
+      [
+        "pdf"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Formats de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "PDF",
+      "fichier PDF",
+      "Portable Document Format",
+      "fichier .pdf",
+      "document PDF"
+    ],
+    "niveau": 2,
+    "titre": "Format de fichier pour documents imprimables",
+    "question": "Quel format de fichier est couramment utilisé pour représenter des documents avec mise en page fixe, comme des rapports ou des livres ?",
+    "reponse": "PDF",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "HTML (HyperText Markup Language) est le langage standard pour créer des pages web. Il utilise des balises pour structurer le contenu et peut inclure du texte, des images et des liens.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre HTML avec un langage de programmation, alors qu'il s'agit d'un langage de balisage pour la structure.",
+    "indice": "Extension courante : .html",
+    "mots_cles": [
+      [
+        "html"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Formats de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "HTML",
+      "fichier HTML",
+      "HyperText Markup Language",
+      "fichier .html",
+      "code HTML"
+    ],
+    "niveau": 2,
+    "titre": "Format de fichier pour pages web",
+    "question": "Quel format de fichier est utilisé pour structurer le contenu des pages web avec des balises ?",
+    "reponse": "HTML",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le CSV (Comma-Separated Values) est un format simple pour représenter des données tabulaires en texte brut. Chaque ligne est un enregistrement et chaque valeur est séparée par une virgule.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Oublier que d'autres délimiteurs (comme des points-virgules) peuvent être utilisés, ce qui nécessite une configuration spécifique lors de la lecture.",
+    "indice": "Extension courante : .csv",
+    "mots_cles": [
+      [
+        "csv"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Formats de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "CSV",
+      "fichier CSV",
+      "Comma-Separated Values",
+      "fichier .csv",
+      "valeurs séparées par des virgules"
+    ],
+    "niveau": 2,
+    "titre": "Format de fichier pour données tabulaires",
+    "question": "Quel format de fichier est couramment utilisé pour stocker des données sous forme de tableau, avec des lignes et des colonnes séparées par des virgules ?",
+    "reponse": "CSV",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "JSON (JavaScript Object Notation) est un format léger pour échanger des données structurées. Il est facile à lire et à écrire pour les humains, et facile à analyser pour les machines.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Oublier que JSON est sensible à la syntaxe (virgules, accolades) et qu'une erreur peut rendre le fichier illisible.",
+    "indice": "Extension courante : .json",
+    "mots_cles": [
+      [
+        "json"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Formats de fichiers",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "JSON",
+      "fichier JSON",
+      "JavaScript Object Notation",
+      "fichier .json",
+      "format JSON"
+    ],
+    "niveau": 2,
+    "titre": "Format de fichier pour données structurées",
+    "question": "Quel format de fichier utilise une syntaxe avec des accolades et des paires clé-valeur pour représenter des données structurées ?",
+    "reponse": "JSON",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'extraction de texte consiste à isoler le contenu textuel d'un fichier, en ignorant la mise en forme ou les éléments non textuels. Elle est essentielle pour traiter les documents dans un système RAG.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que l'extraction de texte conserve la mise en forme, alors qu'elle se concentre uniquement sur le contenu brut.",
+    "indice": "Deux mots, le premier commence par 'e'.",
+    "mots_cles": [
+      [
+        "extraction",
+        "texte"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Extraction de texte",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "extraction de texte",
+      "extraction textuelle",
+      "récupération du texte",
+      "parsing du texte",
+      "extraction du contenu textuel"
+    ],
+    "niveau": 2,
+    "titre": "Processus de récupération du contenu textuel",
+    "question": "Quel terme désigne l'action de récupérer le texte brut à partir d'un fichier, quel que soit son format ?",
+    "reponse": "extraction de texte",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les métadonnées sont des données qui décrivent d'autres données. Elles permettent de classer, retrouver et comprendre le contexte d'un document sans lire son contenu.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre métadonnées avec le contenu du document, alors qu'elles sont distinctes et souvent stockées séparément.",
+    "indice": "Un mot composé avec un préfixe grec signifiant 'au-delà'.",
+    "mots_cles": [
+      [
+        "metadonnees",
+        "metadata"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Métadonnées",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "métadonnées",
+      "les métadonnées",
+      "metadata",
+      "données métas",
+      "informations de métadonnées"
+    ],
+    "niveau": 2,
+    "titre": "Informations descriptives associées à un document",
+    "question": "Quel terme désigne les informations qui décrivent un document, comme son titre ou son auteur, sans en faire partie du contenu principal ?",
+    "reponse": "métadonnées",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le titre est une métadonnée essentielle qui résume le contenu ou le but d'un document. Il est souvent utilisé pour l'identifier et le retrouver dans une base de données.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le titre est toujours présent dans le fichier, alors qu'il peut manquer ou être mal formaté.",
+    "indice": "Un mot de 5 lettres souvent en haut d'un document.",
+    "mots_cles": [
+      [
+        "titre"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Métadonnées",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "titre",
+      "le titre",
+      "nom du document",
+      "intitulé",
+      "titre du document"
+    ],
+    "niveau": 2,
+    "titre": "Métadonnée indiquant le nom du document",
+    "question": "Quelle métadonnée permet d'identifier le nom ou le sujet principal d'un document ?",
+    "reponse": "titre",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'auteur est une métadonnée qui indique qui a écrit ou produit le document. Elle est utile pour évaluer la crédibilité ou la source d'une information.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre auteur avec éditeur ou contributeur, qui ont des rôles différents dans la création d'un document.",
+    "indice": "Un mot de 6 lettres désignant une personne.",
+    "mots_cles": [
+      [
+        "auteur"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Métadonnées",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "auteur",
+      "l'auteur",
+      "créateur",
+      "rédaction",
+      "auteur du document"
+    ],
+    "niveau": 2,
+    "titre": "Métadonnée indiquant la personne à l'origine du document",
+    "question": "Quelle métadonnée permet d'identifier la personne ou l'entité qui a créé un document ?",
+    "reponse": "auteur",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "La date est une métadonnée cruciale pour évaluer la pertinence et l'actualité d'un document. Elle peut indiquer la création, la dernière modification ou la publication.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que la date est toujours précise, alors qu'elle peut être absente ou approximative dans certains fichiers.",
+    "indice": "Un mot de 4 lettres souvent associé au temps.",
+    "mots_cles": [
+      [
+        "date"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Métadonnées",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "date",
+      "la date",
+      "date de création",
+      "date de modification",
+      "timestamp"
+    ],
+    "niveau": 2,
+    "titre": "Métadonnée indiquant le moment de création ou de modification",
+    "question": "Quelle métadonnée permet de savoir quand un document a été créé ou mis à jour ?",
+    "reponse": "date",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "La source est une métadonnée qui indique l'origine du document, comme un site web, une base de données ou un auteur. Elle est essentielle pour la traçabilité et la vérification des informations.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Oublier de documenter la source, ce qui rend difficile la vérification ou la mise à jour des informations.",
+    "indice": "Un mot de 6 lettres lié à l'origine.",
+    "mots_cles": [
+      [
+        "source"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Métadonnées",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "source",
+      "la source",
+      "origine",
+      "provenance",
+      "source du document"
+    ],
+    "niveau": 2,
+    "titre": "Métadonnée indiquant l'origine du document",
+    "question": "Quelle métadonnée permet de savoir d'où provient un document ou qui l'a fourni ?",
+    "reponse": "source",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'identifiant de document est une valeur unique qui permet de distinguer un document des autres dans un système. Il est souvent utilisé comme référence dans les bases de données.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser un titre ou un nom de fichier comme identifiant, alors qu'ils ne sont pas toujours uniques.",
+    "indice": "Deux mots, le premier commence par 'i'.",
+    "mots_cles": [
+      [
+        "identifiant",
+        "document"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Métadonnées",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "identifiant de document",
+      "ID du document",
+      "identifiant unique",
+      "UUID",
+      "clé primaire"
+    ],
+    "niveau": 2,
+    "titre": "Métadonnée unique pour identifier un document",
+    "question": "Quelle métadonnée permet d'identifier de manière unique un document dans une base de données ou un système ?",
+    "reponse": "identifiant de document",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le nettoyage des données consiste à corriger ou supprimer les erreurs, incohérences ou doublons pour améliorer leur qualité. C'est une étape cruciale avant l'indexation.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le nettoyage est optionnel, alors qu'il impacte directement la qualité des résultats du système RAG.",
+    "indice": "Un mot de 9 lettres lié à la propreté.",
+    "mots_cles": [
+      [
+        "nettoyage"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Nettoyage",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "nettoyage",
+      "le nettoyage",
+      "prétraitement",
+      "cleanup",
+      "nettoyage des données"
+    ],
+    "niveau": 2,
+    "titre": "Processus de préparation des données pour l'analyse",
+    "question": "Quel terme désigne l'ensemble des opérations visant à améliorer la qualité des données avant leur utilisation ?",
+    "reponse": "nettoyage",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "La suppression des doublons vise à éviter la redondance dans les données, ce qui améliore l'efficacité de la recherche et réduit les coûts de traitement. Elle peut être exacte ou basée sur une similarité.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Supprimer des doublons partiels qui pourraient contenir des informations complémentaires, ce qui appauvrit les données.",
+    "indice": "Deux mots, le second commence par 'd'.",
+    "mots_cles": [
+      [
+        "suppression",
+        "doublons"
+      ],
+      [
+        "deduplication"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Nettoyage",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "suppression des doublons",
+      "déduplication",
+      "élimination des doublons",
+      "nettoyage des doublons",
+      "dédoublonnage"
+    ],
+    "niveau": 2,
+    "titre": "Suppression des entrées redondantes",
+    "question": "Quel processus permet d'éliminer les copies identiques ou très similaires dans un ensemble de documents ou de chunks ?",
+    "reponse": "suppression des doublons",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les caractères spéciaux (comme ©, ®, ou des caractères non latins) peuvent poser problème lors de l'extraction ou de l'indexation. Ils nécessitent souvent un encodage spécifique ou un nettoyage.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Supprimer tous les caractères spéciaux sans distinction, ce qui peut altérer le sens du texte (ex : symboles monétaires).",
+    "indice": "Deux mots, le premier commence par 'c'.",
+    "mots_cles": [
+      [
+        "caracteres speciaux"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Nettoyage",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "caractères spéciaux",
+      "symboles spéciaux",
+      "caractères non ASCII",
+      "caractères exotiques",
+      "ponctuation spéciale"
+    ],
+    "niveau": 2,
+    "titre": "Caractères non standard dans le texte",
+    "question": "Quel terme désigne les symboles ou caractères qui ne font pas partie de l'alphabet standard et peuvent causer des problèmes de traitement ?",
+    "reponse": "caractères spéciaux",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "La structure d'un document définit comment ses différentes parties sont agencées et liées entre elles. Elle est essentielle pour une extraction et un découpage efficaces.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Ignorer la structure lors du découpage, ce qui peut séparer des éléments logiquement liés (ex : un titre et son paragraphe).",
+    "indice": "Deux mots, le premier commence par 's'.",
+    "mots_cles": [
+      [
+        "structure",
+        "document"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Structure du document",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "structure d’un document",
+      "structure du document",
+      "organisation du document",
+      "schéma du document",
+      "hiérarchie du document"
+    ],
+    "niveau": 2,
+    "titre": "Organisation interne d'un document",
+    "question": "Quel terme désigne la manière dont les éléments d'un document (titres, paragraphes, tableaux) sont organisés et hiérarchisés ?",
+    "reponse": "structure d’un document",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un paragraphe est une unité de texte qui traite d'une idée ou d'un sujet spécifique. Dans le découpage, il est souvent traité comme une unité cohérente.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre un paragraphe avec une phrase, alors qu'un paragraphe peut contenir plusieurs phrases liées.",
+    "indice": "Un mot de 10 lettres, souvent séparé par des sauts de ligne.",
+    "mots_cles": [
+      [
+        "paragraphe"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Structure du document",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "paragraphes",
+      "paragraphe",
+      "bloc de texte",
+      "section de texte",
+      "alinea"
+    ],
+    "niveau": 2,
+    "titre": "Bloc de texte séparé par des sauts de ligne",
+    "question": "Quel terme désigne une section de texte continue, généralement séparée des autres par un saut de ligne ou un espace ?",
+    "reponse": "paragraphes",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les titres structurent un document en sections et sous-sections, facilitant la navigation et la compréhension. Ils sont souvent utilisés pour identifier des chunks cohérents.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Ne pas prendre en compte les titres lors du découpage, ce qui peut briser la hiérarchie logique du document.",
+    "indice": "Un mot de 6 lettres, souvent en gras ou plus grand.",
+    "mots_cles": [
+      [
+        "titre"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Structure du document",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "titres",
+      "titre",
+      "en-têtes",
+      "niveaux de titre",
+      "hiérarchie de titres"
+    ],
+    "niveau": 2,
+    "titre": "Élément de mise en forme hiérarchisant le contenu",
+    "question": "Quel terme désigne les éléments textuels qui organisent un document en niveaux de priorité ou d'importance ?",
+    "reponse": "titres",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un tableau est une structure qui organise des informations de manière tabulaire, facilitant la comparaison et l'analyse. Dans un document, il peut nécessiter un traitement spécifique pour l'extraction.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Extraire un tableau comme du texte brut, ce qui perd sa structure et son sens.",
+    "indice": "Un mot de 8 lettres, souvent avec des bordures.",
+    "mots_cles": [
+      [
+        "tableau"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Structure du document",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "tableaux",
+      "tableau",
+      "grille de données",
+      "table de données",
+      "matrice de données"
+    ],
+    "niveau": 2,
+    "titre": "Représentation de données sous forme de lignes et colonnes",
+    "question": "Quel terme désigne une disposition visuelle de données organisées en rangées et colonnes ?",
+    "reponse": "tableaux",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les documents longs nécessitent un découpage en chunks pour être traités efficacement par un système RAG. Sans cela, ils peuvent dépasser les limites de taille des modèles ou des index.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Essayer de traiter un document long sans découpage, ce qui peut entraîner des erreurs de mémoire ou des performances médiocres.",
+    "indice": "Deux mots, le second commence par 'l'.",
+    "mots_cles": [
+      [
+        "document",
+        "long"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Documents spéciaux",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "documents longs",
+      "longs documents",
+      "document volumineux",
+      "texte long",
+      "corpus étendu"
+    ],
+    "niveau": 2,
+    "titre": "Documents dépassant une certaine longueur",
+    "question": "Quel terme désigne les documents dont la taille ou le nombre de mots dépasse les limites typiques de traitement en une seule fois ?",
+    "reponse": "documents longs",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les documents multilingues posent des défis pour l'extraction et l'indexation, car ils nécessitent des modèles capables de traiter plusieurs langues. Ils peuvent aussi nécessiter une détection de langue préalable.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Traiter un document multilingue avec un modèle monolingue, ce qui réduit la qualité de l'extraction et de la recherche.",
+    "indice": "Deux mots, le second commence par 'm'.",
+    "mots_cles": [
+      [
+        "document",
+        "multilingue"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Documents spéciaux",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "documents multilingues",
+      "document multilingue",
+      "texte multilingue",
+      "contenu multilingue",
+      "documents en plusieurs langues"
+    ],
+    "niveau": 2,
+    "titre": "Documents rédigés dans plusieurs langues",
+    "question": "Quel terme désigne les documents contenant du texte dans plus d'une langue ?",
+    "reponse": "documents multilingues",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'encodage détermine comment les caractères sont convertis en octets pour être stockés ou transmis. Un mauvais encodage peut corrompre le texte lors de l'extraction.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser un encodage incompatible (ex : UTF-8 vs ISO-8859-1), ce qui provoque des erreurs de lecture ou des caractères illisibles.",
+    "indice": "Un mot de 8 lettres lié à la conversion de données.",
+    "mots_cles": [
+      [
+        "encodage"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Encodage",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "encodage",
+      "l'encodage",
+      "encodage de caractères",
+      "charset",
+      "jeu de caractères"
+    ],
+    "niveau": 2,
+    "titre": "Système de représentation des caractères en binaire",
+    "question": "Quel terme désigne la méthode utilisée pour représenter les caractères d'un texte sous forme de données binaires, afin qu'ils puissent être stockés ou transmis ?",
+    "reponse": "encodage",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un pipeline d'ingestion est une suite d'opérations automatisées qui transforment les documents bruts en données prêtes à être indexées et recherchées. Chaque étape dépend souvent des précédentes.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Sauter une étape du pipeline (ex : nettoyage avant découpage), ce qui peut introduire des erreurs en aval.",
+    "indice": "Deux mots, le premier commence par 'p'.",
+    "mots_cles": [
+      [
+        "pipeline",
+        "ingestion"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Pipeline",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "pipeline d’ingestion",
+      "pipeline d'ingestion",
+      "chaîne de traitement",
+      "flux d'ingestion",
+      "processus d'ingestion"
+    ],
+    "niveau": 2,
+    "titre": "Séquence d'étapes pour traiter les documents",
+    "question": "Quel terme désigne l'enchaînement organisé d'étapes (extraction, nettoyage, découpage, indexation) pour préparer les documents dans un système RAG ?",
+    "reponse": "pipeline d’ingestion",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les erreurs d'extraction peuvent survenir pour diverses raisons : fichiers corrompus, formats non supportés, ou encodages incompatibles. Elles doivent être détectées et gérées pour éviter des données incomplètes.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Ignorer les erreurs d'extraction, ce qui peut entraîner des chunks manquants ou corrompus dans l'index.",
+    "indice": "Deux mots, le premier commence par 'e'.",
+    "mots_cles": [
+      [
+        "erreur",
+        "extraction"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Erreurs",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "erreurs d’extraction",
+      "erreurs d'extraction",
+      "échecs d'extraction",
+      "problèmes d'extraction",
+      "défauts d'extraction"
+    ],
+    "niveau": 2,
+    "titre": "Problèmes lors de la récupération du texte",
+    "question": "Quel terme désigne les échecs ou imprécisions qui surviennent lors de l'extraction du texte à partir d'un fichier ?",
+    "reponse": "erreurs d’extraction",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un document corrompu peut être dû à une erreur de sauvegarde, une transmission défectueuse ou un format non standard. Il nécessite souvent une réparation ou un remplacement.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Tenter de traiter un document corrompu sans vérification préalable, ce qui peut planter le pipeline ou corrompre l'index.",
+    "indice": "Deux mots, le second commence par 'c'.",
+    "mots_cles": [
+      [
+        "document",
+        "corrompu"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Erreurs",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "documents corrompus",
+      "fichiers corrompus",
+      "document corrompu",
+      "fichier endommagé",
+      "données corrompues"
+    ],
+    "niveau": 2,
+    "titre": "Fichiers endommagés ou illisibles",
+    "question": "Quel terme désigne les fichiers qui ne peuvent pas être lus ou traités correctement en raison de dommages ou de formats incompatibles ?",
+    "reponse": "documents corrompus",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "La confidentialité implique de contrôler l'accès aux données sensibles, de les anonymiser si nécessaire, et de s'assurer qu'elles ne sont pas exposées à des utilisateurs non autorisés.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Indexer des documents confidentiels sans restrictions d'accès, ce qui peut entraîner des fuites d'informations.",
+    "indice": "Un mot de 14 lettres lié à la protection.",
+    "mots_cles": [
+      [
+        "confidentialite"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Gestion des données",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "confidentialité",
+      "la confidentialité",
+      "sécurité des données",
+      "protection des données",
+      "secret des données"
+    ],
+    "niveau": 2,
+    "titre": "Protection des informations sensibles",
+    "question": "Quel terme désigne l'ensemble des mesures visant à protéger les informations confidentielles ou sensibles dans les documents traités par un système RAG ?",
+    "reponse": "confidentialité",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "La mise à jour de la base est essentielle pour maintenir la pertinence des réponses générées par un système RAG. Elle peut être manuelle ou automatisée, selon la fréquence des changements.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Mettre à jour la base sans réindexer, ce qui laisse des anciens chunks obsolètes dans l'index.",
+    "indice": "Trois mots, le premier commence par 'm'.",
+    "mots_cles": [
+      [
+        "mise a jour",
+        "base"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Gestion des données",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "mise à jour de la base",
+      "mise à jour des documents",
+      "actualisation de la base",
+      "synchronisation des documents",
+      "rafraîchissement de la base"
+    ],
+    "niveau": 2,
+    "titre": "Actualisation des documents dans la base",
+    "question": "Quel terme désigne le processus de mise à jour des documents dans la base de connaissances pour refléter les dernières versions ou informations ?",
+    "reponse": "mise à jour de la base",
+    "matiere": "rag",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'indexation consiste à structurer les chunks de texte (par exemple via des embeddings ou des inverses) pour permettre une recherche rapide et pertinente. C'est une étape clé pour les performances du RAG.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre indexation avec ingestion, alors que l'indexation est une sous-étape qui suit le découpage et le nettoyage.",
+    "indice": "Un mot de 10 lettres lié à l'organisation des données.",
+    "mots_cles": [
+      [
+        "indexation"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Indexation",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "indexation",
+      "l'indexation",
+      "création d'index",
+      "indexage",
+      "construction de l'index"
+    ],
+    "niveau": 2,
+    "titre": "Processus de préparation pour la recherche",
+    "question": "Quel terme désigne l'étape où les chunks de texte sont organisés et stockés de manière à permettre une recherche efficace ?",
+    "reponse": "indexation",
+    "matiere": "rag",
+    "langue": "fr"
+  }
+]

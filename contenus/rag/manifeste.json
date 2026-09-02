@@ -1,0 +1,11 @@
+{
+  "matiere": "rag",
+  "nom": "RAG",
+  "description": "Génération augmentée par la recherche : concepts, découpage, recherche, ancrage sur les sources.",
+  "langue_enseignement": "fr",
+  "langue_cible": "fr",
+  "type_defaut": "texte",
+  "matieres_voisines": [
+    "ia"
+  ]
+}

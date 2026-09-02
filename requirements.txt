@@ -1,0 +1,6 @@
+Flask>=3.0
+pytest>=8.0
+
+# Facultatif : uniquement si vous hébergez le frontend sur un autre domaine
+# que l'API. Servi par Flask (cas par défaut), il est inutile.
+# flask-cors>=4.0

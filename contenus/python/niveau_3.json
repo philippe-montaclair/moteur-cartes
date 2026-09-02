@@ -1,0 +1,1508 @@
+[
+  {
+    "explication": "Une liste est mutable : ses éléments peuvent être ajoutés, supprimés ou remplacés sans créer un nouvel objet. C'est ce qui la distingue d'un tuple, qui est immuable.",
+    "exemple_code": "nombres = [1, 2, 3]\nnombres[0] = 99\nprint(nombres)",
+    "sortie_attendue": "[99, 2, 3]",
+    "erreur_frequente": "Confondre « mutable » avec « accessible à tous » : la mutabilité décrit une propriété de l'objet lui-même, pas des droits d'accès.",
+    "indice": "Le contraire du mot qui s'appliquera au tuple dans la carte suivante.",
+    "mots_cles": [
+      [
+        "mutable"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "mutable",
+      "une collection mutable",
+      "elle est mutable",
+      "un objet mutable",
+      "on dit qu'elle est mutable"
+    ],
+    "niveau": 3,
+    "titre": "Ce qui permet de modifier une liste après sa création",
+    "question": "Comment qualifie-t-on en Python une collection, comme une liste, dont on peut changer le contenu (ajouter, retirer ou remplacer des éléments) après sa création ?",
+    "reponse": "mutable",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un tuple ne peut pas être modifié après sa création : toute tentative de changer un de ses éléments lève une erreur. Cette immuabilité permet notamment de l'utiliser comme clé de dictionnaire.",
+    "exemple_code": "t = (1, 2, 3)\ntry:\n    t[0] = 99\nexcept TypeError:\n    print(\"impossible\")",
+    "sortie_attendue": "impossible",
+    "erreur_frequente": "Essayer de faire t[0] = valeur en pensant qu'un tuple se comporte comme une liste : Python lève une TypeError.",
+    "indice": "Contraire du mot utilisé pour les listes.",
+    "mots_cles": [
+      [
+        "immuable"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Tuples",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "immuable",
+      "il est immuable",
+      "une structure immuable",
+      "un objet immuable",
+      "on dit qu'il est immuable"
+    ],
+    "niveau": 3,
+    "titre": "Ce qui empêche de modifier un tuple après sa création",
+    "question": "Quel terme désigne la propriété d'un tuple qui l'empêche d'être modifié — aucun élément ne peut être ajouté, retiré ou remplacé — une fois qu'il est créé ?",
+    "reponse": "immuable",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un ensemble ne conserve qu'une seule occurrence de chaque valeur et n'a pas d'ordre garanti. Il se note avec des accolades, comme {1, 2, 3}, mais {} seul crée un dictionnaire vide.",
+    "exemple_code": "panier = {'pomme', 'orange', 'pomme'}\nprint(len(panier))",
+    "sortie_attendue": "2",
+    "erreur_frequente": "Écrire {} en pensant créer un ensemble vide : ce sont des accolades vides qui créent un dictionnaire vide, il faut utiliser set().",
+    "indice": "Comme en mathématiques, une collection sans doublons ni ordre.",
+    "mots_cles": [
+      [
+        "ensemble",
+        "set"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Ensembles",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "un ensemble",
+      "ensemble",
+      "un set",
+      "un ensemble (set)",
+      "la structure ensemble"
+    ],
+    "niveau": 3,
+    "titre": "La collection qui élimine automatiquement les doublons",
+    "question": "Quel type de collection Python, non ordonnée, élimine automatiquement les doublons lorsqu'on l'utilise pour stocker des valeurs ?",
+    "reponse": "un ensemble",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un dictionnaire retient l'ordre dans lequel ses clés ont été ajoutées, contrairement à un ensemble qui n'a pas d'ordre garanti. list(d) ou une boucle for renvoient donc les clés dans cet ordre.",
+    "exemple_code": "tel = {}\ntel['jack'] = 4098\ntel['guido'] = 4127\nprint(list(tel))",
+    "sortie_attendue": "['jack', 'guido']",
+    "erreur_frequente": "Croire qu'un dictionnaire trie ses clés par ordre alphabétique ou numérique : il faut appeler sorted() explicitement pour cela.",
+    "indice": "Pense à l'ordre dans lequel on a écrit les affectations.",
+    "mots_cles": [
+      [
+        "insertion",
+        "ajoutees",
+        "inserees"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Dictionnaires",
+    "type": "texte",
+    "reponses_acceptees": [
+      "l'ordre d'insertion",
+      "l'ordre dans lequel les clés ont été ajoutées",
+      "l'ordre dans lequel les clés sont ajoutées",
+      "l'ordre chronologique dans lequel les clés ont été ajoutées",
+      "l'ordre dans lequel elles ont été insérées"
+    ],
+    "niveau": 3,
+    "titre": "Ce que Python retient à propos du moment où chaque clé d'un dictionnaire a été ajoutée",
+    "question": "Depuis les versions récentes de Python, quel ordre un dictionnaire conserve-t-il pour ses clés lorsqu'on les parcourt ou qu'on les liste ?",
+    "reponse": "l'ordre d'insertion",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'instruction del supprime une entrée complète (clé et valeur) d'un dictionnaire. Elle peut aussi supprimer un élément de liste par position ou une variable entière.",
+    "exemple_code": "tel = {'jack': 4098, 'sape': 4139}\ndel tel['sape']\nprint(tel)",
+    "sortie_attendue": "{'jack': 4098}",
+    "erreur_frequente": "Confondre del d['x'] avec d.pop('x') : del ne renvoie rien, alors que pop() renvoie la valeur supprimée.",
+    "indice": "Trois lettres, contraction de « delete ».",
+    "mots_cles": [
+      [
+        "del"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Dictionnaires",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "del",
+      "l'instruction del",
+      "le mot-clé del",
+      "del suivi de la clé",
+      "l'opérateur del"
+    ],
+    "niveau": 3,
+    "titre": "Le mot-clé qui retire une clé et sa valeur d'un dictionnaire",
+    "question": "Quelle instruction Python retire définitivement une clé et sa valeur associée d'un dictionnaire, comme dans del tel['sape'] ?",
+    "reponse": "del",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les ensembles sont non ordonnés : l'ordre d'apparition des éléments lors d'un parcours peut différer de ce que l'on attend, contrairement à une liste ou un tuple.",
+    "exemple_code": "panier = {'pomme', 'poire', 'kiwi'}\nprint(sorted(panier))",
+    "sortie_attendue": "['kiwi', 'poire', 'pomme']",
+    "erreur_frequente": "Écrire du code qui suppose qu'un ensemble garde l'ordre d'ajout des éléments, comme un dictionnaire ou une liste : rien ne le garantit.",
+    "indice": "Pense à ce qui distingue un ensemble d'une liste ou d'un dictionnaire.",
+    "mots_cles": [
+      [
+        "ordre"
+      ],
+      [
+        "garanti",
+        "garantie"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Parcours de collections",
+    "type": "texte",
+    "reponses_acceptees": [
+      "aucun ordre garanti",
+      "l'ordre n'est pas garanti",
+      "aucune garantie sur l'ordre",
+      "il n'y a pas d'ordre garanti",
+      "l'ordre n'est pas garanti par Python"
+    ],
+    "niveau": 3,
+    "titre": "Ce que l'on ne peut pas prévoir à l'avance quand on parcourt un ensemble avec une boucle for",
+    "question": "Quand on parcourt un ensemble avec une boucle for, quel ordre Python garantit-il pour l'apparition des éléments ?",
+    "reponse": "aucun ordre garanti",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une compréhension de liste condense en une ligne la création d'une liste vide, la boucle for et l'append répétés. Elle est en général plus rapide et plus lisible qu'une boucle explicite équivalente.",
+    "exemple_code": "carres = [x**2 for x in range(5)]\nprint(carres)",
+    "sortie_attendue": "[0, 1, 4, 9, 16]",
+    "erreur_frequente": "Oublier les crochets autour de l'expression, ou écrire un tuple sans parenthèses à l'intérieur, ce qui provoque une SyntaxError.",
+    "indice": "Le nom combine le mot « liste » et un mot qui désigne une construction condensée.",
+    "mots_cles": [
+      [
+        "comprehension"
+      ],
+      [
+        "liste",
+        "list"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Compréhensions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "une compréhension de liste",
+      "la compréhension de liste",
+      "une list comprehension",
+      "une compréhension (liste)",
+      "une liste en compréhension"
+    ],
+    "niveau": 3,
+    "titre": "Condenser en une seule ligne une boucle for qui remplit une nouvelle collection ordonnée",
+    "question": "Quelle construction Python permet de créer une nouvelle liste en une seule ligne, en appliquant une expression à chaque élément d'un itérable, comme [x**2 for x in range(5)] ?",
+    "reponse": "une compréhension de liste",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Comme la compréhension de liste, elle condense en une ligne la construction d'un dictionnaire, mais elle utilise des accolades et sépare la clé de la valeur par deux-points.",
+    "exemple_code": "carres = {x: x**2 for x in (2, 4, 6)}\nprint(carres)",
+    "sortie_attendue": "{2: 4, 4: 16, 6: 36}",
+    "erreur_frequente": "Écrire une compréhension de dictionnaire sans les deux-points entre clé et valeur, en pensant qu'un simple x suffit comme pour une liste.",
+    "indice": "Comme pour la liste, mais avec des accolades et un « clé: valeur ».",
+    "mots_cles": [
+      [
+        "comprehension"
+      ],
+      [
+        "dictionnaire",
+        "dict"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Compréhensions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "une compréhension de dictionnaire",
+      "la compréhension de dictionnaire",
+      "un dictionnaire en compréhension",
+      "un dictionnaire construit par compréhension",
+      "une compréhension (dictionnaire)"
+    ],
+    "niveau": 3,
+    "titre": "Condenser en une seule ligne la construction d'une nouvelle collection clé-valeur",
+    "question": "Quelle construction Python permet de créer un nouveau dictionnaire en une seule ligne à partir d'un itérable, comme {x: x**2 for x in (2, 4, 6)} ?",
+    "reponse": "une compréhension de dictionnaire",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "def se contente de créer la fonction en mémoire ; ses instructions ne s'exécutent que lorsqu'on l'appelle ensuite, potentiellement plusieurs fois ou jamais.",
+    "exemple_code": "def saluer():\n    print(\"Bonjour\")\n\nprint(\"avant\")\nsaluer()\nprint(\"apres\")",
+    "sortie_attendue": "avant\nBonjour\napres",
+    "erreur_frequente": "Croire que le simple fait d'écrire def saluer(): ... affiche déjà un résultat : rien ne s'exécute tant que saluer() n'est pas appelée.",
+    "indice": "Le contraire de « à sa définition ».",
+    "mots_cles": [
+      [
+        "appel",
+        "appelle",
+        "appelee",
+        "invoque",
+        "invoquee"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "lors de son appel",
+      "quand on l'appelle",
+      "au moment de l'appel",
+      "lorsqu'elle est invoquée",
+      "quand la fonction est appelée"
+    ],
+    "niveau": 3,
+    "titre": "Le moment où s'exécute réellement le corps d'une fonction",
+    "question": "À quel moment les instructions contenues dans une fonction s'exécutent-elles réellement : à sa définition avec def, ou à un autre moment ?",
+    "reponse": "lors de son appel",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les paramètres sont les noms déclarés dans la définition d'une fonction, comme n dans def carre(n). Ils ne prennent une valeur concrète que lorsque la fonction est appelée avec des arguments.",
+    "exemple_code": "def carre(nombre):\n    return nombre ** 2\n\nprint(carre(5))",
+    "sortie_attendue": "25",
+    "erreur_frequente": "Confondre paramètre et argument : le paramètre est le nom dans la définition, l'argument est la valeur fournie à l'appel.",
+    "indice": "C'est ce qui apparaît entre parenthèses juste après def nom_fonction(...).",
+    "mots_cles": [
+      [
+        "parametre",
+        "parametres"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "des paramètres",
+      "les paramètres",
+      "un paramètre",
+      "les paramètres de la fonction",
+      "les paramètres formels"
+    ],
+    "niveau": 3,
+    "titre": "Le nom donné à une variable dans la signature d'une fonction, avant tout appel",
+    "question": "Comment appelle-t-on les noms de variables listés entre parenthèses dans la définition d'une fonction avec def, avant même qu'elle soit appelée ?",
+    "reponse": "des paramètres",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'argument est la valeur réellement transmise lors de l'appel ; elle vient remplacer le paramètre correspondant à l'intérieur de la fonction le temps de son exécution.",
+    "exemple_code": "def carre(nombre):\n    return nombre ** 2\n\nresultat = carre(7)\nprint(resultat)",
+    "sortie_attendue": "49",
+    "erreur_frequente": "Utiliser « paramètre » et « argument » comme synonymes stricts : le second désigne la valeur donnée à l'appel, le premier le nom dans la définition.",
+    "indice": "Ce qu'on écrit entre parenthèses quand on appelle la fonction, pas quand on la définit.",
+    "mots_cles": [
+      [
+        "argument",
+        "arguments"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "un argument",
+      "les arguments",
+      "l'argument",
+      "un argument transmis à la fonction",
+      "la valeur passée en argument"
+    ],
+    "niveau": 3,
+    "titre": "La valeur concrète fournie à une fonction au moment où on l'appelle",
+    "question": "Comment appelle-t-on la valeur concrète que l'on fournit entre parenthèses au moment où l'on appelle une fonction, comme le 7 dans carre(7) ?",
+    "reponse": "un argument",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "return n'est pas limité aux nombres ou aux chaînes : il peut renvoyer une liste, un dictionnaire, un tuple ou tout autre objet Python, comme la fonction fib2 qui renvoie la liste des termes calculés.",
+    "exemple_code": "def carres_jusqua(n):\n    resultat = []\n    for i in range(n):\n        resultat.append(i ** 2)\n    return resultat\n\nprint(carres_jusqua(4))",
+    "sortie_attendue": "[0, 1, 4, 9]",
+    "erreur_frequente": "Croire qu'une fonction ne peut renvoyer qu'une seule valeur simple : elle peut renvoyer une structure entière, comme une liste ou un tuple.",
+    "indice": "Pense à la fonction qui accumule des résultats dans une liste avant de la renvoyer.",
+    "mots_cles": [
+      [
+        "importe"
+      ],
+      [
+        "type"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "n'importe quel type d'objet",
+      "n'importe quel type de valeur",
+      "un objet de n'importe quel type",
+      "n'importe quel type, pas seulement un nombre",
+      "n'importe quel type de résultat"
+    ],
+    "niveau": 3,
+    "titre": "Ce qu'une fonction peut renvoyer avec return, au-delà d'un simple nombre",
+    "question": "D'après l'exemple qui construit une liste result puis exécute return result, quel type de valeur une fonction Python peut-elle renvoyer avec return ?",
+    "reponse": "n'importe quel type d'objet",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La valeur par défaut est calculée une seule fois, quand Python exécute l'instruction def, et non à chaque appel de la fonction. C'est pour cela qu'une liste par défaut se comporte de façon surprenante d'un appel à l'autre.",
+    "exemple_code": "def ajoute_un(n=1, total=0):\n    return total + n\n\nprint(ajoute_un())\nprint(ajoute_un(5))",
+    "sortie_attendue": "1\n5",
+    "erreur_frequente": "Croire que retries=4 est réévalué à chaque appel : si la valeur par défaut est un objet mutable, il reste partagé entre tous les appels.",
+    "indice": "Pense à l'instant où def s'exécute, pas à celui où la fonction est appelée.",
+    "mots_cles": [
+      [
+        "definition",
+        "definie"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "une seule fois, à la définition de la fonction",
+      "au moment où la fonction est définie",
+      "une seule fois, quand la fonction est définie",
+      "à la définition de la fonction, une seule fois pour tous les usages",
+      "lors de la définition, une seule fois pour toute la durée du programme"
+    ],
+    "niveau": 3,
+    "titre": "Le moment où Python évalue la valeur par défaut d'un paramètre",
+    "question": "Quand exactement Python évalue-t-il la valeur par défaut d'un paramètre de fonction, comme le 4 dans def ask_ok(prompt, retries=4) ?",
+    "reponse": "une seule fois, à la définition de la fonction",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un argument nommé précise explicitement à quel paramètre il correspond grâce à nom=valeur, ce qui permet de changer l'ordre des arguments ou d'omettre ceux qui ont une valeur par défaut.",
+    "exemple_code": "def presenter(nom, ville):\n    return f\"{nom} habite a {ville}\"\n\nprint(presenter(ville=\"Lyon\", nom=\"Ada\"))",
+    "sortie_attendue": "Ada habite a Lyon",
+    "erreur_frequente": "Placer un argument nommé avant un argument positionnel dans l'appel, comme f(x=1, 2) : Python lève une SyntaxError, les positionnels doivent venir en premier.",
+    "indice": "Le nom du paramètre apparaît explicitement dans l'appel, suivi d'un signe égal.",
+    "mots_cles": [
+      [
+        "nomme"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "un argument nommé",
+      "un argument nommé par mot-clé",
+      "on nomme explicitement le paramètre visé",
+      "un argument dont le paramètre est nommé",
+      "un argument identifié par son nom, explicitement nommé"
+    ],
+    "niveau": 3,
+    "titre": "Préciser explicitement quel paramètre reçoit une valeur donnée, plutôt que de compter sur sa position",
+    "question": "Comment appelle-t-on un argument transmis lors de l'appel d'une fonction sous la forme nom_parametre=valeur, plutôt que par sa simple position ?",
+    "reponse": "un argument nommé",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Chaque exécution d'une fonction crée un nouvel espace de nommage pour ses variables locales : les affectations faites à l'intérieur de la fonction y restent, sans modifier les variables globales de même nom.",
+    "exemple_code": "x = 10\n\ndef test():\n    x = 20\n    return x\n\nprint(test())\nprint(x)",
+    "sortie_attendue": "20\n10",
+    "erreur_frequente": "Croire qu'une variable affectée dans une fonction modifie automatiquement une variable globale portant le même nom : elle crée en réalité une variable locale distincte.",
+    "indice": "Terme qui contient le mot « nommage ».",
+    "mots_cles": [
+      [
+        "nommage"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Portée des variables",
+    "type": "texte",
+    "reponses_acceptees": [
+      "un espace de nommage",
+      "un nouvel espace de nommage local",
+      "un espace de nommage propre à la fonction",
+      "un namespace, c'est-à-dire un espace de nommage",
+      "l'espace de nommage de la fonction"
+    ],
+    "niveau": 3,
+    "titre": "Le terme qui désigne l'ensemble des variables locales créées à chaque exécution d'une fonction",
+    "question": "Comment appelle-t-on l'espace créé à chaque exécution d'une fonction pour stocker ses variables locales ?",
+    "reponse": "un espace de nommage",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une fonction imbriquée est définie avec def dans le corps d'une autre fonction ; elle peut, comme une lambda, accéder aux variables de la fonction englobante grâce à la portée lexicale.",
+    "exemple_code": "def externe():\n    def interne():\n        return \"depuis l'interieur\"\n    return interne()\n\nprint(externe())",
+    "sortie_attendue": "depuis l'interieur",
+    "erreur_frequente": "Croire qu'une fonction imbriquée est visible et appelable depuis l'extérieur de la fonction qui la contient : elle n'existe que dans cet espace de nommage local.",
+    "indice": "Elle est « emboîtée » dans une autre, comme des poupées russes.",
+    "mots_cles": [
+      [
+        "imbriquee",
+        "interne"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "une fonction imbriquée",
+      "une fonction interne",
+      "une fonction imbriquée dans une autre",
+      "une fonction interne, écrite dans le corps d'une autre fonction",
+      "une fonction imbriquée, nichée dans une autre"
+    ],
+    "niveau": 3,
+    "titre": "Ce à quoi l'on compare une lambda pour expliquer son accès aux variables englobantes",
+    "question": "Le tutoriel explique que les fonctions lambda peuvent référencer des variables de la portée englobante « comme » un autre type de fonction, défini avec def à l'intérieur du corps d'une autre fonction. Comment appelle-t-on ce type de fonction ?",
+    "reponse": "une fonction imbriquée",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La docstring, écrite comme première instruction du corps de la fonction entre triples guillemets, est automatiquement stockée dans l'attribut __doc__ de la fonction et peut être relue par ce biais.",
+    "exemple_code": "def carre(n):\n    \"\"\"Renvoie le carre de n.\"\"\"\n    return n * n\n\nprint(carre.__doc__)",
+    "sortie_attendue": "Renvoie le carre de n.",
+    "erreur_frequente": "Écrire la docstring après d'autres instructions : seule la toute première instruction du corps de la fonction est reconnue comme docstring.",
+    "indice": "Deux underscores de chaque côté du mot « doc ».",
+    "mots_cles": [
+      [
+        "doc"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "__doc__",
+      "l'attribut __doc__",
+      "l'attribut doc",
+      "ma_fonction.__doc__",
+      "le double-underscore doc"
+    ],
+    "niveau": 3,
+    "titre": "L'attribut spécial qui donne accès au texte explicatif placé au début d'une fonction",
+    "question": "Une fois une fonction définie avec une chaîne de documentation comme première instruction, quel attribut spécial de la fonction permet d'accéder à ce texte, comme dans ma_fonction.__doc__ ?",
+    "reponse": "__doc__",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une fonction lambda est restreinte à une seule expression, qu'elle renvoie implicitement ; c'est un sucre syntaxique pour une définition normale avec def, utile pour de petites fonctions ponctuelles.",
+    "exemple_code": "carre = lambda x: x * x\nprint(carre(6))",
+    "sortie_attendue": "36",
+    "erreur_frequente": "Essayer d'écrire plusieurs instructions ou un return explicite dans une lambda : elle n'accepte qu'une seule expression.",
+    "indice": "Mot grec qui donne aussi son nom à une lettre de l'alphabet.",
+    "mots_cles": [
+      [
+        "lambda",
+        "anonyme"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "une fonction lambda",
+      "une lambda",
+      "une fonction anonyme",
+      "un lambda",
+      "une expression lambda"
+    ],
+    "niveau": 3,
+    "titre": "Un petit bloc de code anonyme écrit en une seule expression",
+    "question": "Comment appelle-t-on une fonction sans nom, définie en une seule expression avec la syntaxe lambda arguments: expression ?",
+    "reponse": "une fonction lambda",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "map() applique une fonction à chaque élément d'un itérable et renvoie un objet map paresseux ; on le convertit souvent en liste avec list() pour en voir le contenu, comme alternative à une compréhension de liste.",
+    "exemple_code": "carres = list(map(lambda x: x**2, range(5)))\nprint(carres)",
+    "sortie_attendue": "[0, 1, 4, 9, 16]",
+    "erreur_frequente": "Afficher directement le résultat de map() en pensant obtenir une liste : il faut l'envelopper dans list(...) pour voir les valeurs.",
+    "indice": "Le nom anglais qui signifie « mettre en correspondance ».",
+    "mots_cles": [
+      [
+        "map"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Outils fonctionnels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "map()",
+      "la fonction map",
+      "map",
+      "map(...)",
+      "la fonction native map()"
+    ],
+    "niveau": 3,
+    "titre": "La fonction qui applique un traitement à chaque élément d'un itérable, sans boucle explicite",
+    "question": "Quelle fonction native applique une fonction donnée à chaque élément d'un itérable et renvoie un itérateur des résultats, comme dans map(lambda x: x**2, range(10)) ?",
+    "reponse": "map()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "zip() combine plusieurs itérables en une série de tuples regroupant les éléments de même position ; l'itération s'arrête dès que la plus courte séquence est épuisée.",
+    "exemple_code": "questions = ['nom', 'quete']\nreponses = ['Ada', 'coder']\nfor q, r in zip(questions, reponses):\n    print(q, r)",
+    "sortie_attendue": "nom Ada\nquete coder",
+    "erreur_frequente": "Croire que zip() complète automatiquement la séquence la plus courte : elle s'arrête au contraire dès que l'une des séquences est épuisée.",
+    "indice": "Comme une fermeture éclair qui entrelace deux rangées de dents.",
+    "mots_cles": [
+      [
+        "zip"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Outils fonctionnels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "zip()",
+      "la fonction zip",
+      "zip",
+      "zip(...)",
+      "la fonction native zip()"
+    ],
+    "niveau": 3,
+    "titre": "La fonction qui associe des éléments de même position venant de plusieurs séquences",
+    "question": "Quelle fonction native permet de parcourir plusieurs séquences en parallèle en associant leurs éléments de même position, comme dans zip(questions, reponses) ?",
+    "reponse": "zip()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "enumerate() renvoie des couples (indice, valeur) au fil du parcours, ce qui évite de gérer soi-même un compteur avec range(len(...)).",
+    "exemple_code": "for i, v in enumerate(['tic', 'tac', 'toe']):\n    print(i, v)",
+    "sortie_attendue": "0 tic\n1 tac\n2 toe",
+    "erreur_frequente": "Utiliser range(len(liste)) puis liste[i] alors qu'enumerate(liste) donne directement l'indice et la valeur, de façon plus lisible.",
+    "indice": "Verbe anglais qui signifie « énumérer », donner un numéro à chaque élément.",
+    "mots_cles": [
+      [
+        "enumerate"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Outils fonctionnels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "enumerate()",
+      "la fonction enumerate",
+      "enumerate",
+      "enumerate(...)",
+      "la fonction native enumerate()"
+    ],
+    "niveau": 3,
+    "titre": "La fonction qui fournit l'indice de chaque élément pendant un parcours",
+    "question": "Quelle fonction native, utilisée dans une boucle for, fournit à la fois la position et la valeur de chaque élément d'un itérable, comme dans enumerate(['tic', 'tac', 'toe']) ?",
+    "reponse": "enumerate()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "sorted() construit et renvoie une toute nouvelle liste triée, contrairement à la méthode list.sort() qui trie la liste sur place et ne renvoie rien.",
+    "exemple_code": "fruits = ['orange', 'kiwi', 'banane']\nprint(sorted(fruits))\nprint(fruits)",
+    "sortie_attendue": "['banane', 'kiwi', 'orange']\n['orange', 'kiwi', 'banane']",
+    "erreur_frequente": "Écrire fruits = fruits.sort() en pensant récupérer la liste triée : sort() renvoie None, alors que sorted(fruits) renvoie bien la liste triée.",
+    "indice": "Participe passé anglais du verbe « trier ».",
+    "mots_cles": [
+      [
+        "sorted"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Outils fonctionnels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "sorted()",
+      "la fonction sorted",
+      "sorted",
+      "sorted(...)",
+      "la fonction native sorted()"
+    ],
+    "niveau": 3,
+    "titre": "La fonction qui renvoie une nouvelle liste triée sans modifier l'original",
+    "question": "Quelle fonction native renvoie une nouvelle liste triée à partir de n'importe quel itérable, sans modifier la séquence d'origine ?",
+    "reponse": "sorted()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "sum() prend un itérable en paramètre et additionne tous ses éléments numériques, ce qui évite d'écrire soi-même une boucle avec un accumulateur.",
+    "exemple_code": "total = sum(range(4))\nprint(total)",
+    "sortie_attendue": "6",
+    "erreur_frequente": "Essayer sum() sur un itérable contenant des chaînes de caractères : Python lève une TypeError, sum() attend des nombres.",
+    "indice": "Mot anglais pour « somme ».",
+    "mots_cles": [
+      [
+        "sum"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Outils fonctionnels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "sum()",
+      "la fonction sum",
+      "sum",
+      "sum(...)",
+      "la fonction native sum()"
+    ],
+    "niveau": 3,
+    "titre": "La fonction qui additionne tous les éléments d'un itérable",
+    "question": "Quelle fonction native renvoie la somme de tous les éléments d'un itérable de nombres, comme dans sum(range(4)) ?",
+    "reponse": "sum()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une fonction devient réutilisable quand elle reçoit ses données par des paramètres plutôt que de dépendre de valeurs codées en dur, comme carre(n) qui fonctionne pour n'importe quel nombre plutôt qu'une fonction qui ne calculerait que 5 au carré.",
+    "exemple_code": "def carre(n):\n    return n * n\n\nprint(carre(3))\nprint(carre(10))",
+    "sortie_attendue": "9\n100",
+    "erreur_frequente": "Écrire une fonction qui recopie une valeur fixe dans son corps plutôt que de la recevoir en paramètre, ce qui oblige à dupliquer le code pour chaque cas particulier.",
+    "indice": "Contient le mot « utiliser », répété.",
+    "mots_cles": [
+      [
+        "reutilisabilite",
+        "reutilisable",
+        "reutilisation",
+        "reutiliser"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Résolution de problèmes",
+    "type": "texte",
+    "reponses_acceptees": [
+      "la réutilisabilité",
+      "rendre la fonction réutilisable",
+      "la réutilisation de code",
+      "écrire du code réutilisable",
+      "généraliser la fonction pour la réutiliser"
+    ],
+    "niveau": 3,
+    "titre": "Écrire une fonction assez générale pour l'appeler dans plusieurs situations sans la réécrire",
+    "question": "Quel principe consiste à écrire une fonction de façon suffisamment générale, avec des paramètres plutôt que des valeurs fixes, pour pouvoir l'appeler dans plusieurs situations sans la réécrire ?",
+    "reponse": "la réutilisabilité",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Décomposer un problème consiste à le découper en sous-tâches, chacune confiée à une fonction dédiée ; le programme principal les appelle et combine leurs résultats, ce qui rend le code plus facile à lire, tester et corriger.",
+    "exemple_code": "def carre(n):\n    return n * n\n\ndef somme_des_carres(nombres):\n    total = 0\n    for n in nombres:\n        total += carre(n)\n    return total\n\nprint(somme_des_carres([1, 2, 3]))",
+    "sortie_attendue": "14",
+    "erreur_frequente": "Écrire tout le traitement dans une seule fonction géante : au moindre bug, il devient difficile d'isoler la partie fautive.",
+    "indice": "Le contraire de « composer », comme démonter un mécanisme en pièces séparées.",
+    "mots_cles": [
+      [
+        "decomposition",
+        "decomposer",
+        "diviser"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Résolution de problèmes",
+    "type": "texte",
+    "reponses_acceptees": [
+      "la décomposition",
+      "décomposer le problème",
+      "la décomposition en sous-problèmes",
+      "diviser le problème en fonctions",
+      "la décomposition fonctionnelle"
+    ],
+    "niveau": 3,
+    "titre": "Diviser un problème complexe en plusieurs fonctions plus simples",
+    "question": "Quel terme désigne la démarche qui consiste à diviser un problème complexe en plusieurs fonctions plus petites, chacune responsable d'une seule tâche ?",
+    "reponse": "la décomposition",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "extend() parcourt l'itérable donné et ajoute chacun de ses éléments à la fin de la liste, alors qu'append() ajouterait l'itérable entier comme un seul élément imbriqué.",
+    "exemple_code": "a = [1, 2]\na.extend([3, 4])\nprint(a)",
+    "sortie_attendue": "[1, 2, 3, 4]",
+    "erreur_frequente": "Utiliser append(autre_liste) en espérant fusionner deux listes : cela ajoute la liste entière comme un seul élément, il faut extend().",
+    "indice": "Verbe anglais qui signifie « étendre, prolonger ».",
+    "mots_cles": [
+      [
+        "extend"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "extend()",
+      "la méthode extend",
+      "extend",
+      "extend(...)",
+      "liste.extend()"
+    ],
+    "niveau": 3,
+    "titre": "Ajouter tous les éléments d'un itérable à la fin d'une liste",
+    "question": "Quelle méthode de liste ajoute d'un coup tous les éléments d'un itérable à la fin, au lieu d'ajouter l'itérable entier comme un seul élément ?",
+    "reponse": "extend()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "insert(index, valeur) place le nouvel élément à la position index et décale tous les éléments suivants d'un cran, contrairement à append() qui ajoute toujours à la fin.",
+    "exemple_code": "a = [2, 3]\na.insert(0, 1)\nprint(a)",
+    "sortie_attendue": "[1, 2, 3]",
+    "erreur_frequente": "Croire qu'insert(0, x) remplace le premier élément : il le décale au contraire vers la droite au lieu de l'écraser.",
+    "indice": "Verbe anglais pour « insérer ».",
+    "mots_cles": [
+      [
+        "insert"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "insert()",
+      "la méthode insert",
+      "insert",
+      "insert(...)",
+      "liste.insert()"
+    ],
+    "niveau": 3,
+    "titre": "Ajouter un élément au milieu d'une liste, à une position précise, sans écraser les autres",
+    "question": "Quelle méthode de liste place un élément à une position donnée, en décalant les éléments suivants, comme a.insert(0, x) qui l'ajoute en tête ?",
+    "reponse": "insert()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "copy() crée une nouvelle liste contenant les mêmes éléments de premier niveau ; contrairement à b = a qui ne fait que donner un second nom à la même liste, b = a.copy() crée un objet distinct.",
+    "exemple_code": "a = [1, 2, 3]\nb = a.copy()\nb.append(4)\nprint(a)\nprint(b)",
+    "sortie_attendue": "[1, 2, 3]\n[1, 2, 3, 4]",
+    "erreur_frequente": "Écrire b = a en pensant obtenir une copie indépendante : a et b désignent alors la même liste, et modifier l'une modifie l'autre.",
+    "indice": "Même mot qu'en français, sans accent.",
+    "mots_cles": [
+      [
+        "copy"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "copy()",
+      "la méthode copy",
+      "copy",
+      "copy(...)",
+      "liste.copy()"
+    ],
+    "niveau": 3,
+    "titre": "Obtenir un second objet indépendant à partir d'une liste, plutôt qu'un simple second nom pour la même liste",
+    "question": "Quelle méthode renvoie une copie superficielle d'une liste, telle que modifier le résultat ne modifie pas la liste d'origine ?",
+    "reponse": "copy()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une pile suit le principe LIFO (Last-In, First-Out) : le dernier élément ajouté avec append() est le premier retiré par pop(), comme une pile d'assiettes.",
+    "exemple_code": "pile = [3, 4, 5]\npile.append(6)\npile.append(7)\nprint(pile.pop())",
+    "sortie_attendue": "7",
+    "erreur_frequente": "Confondre avec une file, où le premier élément ajouté est le premier retiré : une simple liste utilisée avec append/pop se comporte comme une pile, pas comme une file.",
+    "indice": "Acronyme anglais de quatre lettres, contraire de FIFO.",
+    "mots_cles": [
+      [
+        "lifo"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "LIFO",
+      "dernier arrivé, premier sorti (LIFO)",
+      "le dernier entré est le premier sorti, comme le LIFO",
+      "last in, first out (LIFO)",
+      "l'ordre LIFO"
+    ],
+    "niveau": 3,
+    "titre": "Le principe qui régit une liste utilisée comme une pile",
+    "question": "En utilisant uniquement append() pour ajouter et pop() sans argument pour retirer, quel principe décrit l'ordre de retrait des éléments d'une liste employée comme une pile ?",
+    "reponse": "LIFO",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La première clause for parcourt les sous-listes, la seconde parcourt les éléments de chaque sous-liste : le résultat rassemble tous ces éléments dans une seule liste plate, sans niveau d'imbrication.",
+    "exemple_code": "vec = [[1, 2, 3], [4, 5, 6]]\nresultat = [num for elem in vec for num in elem]\nprint(resultat)",
+    "sortie_attendue": "[1, 2, 3, 4, 5, 6]",
+    "erreur_frequente": "Croire que le résultat garde la structure imbriquée d'origine, comme le ferait [[x for x in e] for e in vec] : ici il n'y a qu'une seule paire de crochets, donc un seul niveau.",
+    "indice": "Comme si on versait le contenu de plusieurs boîtes dans une seule.",
+    "mots_cles": [
+      [
+        "aplatit"
+      ]
+    ],
+    "difficulte": 4,
+    "prerequis": "",
+    "categorie": "Compréhensions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "elle aplatit la liste de listes en une seule liste",
+      "elle aplatit les sous-listes en une seule liste",
+      "elle aplatit la structure en une seule liste plate",
+      "elle aplatit complètement la liste de listes",
+      "elle aplatit les niveaux imbriqués en une seule liste"
+    ],
+    "niveau": 3,
+    "titre": "L'effet de deux clauses for consécutives placées l'une après l'autre dans une même compréhension",
+    "question": "Dans une compréhension comme [num for elem in vec for num in elem], où vec est une liste de listes, quel effet produisent ces deux clauses for consécutives sur le résultat ?",
+    "reponse": "elle aplatit la liste de listes en une seule liste",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La dissociation de séquence répartit les éléments d'un tuple (ou d'une autre séquence) sur autant de variables placées à gauche du signe égal ; leur nombre doit correspondre exactement au nombre d'éléments.",
+    "exemple_code": "t = (12345, 54321, 'salut')\nx, y, z = t\nprint(x, z)",
+    "sortie_attendue": "12345 salut",
+    "erreur_frequente": "Mettre plus ou moins de variables à gauche que d'éléments dans la séquence : Python lève une erreur si les comptes ne correspondent pas.",
+    "indice": "Le contraire de « agrégation » (packing), l'autre moitié du couple.",
+    "mots_cles": [
+      [
+        "dissociation",
+        "depaquetage"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Tuples",
+    "type": "texte",
+    "reponses_acceptees": [
+      "la dissociation de séquence",
+      "le dépaquetage de séquence",
+      "la dissociation",
+      "le dépaquetage de tuple (sequence unpacking)",
+      "le dépaquetage d'un tuple"
+    ],
+    "niveau": 3,
+    "titre": "Affecter en une seule instruction chaque élément d'un tuple à une variable différente",
+    "question": "Comment appelle-t-on l'opération qui affecte en une seule instruction chaque élément d'une séquence à une variable différente, comme dans x, y, z = t ?",
+    "reponse": "la dissociation de séquence",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "C'est la virgule, et non les parenthèses, qui crée un tuple ; sans elle, ('salut') est simplement l'expression 'salut' entourée de parenthèses, donc une chaîne.",
+    "exemple_code": "singleton = 'salut',\nprint(len(singleton))",
+    "sortie_attendue": "1",
+    "erreur_frequente": "Écrire singleton = ('salut') en pensant créer un tuple : sans virgule, Python n'y voit qu'une chaîne de caractères entre parenthèses.",
+    "indice": "Un seul caractère de ponctuation, déjà utilisé pour séparer les éléments d'une liste.",
+    "mots_cles": [
+      [
+        "virgule"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Tuples",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "une virgule",
+      "une virgule finale",
+      "une virgule après l'élément",
+      "une virgule de fin",
+      "ajouter une virgule"
+    ],
+    "niveau": 3,
+    "titre": "Ce qui distingue un tuple à un seul élément d'une simple parenthèse",
+    "question": "Que faut-il ajouter après l'unique valeur pour que ('salut') soit interprété comme un tuple à un élément plutôt que comme la chaîne 'salut' entre parenthèses ?",
+    "reponse": "une virgule",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "a | b renvoie un nouvel ensemble contenant tous les éléments qui figurent dans a, dans b, ou dans les deux à la fois, sans jamais dupliquer un élément commun.",
+    "exemple_code": "a = {'a', 'b', 'r'}\nb = {'a', 'l', 'm'}\nprint(sorted(a | b))",
+    "sortie_attendue": "['a', 'b', 'l', 'm', 'r']",
+    "erreur_frequente": "Utiliser + comme pour concaténer des listes : les ensembles n'acceptent pas + pour l'union, seulement l'opérateur |.",
+    "indice": "Le même symbole que le OU logique au niveau des bits.",
+    "mots_cles": [
+      [
+        "verticale",
+        "pipe"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Ensembles",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "la barre verticale",
+      "le pipe",
+      "l'opérateur pipe",
+      "le symbole barre verticale",
+      "une barre verticale"
+    ],
+    "niveau": 3,
+    "titre": "L'opérateur qui réunit tous les éléments présents dans l'un ou l'autre de deux ensembles",
+    "question": "Quel opérateur, placé entre deux ensembles comme dans a | b, calcule leur union — tous les éléments présents dans a, dans b, ou dans les deux ?",
+    "reponse": "la barre verticale",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "a & b renvoie un nouvel ensemble ne contenant que les éléments présents à la fois dans a et dans b ; un élément qui n'apparaît que dans l'un des deux est exclu du résultat.",
+    "exemple_code": "a = {'a', 'b', 'c'}\nb = {'a', 'c', 'd'}\nprint(sorted(a & b))",
+    "sortie_attendue": "['a', 'c']",
+    "erreur_frequente": "Utiliser and, réservé aux valeurs booléennes, à la place de & pour combiner deux ensembles : and ne calcule pas d'intersection.",
+    "indice": "Le symbole utilisé pour le ET logique au niveau des bits.",
+    "mots_cles": [
+      [
+        "esperluette",
+        "commercial"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Ensembles",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "l'esperluette",
+      "le et commercial",
+      "l'opérateur esperluette",
+      "le symbole esperluette",
+      "un et commercial"
+    ],
+    "niveau": 3,
+    "titre": "L'opérateur qui ne garde que les éléments communs à deux ensembles",
+    "question": "Quel opérateur, placé entre deux ensembles comme dans a & b, calcule leur intersection — uniquement les éléments présents à la fois dans a et dans b ?",
+    "reponse": "l'esperluette",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Comme la compréhension de liste, elle condense en une ligne la construction d'une collection, mais le résultat est un ensemble : les doublons éventuels sont automatiquement éliminés.",
+    "exemple_code": "voyelles = {c for c in 'abracadabra' if c in 'aeiou'}\nprint(sorted(voyelles))",
+    "sortie_attendue": "['a']",
+    "erreur_frequente": "Confondre avec une compréhension de dictionnaire à cause des accolades : sans les deux-points clé: valeur, {expr for x in ...} construit un ensemble, pas un dictionnaire.",
+    "indice": "Comme la compréhension de liste, mais avec des accolades au lieu de crochets.",
+    "mots_cles": [
+      [
+        "comprehension"
+      ],
+      [
+        "ensemble",
+        "set"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Compréhensions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "une compréhension d'ensemble",
+      "la compréhension d'ensemble",
+      "un ensemble en compréhension",
+      "une set comprehension",
+      "une compréhension (ensemble)"
+    ],
+    "niveau": 3,
+    "titre": "Condenser en une seule ligne la construction d'une nouvelle collection sans doublons ni ordre",
+    "question": "Quelle construction Python, entre accolades avec une expression et une clause for, comme {c for c in 'abracadabra' if c in 'aeiou'}, crée une nouvelle collection de ce type en une seule ligne ?",
+    "reponse": "une compréhension d'ensemble",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "d.get(cle, defaut) renvoie la valeur associée à cle si elle existe, sinon la valeur defaut fournie (ou None si aucune n'est précisée), au lieu de lever une erreur comme le ferait d[cle].",
+    "exemple_code": "tel = {'jack': 4098}\nprint(tel.get('irv', 'inconnu'))",
+    "sortie_attendue": "inconnu",
+    "erreur_frequente": "Utiliser les crochets d[cle] quand on n'est pas sûr que la clé existe : cela lève une erreur, alors que get() permet de fournir une valeur de repli.",
+    "indice": "Verbe anglais très court qui signifie « obtenir ».",
+    "mots_cles": [
+      [
+        "get"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Dictionnaires",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "get()",
+      "la méthode get",
+      "get",
+      "get(...)",
+      "d.get()"
+    ],
+    "niveau": 3,
+    "titre": "Accéder à une valeur de dictionnaire sans provoquer d'erreur si la clé est absente",
+    "question": "Quelle méthode de dictionnaire renvoie une valeur par défaut au lieu de provoquer une erreur lorsque la clé demandée n'existe pas ?",
+    "reponse": "get()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "dict() accepte un itérable de couples (clé, valeur) et construit directement le dictionnaire correspondant, sans qu'il soit nécessaire d'ajouter les clés une par une.",
+    "exemple_code": "paires = [('sape', 4139), ('guido', 4127)]\nprint(dict(paires))",
+    "sortie_attendue": "{'sape': 4139, 'guido': 4127}",
+    "erreur_frequente": "Oublier que chaque élément de la liste doit être un couple de deux valeurs : dict() lève une erreur si un des éléments n'a pas exactement deux éléments.",
+    "indice": "Le nom du type que la fonction construit, utilisé aussi comme un appel de fonction.",
+    "mots_cles": [
+      [
+        "dict"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Dictionnaires",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "dict()",
+      "la fonction dict",
+      "dict",
+      "dict(...)",
+      "la fonction native dict()"
+    ],
+    "niveau": 3,
+    "titre": "Construire une association clé-valeur à partir d'une liste de couples",
+    "question": "Quelle fonction permet de construire directement un dictionnaire à partir d'une liste de tuples (clé, valeur), comme [('sape', 4139), ('guido', 4127)] ?",
+    "reponse": "dict()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "d[cle] lève une KeyError si cle n'est pas présente dans le dictionnaire d, contrairement à d.get(cle) qui renvoie None ou une valeur par défaut sans interrompre le programme.",
+    "exemple_code": "tel = {'jack': 4098}\ntry:\n    tel['irv']\nexcept KeyError:\n    print(\"erreur\")",
+    "sortie_attendue": "erreur",
+    "erreur_frequente": "Confondre avec IndexError, qui concerne un indice hors limites dans une liste, alors que KeyError concerne une clé absente d'un dictionnaire.",
+    "indice": "Le nom de l'exception contient le mot anglais pour « clé ».",
+    "mots_cles": [
+      [
+        "keyerror"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Dictionnaires",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "KeyError",
+      "une KeyError",
+      "l'exception KeyError",
+      "une erreur de type KeyError",
+      "KeyError (erreur de clé absente)"
+    ],
+    "niveau": 3,
+    "titre": "L'erreur levée en accédant à une clé absente d'un dictionnaire",
+    "question": "Quelle exception Python lève-t-il lorsqu'on accède avec des crochets à une clé qui n'existe pas dans un dictionnaire ?",
+    "reponse": "KeyError",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "liste.count(valeur) parcourt la liste et renvoie le nombre d'occurrences exactes de cette valeur, 0 si elle n'y figure jamais.",
+    "exemple_code": "fruits = ['pomme', 'poire', 'pomme']\nprint(fruits.count('pomme'))",
+    "sortie_attendue": "2",
+    "erreur_frequente": "Confondre count() avec index() : count() renvoie un nombre d'occurrences, index() renvoie la position de la première occurrence.",
+    "indice": "Verbe anglais pour « compter ».",
+    "mots_cles": [
+      [
+        "count"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "count()",
+      "la méthode count",
+      "count",
+      "count(...)",
+      "liste.count()"
+    ],
+    "niveau": 3,
+    "titre": "Savoir combien de fois une valeur apparaît dans une liste",
+    "question": "Quelle méthode de liste renvoie le nombre de fois qu'une valeur donnée y apparaît ?",
+    "reponse": "count()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "liste.clear() supprime tous les éléments de la liste en une seule opération ; la liste continue d'exister mais devient vide.",
+    "exemple_code": "a = [1, 2, 3]\na.clear()\nprint(a)",
+    "sortie_attendue": "[]",
+    "erreur_frequente": "Écrire a = [] en pensant que c'est équivalent à a.clear() : cela crée un nouvel objet et n'affecte pas d'autres variables qui pointaient vers l'ancienne liste, contrairement à clear().",
+    "indice": "Verbe anglais pour « vider, effacer ».",
+    "mots_cles": [
+      [
+        "clear"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "clear()",
+      "la méthode clear",
+      "clear",
+      "clear(...)",
+      "liste.clear()"
+    ],
+    "niveau": 3,
+    "titre": "Vider entièrement une liste de tous ses éléments",
+    "question": "Quelle méthode retire d'un seul coup tous les éléments d'une liste, la laissant vide ?",
+    "reponse": "clear()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "liste.pop(index) retire l'élément à la position donnée (le dernier par défaut) et renvoie sa valeur, alors que remove() se contente de retirer la première occurrence d'une valeur sans rien renvoyer.",
+    "exemple_code": "a = [10, 20, 30]\nvaleur = a.pop(0)\nprint(valeur, a)",
+    "sortie_attendue": "10 [20, 30]",
+    "erreur_frequente": "Appeler pop() sur une liste vide en pensant obtenir None : Python lève une erreur, il n'y a rien à retirer.",
+    "indice": "Comme le bruit d'un bouchon qui saute.",
+    "mots_cles": [
+      [
+        "pop"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Listes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "pop()",
+      "la méthode pop",
+      "pop",
+      "pop(...)",
+      "liste.pop()"
+    ],
+    "niveau": 3,
+    "titre": "Retirer un élément d'une liste tout en récupérant sa valeur",
+    "question": "Quelle méthode retire un élément d'une liste à une position donnée et renvoie sa valeur, ce que ne fait pas remove() ?",
+    "reponse": "pop()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "d.items() renvoie une vue sur les couples (clé, valeur) du dictionnaire, ce qui permet de les récupérer en une seule fois dans une boucle for k, v in d.items().",
+    "exemple_code": "chevaliers = {'gauvain': 'le pur'}\nfor k, v in chevaliers.items():\n    print(k, v)",
+    "sortie_attendue": "gauvain le pur",
+    "erreur_frequente": "Écrire for k, v in d en pensant obtenir la clé et la valeur : parcourir directement un dictionnaire ne donne que ses clés, il faut appeler .items().",
+    "indice": "Pluriel du mot anglais pour « élément ».",
+    "mots_cles": [
+      [
+        "items"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Parcours de collections",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "items()",
+      "la méthode items",
+      "items",
+      "items(...)",
+      "d.items()"
+    ],
+    "niveau": 3,
+    "titre": "Obtenir simultanément la clé et la valeur de chaque entrée en parcourant un dictionnaire",
+    "question": "Quelle méthode, utilisée dans une boucle for comme for k, v in d.items(), fournit à la fois la clé et la valeur de chaque entrée d'un dictionnaire ?",
+    "reponse": "items()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "reversed() renvoie un itérateur qui parcourt la séquence d'origine du dernier élément vers le premier, sans changer son contenu ni son ordre réel.",
+    "exemple_code": "for i in reversed([1, 2, 3]):\n    print(i)",
+    "sortie_attendue": "3\n2\n1",
+    "erreur_frequente": "Confondre avec liste.reverse(), qui inverse la liste sur place et ne renvoie rien, alors que reversed() renvoie un itérateur sans modifier la séquence d'origine.",
+    "indice": "Participe passé anglais du verbe « inverser ».",
+    "mots_cles": [
+      [
+        "reversed"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Parcours de collections",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "reversed()",
+      "la fonction reversed",
+      "reversed",
+      "reversed(...)",
+      "la fonction native reversed()"
+    ],
+    "niveau": 3,
+    "titre": "Parcourir une séquence en partant de la fin vers le début",
+    "question": "Quelle fonction native permet de parcourir une séquence dans l'ordre inverse, du dernier élément vers le premier, sans la trier ?",
+    "reponse": "reversed()",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une fonction Python est elle-même une valeur : on peut l'affecter à une variable comme n'importe quel autre objet, puis appeler cette variable comme la fonction d'origine.",
+    "exemple_code": "def carre(n):\n    return n * n\n\nma_fonction = carre\nprint(ma_fonction(4))",
+    "sortie_attendue": "16",
+    "erreur_frequente": "Écrire f = carre() avec des parenthèses en pensant faire la même chose : cela appelle carre et affecte son résultat à f, au lieu d'affecter la fonction elle-même.",
+    "indice": "Pense à ce qu'on peut faire avec n'importe quelle autre valeur en Python, comme un nombre.",
+    "mots_cles": [
+      [
+        "affecter",
+        "assigner",
+        "stocker",
+        "attribuer",
+        "donner"
+      ],
+      [
+        "variable"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "l'affecter à une variable",
+      "l'assigner à une autre variable",
+      "la stocker dans une variable",
+      "lui donner un autre nom via une variable",
+      "l'attribuer à une variable"
+    ],
+    "niveau": 3,
+    "titre": "Donner un autre nom à une fonction déjà définie",
+    "question": "D'après le fait que l'on puisse écrire f = carre après avoir défini carre avec def, qu'est-il possible de faire avec le nom d'une fonction ?",
+    "reponse": "l'affecter à une variable",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Tout paramètre placé avant le / ne peut être fourni qu'en position, comme f(1) ; l'appeler avec son nom, comme f(arg=1), lève une TypeError.",
+    "exemple_code": "def carre(n, /):\n    return n * n\n\nprint(carre(5))",
+    "sortie_attendue": "25",
+    "erreur_frequente": "Essayer d'appeler un paramètre positionnel uniquement par son nom, comme f(arg=1) : Python le refuse et lève une TypeError.",
+    "indice": "Le même symbole que celui de la division.",
+    "mots_cles": [
+      [
+        "oblique",
+        "slash"
+      ]
+    ],
+    "difficulte": 4,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "la barre oblique",
+      "le slash",
+      "l'opérateur barre oblique",
+      "le symbole barre oblique",
+      "une barre oblique dans la signature"
+    ],
+    "niveau": 3,
+    "titre": "Le symbole qui impose de fournir certains paramètres uniquement par position",
+    "question": "Quel symbole, placé dans la liste de paramètres d'une fonction comme dans def f(arg, /), impose que les paramètres précédents soient fournis uniquement par position, jamais par mot-clé ?",
+    "reponse": "la barre oblique",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "*args regroupe dans un tuple tous les arguments positionnels excédentaires transmis à l'appel, ce qui permet à la fonction d'accepter un nombre variable d'arguments sans les lister un par un.",
+    "exemple_code": "def concat(*args, sep=\"/\"):\n    return sep.join(args)\n\nprint(concat(\"terre\", \"mars\", \"venus\"))",
+    "sortie_attendue": "terre/mars/venus",
+    "erreur_frequente": "Croire que args est un mot-clé imposé : seul l'astérisque * compte, le nom qui suit peut être n'importe quel identifiant valide, args étant simplement la convention la plus courante.",
+    "indice": "Un astérisque suivi d'un nom au pluriel, pour « arguments ».",
+    "mots_cles": [
+      [
+        "args"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "*args",
+      "un paramètre *args",
+      "un tuple d'arguments positionnels variables, nommé args",
+      "*args, pour capturer les arguments positionnels en trop",
+      "un paramètre *args qui regroupe les arguments supplémentaires"
+    ],
+    "niveau": 3,
+    "titre": "Recevoir un nombre variable d'arguments positionnels regroupés dans un tuple",
+    "question": "Quelle syntaxe, placée dans la définition d'une fonction comme def concat(*args, sep=\"/\"), permet de recevoir un nombre quelconque d'arguments positionnels regroupés dans un tuple ?",
+    "reponse": "*args",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "**d dépaquette un dictionnaire en une série d'arguments nommés, une paire clé=valeur par entrée du dictionnaire, comme si on les avait tous écrits explicitement dans l'appel.",
+    "exemple_code": "def presenter(nom, ville):\n    return f\"{nom} - {ville}\"\n\nd = {\"nom\": \"Ada\", \"ville\": \"Lyon\"}\nprint(presenter(**d))",
+    "sortie_attendue": "Ada - Lyon",
+    "erreur_frequente": "Confondre avec un seul astérisque *, qui dépaquette une liste ou un tuple en arguments positionnels : les deux astérisques sont réservés au dépaquetage d'un dictionnaire en arguments nommés.",
+    "indice": "Le double du symbole utilisé pour l'exponentiation ou pour *args.",
+    "mots_cles": [
+      [
+        "etoile",
+        "etoiles",
+        "asterisque",
+        "asterisques"
+      ]
+    ],
+    "difficulte": 4,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "le double astérisque",
+      "deux astérisques",
+      "deux étoiles",
+      "un double astérisque",
+      "l'astérisque double"
+    ],
+    "niveau": 3,
+    "titre": "Transformer les paires clé-valeur d'un dictionnaire en arguments nommés lors d'un appel",
+    "question": "Quel opérateur, placé devant un dictionnaire lors de l'appel d'une fonction comme dans parrot(**d), dépaquette ses paires clé-valeur pour les transmettre comme autant d'arguments nommés ?",
+    "reponse": "le double astérisque",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "En l'absence de return explicite, une fonction termine son exécution et renvoie automatiquement None, la valeur Python qui représente l'absence de valeur.",
+    "exemple_code": "def dire_bonjour():\n    print(\"Bonjour\")\n\nresultat = dire_bonjour()\nprint(resultat)",
+    "sortie_attendue": "Bonjour\nNone",
+    "erreur_frequente": "Récupérer le résultat d'une fonction sans return en pensant obtenir la dernière valeur affichée par print() : print() ne renvoie rien à la fonction, seul return transmet une valeur à l'appelant.",
+    "indice": "Le même mot que celui qui désigne, en Python, l'absence de valeur.",
+    "mots_cles": [
+      [
+        "none"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "None",
+      "la valeur None",
+      "elle renvoie None",
+      "rien (None)",
+      "None par défaut"
+    ],
+    "niveau": 3,
+    "titre": "Ce que renvoie une fonction qui ne contient aucune instruction return",
+    "question": "Quelle valeur une fonction Python renvoie-t-elle automatiquement si son corps ne contient aucune instruction return ?",
+    "reponse": "None",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "La valeur par défaut n'étant évaluée qu'une seule fois à la définition de la fonction, une liste par défaut reste le même objet d'une exécution à l'autre : toute modification faite lors d'une exécution est encore présente à la suivante.",
+    "exemple_code": "def ajouter(a, L=[]):\n    L.append(a)\n    return L\n\nprint(ajouter(1))\nprint(ajouter(2))",
+    "sortie_attendue": "[1]\n[1, 2]",
+    "erreur_frequente": "Écrire def f(a, L=[]): L.append(a); return L en pensant obtenir une liste neuve à chaque exécution : f(1) puis f(2) donnent [1] puis [1, 2], pas [2].",
+    "indice": "Repense à quand exactement Python évalue une valeur par défaut.",
+    "mots_cles": [
+      [
+        "partage",
+        "partagee"
+      ]
+    ],
+    "difficulte": 4,
+    "prerequis": "",
+    "categorie": "Fonctions",
+    "type": "texte",
+    "reponses_acceptees": [
+      "elle est partagée entre tous les appels",
+      "la même liste partagée est modifiée à chaque exécution",
+      "elle n'est créée qu'une seule fois et reste partagée",
+      "son contenu s'accumule car l'objet reste partagé entre les appels",
+      "elle garde ses valeurs précédentes car elle est partagée entre les appels"
+    ],
+    "niveau": 3,
+    "titre": "Pourquoi une liste par défaut peut grossir toute seule au fil des exécutions successives de la fonction",
+    "question": "Pourquoi la valeur par défaut d'un paramètre, si c'est une liste, peut-elle conserver et accumuler des éléments d'une exécution à l'autre de la fonction ?",
+    "reponse": "elle est partagée entre tous les appels",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "key=lambda x: ... indique à sort() ou sorted() de comparer les éléments non pas directement, mais à partir de la valeur renvoyée par cette fonction pour chacun d'eux.",
+    "exemple_code": "paires = [(1, 'un'), (3, 'trois'), (2, 'deux')]\npaires.sort(key=lambda p: p[1])\nprint(paires)",
+    "sortie_attendue": "[(2, 'deux'), (3, 'trois'), (1, 'un')]",
+    "erreur_frequente": "Croire que sorted() trie automatiquement des tuples selon le critère voulu : sans key, le tri se fait par défaut sur le premier élément, puis le second en cas d'égalité.",
+    "indice": "Mot anglais pour « clé », le même que pour les clés d'un dictionnaire.",
+    "mots_cles": [
+      [
+        "key"
+      ],
+      [
+        "parametre",
+        "argument",
+        "tri"
+      ]
+    ],
+    "difficulte": 3,
+    "prerequis": "",
+    "categorie": "Outils fonctionnels",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "le paramètre key",
+      "l'argument key",
+      "le mot-clé key du tri",
+      "key, le paramètre de tri",
+      "l'argument key="
+    ],
+    "niveau": 3,
+    "titre": "Indiquer sur quelle valeur trier chaque élément grâce à une fonction lambda",
+    "question": "Quel paramètre de sort() ou de sorted() permet de préciser, via une fonction lambda, la valeur à utiliser pour comparer les éléments entre eux ?",
+    "reponse": "le paramètre key",
+    "matiere": "python",
+    "langue": "fr"
+  }
+]

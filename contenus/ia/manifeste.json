@@ -1,0 +1,11 @@
+{
+  "matiere": "ia",
+  "nom": "IA (culture générale)",
+  "description": "Comprendre l'intelligence artificielle : données, apprentissage, réseaux, modèles de langage, usages.",
+  "langue_enseignement": "fr",
+  "langue_cible": "fr",
+  "type_defaut": "texte",
+  "matieres_voisines": [
+    "ml"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "matiere": "ml",
+  "nom": "Machine Learning",
+  "description": "Apprendre à partir de données : régression, classification, préparation, évaluation.",
+  "langue_enseignement": "fr",
+  "langue_cible": "fr",
+  "type_defaut": "texte",
+  "code_executable": true,
+  "matieres_voisines": [
+    "ia"
+  ]
+}

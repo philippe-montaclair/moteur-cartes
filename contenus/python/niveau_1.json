@@ -1,0 +1,1240 @@
+[
+  {
+    "niveau": 1,
+    "categorie": "Affichage",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Afficher un message",
+    "question": "Quelle instruction affiche le texte Bonjour dans la console ?",
+    "reponse": "print(\"Bonjour\")",
+    "reponses_acceptees": [
+      "print(\"Bonjour\")",
+      "print('Bonjour')",
+      "print(\"bonjour\")"
+    ],
+    "explication": "print() est la fonction d'affichage. Le texte doit être entouré de guillemets simples ou doubles.",
+    "exemple_code": "print(\"Bonjour\")",
+    "sortie_attendue": "Bonjour",
+    "erreur_frequente": "Oublier les guillemets : print(Bonjour) provoque une NameError.",
+    "indice": "Une fonction, des parenthèses, et le texte entre guillemets."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Variables",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Créer une variable",
+    "question": "Comment stocker la valeur 25 dans une variable nommée age ?",
+    "reponse": "age = 25",
+    "reponses_acceptees": [
+      "age = 25",
+      "age=25"
+    ],
+    "explication": "Le signe = affecte une valeur à un nom. Python devine le type tout seul.",
+    "exemple_code": "age = 25\nprint(age)",
+    "sortie_attendue": "25",
+    "erreur_frequente": "Écrire 25 = age : l'affectation va toujours de droite à gauche.",
+    "indice": "Un nom, un signe égal, une valeur."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Le type des nombres entiers",
+    "question": "Quel est le type Python de la valeur 7 ?",
+    "reponse": "int",
+    "reponses_acceptees": [
+      "int",
+      "entier",
+      "un entier",
+      "le type int"
+    ],
+    "mots_cles": [
+      [
+        "int"
+      ]
+    ],
+    "explication": "int (integer) représente les nombres entiers, positifs ou négatifs, sans virgule.",
+    "exemple_code": "print(type(7))",
+    "sortie_attendue": "<class 'int'>",
+    "erreur_frequente": "Confondre int et float : 7 est un int, 7.0 est un float.",
+    "indice": "Trois lettres, abréviation de l'anglais integer."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Le type des nombres à virgule",
+    "question": "Quel est le type Python de la valeur 3.14 ?",
+    "reponse": "float",
+    "reponses_acceptees": [
+      "float",
+      "un float",
+      "nombre décimal",
+      "le type float",
+      "nombre à virgule"
+    ],
+    "mots_cles": [
+      [
+        "float"
+      ]
+    ],
+    "explication": "float représente les nombres à virgule flottante. En Python on écrit un point, pas une virgule.",
+    "exemple_code": "print(type(3.14))",
+    "sortie_attendue": "<class 'float'>",
+    "erreur_frequente": "Écrire 3,14 : la virgule crée un tuple, pas un nombre décimal.",
+    "indice": "Le mot anglais pour « flottant »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Le type du texte",
+    "question": "Quel est le type Python de la valeur 'bonjour' ?",
+    "reponse": "str",
+    "reponses_acceptees": [
+      "str",
+      "string",
+      "chaîne de caractères",
+      "chaîne",
+      "texte",
+      "le type str"
+    ],
+    "mots_cles": [
+      [
+        "str",
+        "string",
+        "chaine",
+        "texte"
+      ]
+    ],
+    "explication": "str (string) représente une chaîne de caractères, c'est-à-dire du texte.",
+    "exemple_code": "print(type('bonjour'))",
+    "sortie_attendue": "<class 'str'>",
+    "erreur_frequente": "Oublier que \"7\" est un str et non un int.",
+    "indice": "Trois lettres, abréviation de l'anglais string."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Le type vrai ou faux",
+    "question": "Quel est le type Python de la valeur True ?",
+    "reponse": "bool",
+    "reponses_acceptees": [
+      "bool",
+      "booléen",
+      "un booléen",
+      "boolean",
+      "le type bool"
+    ],
+    "mots_cles": [
+      [
+        "bool",
+        "boolean"
+      ]
+    ],
+    "explication": "bool ne peut valoir que True ou False. C'est le résultat de toute comparaison.",
+    "exemple_code": "print(type(3 > 2))",
+    "sortie_attendue": "<class 'bool'>",
+    "erreur_frequente": "Écrire true ou vrai : Python exige True avec une majuscule.",
+    "indice": "Du nom du mathématicien George Boole."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Reconnaître les types",
+    "question": "Quels sont les types de 7, 3.14, 'bonjour' et True ?",
+    "reponse": "int, float, str et bool",
+    "reponses_acceptees": [
+      "int, float, str et bool",
+      "int float str bool",
+      "int, float, str, bool",
+      "entier, décimal, chaîne, booléen"
+    ],
+    "mots_cles": [
+      [
+        "int",
+        "entier"
+      ],
+      [
+        "float",
+        "decimal",
+        "flottant"
+      ],
+      [
+        "str",
+        "string",
+        "chaine"
+      ],
+      [
+        "bool",
+        "boolean"
+      ]
+    ],
+    "explication": "Ce sont les quatre types de base de Python : entier, décimal, texte, booléen.",
+    "exemple_code": "for v in (7, 3.14, 'bonjour', True):\n    print(type(v).__name__)",
+    "sortie_attendue": "int\nfloat\nstr\nbool",
+    "erreur_frequente": "Annoncer int pour True : en Python True est un bool (même s'il vaut 1 en calcul).",
+    "indice": "Quatre types, dans l'ordre des quatre valeurs proposées."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Connaître le type d'une valeur",
+    "question": "Quelle fonction affiche le type de la variable x ?",
+    "reponse": "type(x)",
+    "reponses_acceptees": [
+      "type(x)",
+      "print(type(x))"
+    ],
+    "explication": "type() renvoie le type d'une valeur. Très utile pour déboguer.",
+    "exemple_code": "x = 42\nprint(type(x))",
+    "sortie_attendue": "<class 'int'>",
+    "erreur_frequente": "Écrire x.type() : type est une fonction, pas une méthode.",
+    "indice": "Le nom de la fonction est le mot anglais pour « type »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Chaînes",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Coller deux textes",
+    "question": "Quel opérateur permet de coller deux chaînes de caractères bout à bout ?",
+    "reponse": "+",
+    "reponses_acceptees": [
+      "+",
+      "l'opérateur +",
+      "le plus",
+      "concaténation"
+    ],
+    "mots_cles": [
+      [
+        "+",
+        "concatenation",
+        "plus"
+      ]
+    ],
+    "explication": "Entre deux chaînes, + réalise une concaténation et non une addition.",
+    "exemple_code": "print(\"bon\" + \"jour\")",
+    "sortie_attendue": "bonjour",
+    "erreur_frequente": "Faire \"age : \" + 25 : on ne peut pas concaténer un str et un int.",
+    "indice": "Le même signe que pour l'addition."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Chaînes",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Longueur d'une chaîne",
+    "question": "Quelle instruction donne le nombre de caractères de la chaîne mot ?",
+    "reponse": "len(mot)",
+    "reponses_acceptees": [
+      "len(mot)",
+      "print(len(mot))"
+    ],
+    "explication": "len() renvoie la longueur d'une chaîne, d'une liste, d'un dictionnaire...",
+    "exemple_code": "mot = \"python\"\nprint(len(mot))",
+    "sortie_attendue": "6",
+    "erreur_frequente": "Écrire mot.len() : len est une fonction, pas une méthode.",
+    "indice": "Trois lettres, abréviation de length."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Chaînes",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Passer en majuscules",
+    "question": "Quelle méthode transforme la chaîne mot en majuscules ?",
+    "reponse": "mot.upper()",
+    "reponses_acceptees": [
+      "mot.upper()",
+      "upper()",
+      ".upper()",
+      "upper"
+    ],
+    "explication": "upper() renvoie une NOUVELLE chaîne en majuscules ; la variable d'origine n'est pas modifiée.",
+    "exemple_code": "mot = \"python\"\nprint(mot.upper())\nprint(mot)",
+    "sortie_attendue": "PYTHON\npython",
+    "erreur_frequente": "Croire que mot.upper() modifie mot : il faut réaffecter mot = mot.upper().",
+    "indice": "Le mot anglais pour « supérieur », suivi de parenthèses."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Convertir un texte en nombre",
+    "question": "Comment transformer la chaîne \"42\" en nombre entier ?",
+    "reponse": "int(\"42\")",
+    "reponses_acceptees": [
+      "int(\"42\")",
+      "int('42')"
+    ],
+    "explication": "int() convertit une chaîne en entier, à condition qu'elle ne contienne que des chiffres.",
+    "exemple_code": "print(int(\"42\") + 1)",
+    "sortie_attendue": "43",
+    "erreur_frequente": "int(\"42.5\") lève une ValueError : il faut passer par float() d'abord.",
+    "indice": "La fonction porte le même nom que le type visé."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Entrées/Sorties",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Demander une saisie",
+    "question": "Quelle fonction demande une information à l'utilisateur au clavier ?",
+    "reponse": "input()",
+    "reponses_acceptees": [
+      "input()",
+      "input",
+      "la fonction input"
+    ],
+    "mots_cles": [
+      [
+        "input"
+      ]
+    ],
+    "explication": "input() met le programme en pause et renvoie TOUJOURS une chaîne de caractères.",
+    "exemple_code": "nom = input(\"Ton prénom : \")\nprint(\"Bonjour\", nom)",
+    "sortie_attendue": "Bonjour Ada",
+    "erreur_frequente": "Oublier de convertir : age = input(...) donne un str, pas un int.",
+    "indice": "Le mot anglais pour « entrée »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Syntaxe",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Écrire un commentaire",
+    "question": "Quel caractère commence un commentaire sur une ligne en Python ?",
+    "reponse": "#",
+    "reponses_acceptees": [
+      "#",
+      "le dièse",
+      "dièse",
+      "le caractère #",
+      "hashtag"
+    ],
+    "mots_cles": [
+      [
+        "#",
+        "diese",
+        "hashtag"
+      ]
+    ],
+    "explication": "Tout ce qui suit # sur la ligne est ignoré par Python.",
+    "exemple_code": "# Ceci est un commentaire\nprint(\"visible\")",
+    "sortie_attendue": "visible",
+    "erreur_frequente": "Utiliser // comme en JavaScript : ce n'est pas un commentaire en Python.",
+    "indice": "Le symbole utilisé aussi pour les hashtags."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Opérateurs",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Calculer un quotient",
+    "question": "Quelle est la différence entre / et // en Python ?",
+    "reponse": "/ produit un quotient décimal ; // réalise une division entière",
+    "reponses_acceptees": [
+      "/ produit un quotient décimal ; // réalise une division entière",
+      "/ donne un float, // donne un entier",
+      "/ division décimale, // division entière"
+    ],
+    "mots_cles": [
+      [
+        "/"
+      ],
+      [
+        "//"
+      ],
+      [
+        "decimal",
+        "float",
+        "flottant",
+        "virgule"
+      ],
+      [
+        "entier",
+        "entiere"
+      ]
+    ],
+    "explication": "/ renvoie toujours un float. // tronque vers le bas et renvoie un entier si les opérandes le sont.",
+    "exemple_code": "print(7 / 2)\nprint(7 // 2)",
+    "sortie_attendue": "3.5\n3",
+    "erreur_frequente": "Croire que // arrondit : il tronque vers le bas (-7 // 2 vaut -4).",
+    "indice": "L'un garde la virgule, l'autre la supprime."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Obtenir le reste",
+    "question": "Quel opérateur donne le reste d'une division entière ?",
+    "reponse": "%",
+    "reponses_acceptees": [
+      "%",
+      "modulo",
+      "l'opérateur modulo",
+      "le pourcentage"
+    ],
+    "mots_cles": [
+      [
+        "%",
+        "modulo"
+      ]
+    ],
+    "explication": "% s'appelle le modulo. Très utilisé pour tester la parité : n % 2 == 0.",
+    "exemple_code": "print(7 % 2)",
+    "sortie_attendue": "1",
+    "erreur_frequente": "Confondre % (reste) et // (quotient).",
+    "indice": "Le signe pourcentage."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Élever à une puissance",
+    "question": "Quel opérateur élève un nombre à une puissance ?",
+    "reponse": "**",
+    "reponses_acceptees": [
+      "**",
+      "double étoile",
+      "l'opérateur **",
+      "puissance"
+    ],
+    "mots_cles": [
+      [
+        "**",
+        "puissance"
+      ]
+    ],
+    "explication": "2 ** 10 vaut 1024. L'accent circonflexe ^ ne fait PAS de puissance en Python.",
+    "exemple_code": "print(2 ** 10)",
+    "sortie_attendue": "1024",
+    "erreur_frequente": "Écrire 2 ^ 10 : ^ est un ou exclusif binaire, le résultat serait 8.",
+    "indice": "Deux fois le symbole de la multiplication."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Tester une égalité",
+    "question": "Quel opérateur teste si deux valeurs sont égales ?",
+    "reponse": "==",
+    "reponses_acceptees": [
+      "==",
+      "double égal",
+      "l'opérateur ==",
+      "égal égal"
+    ],
+    "mots_cles": [
+      [
+        "=="
+      ]
+    ],
+    "explication": "= affecte une valeur, == compare deux valeurs et renvoie un booléen.",
+    "exemple_code": "print(3 == 3)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Écrire if x = 3 : Python lève une SyntaxError, il faut ==.",
+    "indice": "Deux fois le signe de l'affectation."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "difficulte": 1,
+    "titre": "Tester une différence",
+    "question": "Quel opérateur teste si deux valeurs sont différentes ?",
+    "reponse": "!=",
+    "reponses_acceptees": [
+      "!=",
+      "différent de",
+      "l'opérateur !="
+    ],
+    "mots_cles": [
+      [
+        "!=",
+        "different"
+      ]
+    ],
+    "explication": "!= renvoie True quand les deux valeurs ne sont pas égales.",
+    "exemple_code": "print(3 != 4)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Écrire <> : cette syntaxe n'existe plus en Python 3.",
+    "indice": "Le point d'exclamation nie l'égalité."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Créer une liste",
+    "question": "Comment créer une liste nommée nombres contenant 1, 2 et 3 ?",
+    "reponse": "nombres = [1, 2, 3]",
+    "reponses_acceptees": [
+      "nombres = [1, 2, 3]",
+      "nombres=[1,2,3]"
+    ],
+    "explication": "Une liste s'écrit entre crochets, les éléments séparés par des virgules.",
+    "exemple_code": "nombres = [1, 2, 3]\nprint(nombres)",
+    "sortie_attendue": "[1, 2, 3]",
+    "erreur_frequente": "Utiliser des parenthèses : (1, 2, 3) crée un tuple, non modifiable.",
+    "indice": "Des crochets, pas des parenthèses."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Ajouter à une liste",
+    "question": "Quelle instruction ajoute la valeur 4 à la fin de la liste nombres ?",
+    "reponse": "nombres.append(4)",
+    "reponses_acceptees": [
+      "nombres.append(4)"
+    ],
+    "explication": "append() ajoute un élément à la FIN de la liste et modifie la liste sur place.",
+    "exemple_code": "nombres = [1, 2, 3]\nnombres.append(4)\nprint(nombres)",
+    "sortie_attendue": "[1, 2, 3, 4]",
+    "erreur_frequente": "Écrire nombres = nombres.append(4) : append renvoie None, la liste serait perdue.",
+    "indice": "Le nom de la liste, un point, la méthode, et la valeur entre parenthèses."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Le premier élément",
+    "question": "Comment accéder au premier élément de la liste nombres ?",
+    "reponse": "nombres[0]",
+    "reponses_acceptees": [
+      "nombres[0]",
+      "print(nombres[0])"
+    ],
+    "explication": "En Python, les indices commencent à 0 : le premier élément est à l'indice 0.",
+    "exemple_code": "nombres = [10, 20, 30]\nprint(nombres[0])",
+    "sortie_attendue": "10",
+    "erreur_frequente": "Écrire nombres[1] en croyant obtenir le premier élément.",
+    "indice": "Le premier indice n'est pas 1."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Le dernier élément",
+    "question": "Comment accéder au dernier élément de la liste nombres, quelle que soit sa taille ?",
+    "reponse": "nombres[-1]",
+    "reponses_acceptees": [
+      "nombres[-1]",
+      "print(nombres[-1])"
+    ],
+    "explication": "Les indices négatifs comptent depuis la fin : -1 est le dernier, -2 l'avant-dernier.",
+    "exemple_code": "nombres = [10, 20, 30]\nprint(nombres[-1])",
+    "sortie_attendue": "30",
+    "erreur_frequente": "Écrire nombres[len(nombres)] : cela dépasse d'un cran et lève une IndexError.",
+    "indice": "Un indice négatif compte à rebours."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "code",
+    "difficulte": 1,
+    "titre": "Taille d'une liste",
+    "question": "Quelle instruction donne le nombre d'éléments de la liste nombres ?",
+    "reponse": "len(nombres)",
+    "reponses_acceptees": [
+      "len(nombres)",
+      "print(len(nombres))"
+    ],
+    "explication": "len() fonctionne pour les listes comme pour les chaînes.",
+    "exemple_code": "nombres = [1, 2, 3]\nprint(len(nombres))",
+    "sortie_attendue": "3",
+    "erreur_frequente": "Confondre len(liste) (le nombre d'éléments) et le dernier indice (len - 1).",
+    "indice": "La même fonction que pour la longueur d'un texte."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Supprimer un élément",
+    "question": "Quelle méthode retire la valeur 2 de la liste nombres ?",
+    "reponse": "nombres.remove(2)",
+    "reponses_acceptees": [
+      "nombres.remove(2)",
+      "remove",
+      "la méthode remove",
+      "remove(2)"
+    ],
+    "mots_cles": [
+      [
+        "remove"
+      ]
+    ],
+    "explication": "remove() retire la PREMIÈRE occurrence de la valeur. pop() retire par indice.",
+    "exemple_code": "nombres = [1, 2, 3, 2]\nnombres.remove(2)\nprint(nombres)",
+    "sortie_attendue": "[1, 3, 2]",
+    "erreur_frequente": "Croire que remove supprime toutes les occurrences : il n'en retire qu'une.",
+    "indice": "Le mot anglais pour « retirer »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Listes",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Trier une liste",
+    "question": "Quelle méthode trie la liste nombres dans l'ordre croissant ?",
+    "reponse": "nombres.sort()",
+    "reponses_acceptees": [
+      "nombres.sort()",
+      "sort",
+      "la méthode sort",
+      "sorted",
+      "sort()"
+    ],
+    "mots_cles": [
+      [
+        "sort"
+      ]
+    ],
+    "explication": "sort() trie la liste sur place. sorted() renvoie une nouvelle liste triée.",
+    "exemple_code": "nombres = [3, 1, 2]\nnombres.sort()\nprint(nombres)",
+    "sortie_attendue": "[1, 2, 3]",
+    "erreur_frequente": "Écrire nombres = nombres.sort() : sort renvoie None.",
+    "indice": "Le mot anglais pour « trier »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Dictionnaires",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Créer un dictionnaire",
+    "question": "Comment créer un dictionnaire personne associant la clé \"nom\" à la valeur \"Ada\" ?",
+    "reponse": "personne = {\"nom\": \"Ada\"}",
+    "reponses_acceptees": [
+      "personne = {\"nom\": \"Ada\"}",
+      "personne = {'nom': 'Ada'}"
+    ],
+    "explication": "Un dictionnaire s'écrit entre accolades, sous la forme clé : valeur.",
+    "exemple_code": "personne = {\"nom\": \"Ada\"}\nprint(personne)",
+    "sortie_attendue": "{'nom': 'Ada'}",
+    "erreur_frequente": "Utiliser des crochets : [ ] crée une liste, pas un dictionnaire.",
+    "indice": "Des accolades, et deux-points entre la clé et la valeur."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Dictionnaires",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Lire une valeur",
+    "question": "Comment lire la valeur associée à la clé \"nom\" dans le dictionnaire personne ?",
+    "reponse": "personne[\"nom\"]",
+    "reponses_acceptees": [
+      "personne[\"nom\"]",
+      "personne['nom']",
+      "personne.get(\"nom\")"
+    ],
+    "explication": "On accède par la clé entre crochets. get() est une variante qui ne plante pas si la clé manque.",
+    "exemple_code": "personne = {\"nom\": \"Ada\"}\nprint(personne[\"nom\"])",
+    "sortie_attendue": "Ada",
+    "erreur_frequente": "Écrire personne[0] : un dictionnaire s'indexe par clé, pas par position.",
+    "indice": "Des crochets, avec la clé entre guillemets."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Dictionnaires",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Ajouter une clé",
+    "question": "Comment ajouter la clé \"age\" avec la valeur 36 au dictionnaire personne ?",
+    "reponse": "personne[\"age\"] = 36",
+    "reponses_acceptees": [
+      "personne[\"age\"] = 36",
+      "personne['age'] = 36"
+    ],
+    "explication": "Affecter une clé inexistante la crée. Affecter une clé existante remplace sa valeur.",
+    "exemple_code": "personne = {\"nom\": \"Ada\"}\npersonne[\"age\"] = 36\nprint(personne)",
+    "sortie_attendue": "{'nom': 'Ada', 'age': 36}",
+    "erreur_frequente": "Chercher une méthode add() : elle n'existe pas pour les dictionnaires.",
+    "indice": "Comme une lecture, mais suivie d'un signe égal."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Définir une fonction",
+    "question": "Quel mot-clé sert à définir une fonction ?",
+    "reponse": "def",
+    "reponses_acceptees": [
+      "def",
+      "le mot-clé def"
+    ],
+    "mots_cles": [
+      [
+        "def"
+      ]
+    ],
+    "explication": "def nom(parametres): puis un bloc indenté. La fonction ne s'exécute qu'à l'appel.",
+    "exemple_code": "def saluer():\n    print(\"Bonjour\")\n\nsaluer()",
+    "sortie_attendue": "Bonjour",
+    "erreur_frequente": "Écrire function comme en JavaScript : Python utilise def.",
+    "indice": "Trois lettres, abréviation de « define »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fonctions",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Renvoyer un résultat",
+    "question": "Quel mot-clé renvoie une valeur depuis une fonction ?",
+    "reponse": "return",
+    "reponses_acceptees": [
+      "return",
+      "le mot-clé return",
+      "retourner"
+    ],
+    "mots_cles": [
+      [
+        "return"
+      ]
+    ],
+    "explication": "return renvoie une valeur ET met fin à la fonction immédiatement.",
+    "exemple_code": "def double(n):\n    return n * 2\n\nprint(double(4))",
+    "sortie_attendue": "8",
+    "erreur_frequente": "Utiliser print au lieu de return : la valeur s'affiche mais n'est pas réutilisable.",
+    "indice": "Le mot anglais pour « retourner »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fonctions",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Appeler une fonction",
+    "question": "Comment appeler la fonction saluer en lui passant le texte \"Ada\" ?",
+    "reponse": "saluer(\"Ada\")",
+    "reponses_acceptees": [
+      "saluer(\"Ada\")",
+      "saluer('Ada')"
+    ],
+    "explication": "On appelle une fonction par son nom suivi de parenthèses contenant les arguments.",
+    "exemple_code": "def saluer(nom):\n    print(\"Bonjour\", nom)\n\nsaluer(\"Ada\")",
+    "sortie_attendue": "Bonjour Ada",
+    "erreur_frequente": "Oublier les parenthèses : saluer seul désigne la fonction sans l'exécuter.",
+    "indice": "Le nom, puis l'argument entre parenthèses."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Fonctions",
+    "type": "texte",
+    "difficulte": 3,
+    "titre": "Un paramètre laissé de côté à l'appel",
+    "question": "Dans def saluer(nom=\"ami\"), que se passe-t-il si on appelle saluer() sans argument ?",
+    "reponse": "nom prend la valeur par défaut ami",
+    "reponses_acceptees": [
+      "nom prend la valeur par défaut ami",
+      "nom vaut ami",
+      "la valeur par défaut ami est utilisée"
+    ],
+    "mots_cles": [
+      [
+        "ami"
+      ],
+      [
+        "defaut",
+        "default"
+      ]
+    ],
+    "explication": "Un paramètre avec valeur par défaut devient facultatif à l'appel.",
+    "exemple_code": "def saluer(nom=\"ami\"):\n    print(\"Bonjour\", nom)\n\nsaluer()",
+    "sortie_attendue": "Bonjour ami",
+    "erreur_frequente": "Placer un paramètre par défaut avant un paramètre obligatoire : SyntaxError.",
+    "indice": "Regarde ce qui suit le signe égal dans la définition."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Syntaxe",
+    "type": "texte",
+    "difficulte": 2,
+    "titre": "Ce qui délimite un bloc en Python",
+    "question": "Comment Python délimite-t-il un bloc de code ?",
+    "reponse": "par l'indentation, généralement 4 espaces",
+    "reponses_acceptees": [
+      "par l'indentation, généralement 4 espaces",
+      "par l'indentation",
+      "avec des espaces en début de ligne",
+      "l'indentation"
+    ],
+    "mots_cles": [
+      [
+        "indentation",
+        "espace",
+        "decalage"
+      ]
+    ],
+    "explication": "Contrairement à beaucoup de langages, Python n'utilise pas d'accolades : le décalage fait le bloc.",
+    "exemple_code": "if True:\n    print(\"dans le bloc\")\nprint(\"hors du bloc\")",
+    "sortie_attendue": "dans le bloc\nhors du bloc",
+    "erreur_frequente": "Mélanger tabulations et espaces : cela provoque une IndentationError.",
+    "indice": "Ce n'est ni une accolade ni un point-virgule, mais un décalage."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Erreurs",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Variable inconnue",
+    "question": "Quelle erreur Python lève-t-il si on utilise une variable jamais définie ?",
+    "reponse": "NameError",
+    "reponses_acceptees": [
+      "NameError",
+      "une NameError",
+      "erreur de nom"
+    ],
+    "mots_cles": [
+      [
+        "nameerror"
+      ]
+    ],
+    "explication": "NameError signale un nom que Python ne connaît pas : faute de frappe ou variable non créée.",
+    "exemple_code": "print(inconnue)",
+    "sortie_attendue": "NameError: name 'inconnue' is not defined",
+    "erreur_frequente": "Confondre NameError (nom inconnu) et TypeError (type incompatible).",
+    "indice": "Le nom de l'erreur contient le mot « nom » en anglais."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Erreurs",
+    "type": "mot_cle",
+    "difficulte": 2,
+    "titre": "Division par zéro",
+    "question": "Quelle erreur Python lève-t-il lors d'une division par zéro ?",
+    "reponse": "ZeroDivisionError",
+    "reponses_acceptees": [
+      "ZeroDivisionError",
+      "une ZeroDivisionError",
+      "erreur de division par zéro"
+    ],
+    "mots_cles": [
+      [
+        "zerodivisionerror"
+      ]
+    ],
+    "explication": "Toute division ou modulo par 0 lève une ZeroDivisionError.",
+    "exemple_code": "print(1 / 0)",
+    "sortie_attendue": "ZeroDivisionError: division by zero",
+    "erreur_frequente": "Oublier de tester le diviseur avant de diviser.",
+    "indice": "Le nom de l'erreur décrit littéralement l'opération interdite."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Chaînes",
+    "type": "code",
+    "difficulte": 2,
+    "titre": "Insérer une variable dans un texte",
+    "question": "Comment afficher \"Bonjour Ada\" avec une f-string, sachant que nom vaut \"Ada\" ?",
+    "reponse": "print(f\"Bonjour {nom}\")",
+    "reponses_acceptees": [
+      "print(f\"Bonjour {nom}\")",
+      "print(f'Bonjour {nom}')",
+      "f\"Bonjour {nom}\""
+    ],
+    "explication": "Le f avant le guillemet autorise les accolades, remplacées par la valeur de la variable.",
+    "exemple_code": "nom = \"Ada\"\nprint(f\"Bonjour {nom}\")",
+    "sortie_attendue": "Bonjour Ada",
+    "erreur_frequente": "Oublier le f : print(\"Bonjour {nom}\") affiche les accolades telles quelles.",
+    "indice": "Une lettre avant le guillemet ouvrant, et des accolades autour de la variable."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Chaînes",
+    "type": "code",
+    "difficulte": 3,
+    "titre": "Découper une chaîne",
+    "question": "Quelle méthode découpe la chaîne phrase en une liste de mots séparés par des espaces ?",
+    "reponse": "phrase.split()",
+    "reponses_acceptees": [
+      "phrase.split()",
+      "split()",
+      "split",
+      ".split()"
+    ],
+    "explication": "split() découpe sur les espaces par défaut, ou sur le séparateur passé en argument.",
+    "exemple_code": "phrase = \"bonjour le monde\"\nprint(phrase.split())",
+    "sortie_attendue": "['bonjour', 'le', 'monde']",
+    "erreur_frequente": "Confondre split (chaîne vers liste) et join (liste vers chaîne).",
+    "indice": "Le mot anglais pour « découper »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Types",
+    "type": "texte",
+    "difficulte": 3,
+    "titre": "Le type de input",
+    "question": "Quel type renvoie toujours la fonction input() ?",
+    "reponse": "une chaîne de caractères, donc str",
+    "reponses_acceptees": [
+      "une chaîne de caractères, donc str",
+      "str",
+      "une chaîne",
+      "du texte",
+      "string"
+    ],
+    "mots_cles": [
+      [
+        "chaine",
+        "string",
+        "texte"
+      ]
+    ],
+    "explication": "Même si l'utilisateur tape 25, input() renvoie \"25\". Il faut convertir avec int() pour calculer.",
+    "exemple_code": "age = input(\"Ton âge : \")\nprint(type(age))",
+    "sortie_attendue": "<class 'str'>",
+    "erreur_frequente": "Faire input() + 1 : TypeError, car on additionne un str et un int.",
+    "indice": "Le même type que celui d'un texte entre guillemets."
+  },
+  {
+    "explication": "Une variable est un nom associé à une valeur grâce au signe =, ce qui permet de réutiliser cette valeur plus loin dans le programme sans la réécrire. Le nom pointe vers la valeur, il ne la contient pas physiquement.",
+    "exemple_code": "largeur = 20\nhauteur = 5 * 9\nprint(largeur * hauteur)",
+    "sortie_attendue": "900",
+    "erreur_frequente": "Confondre le nom de la variable avec sa valeur, par exemple croire que largeur et 20 sont la même chose alors que largeur peut changer de valeur ensuite.",
+    "indice": "C'est un terme algébrique, transposé en programmation.",
+    "mots_cles": [
+      [
+        "variable"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Variables",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "variable",
+      "une variable",
+      "un nom de variable",
+      "c'est une variable",
+      "une variable python"
+    ],
+    "niveau": 1,
+    "titre": "Le mot qui affecte une valeur à un nom réutilisable",
+    "question": "Dans le code Python largeur = 20, comment appelle-t-on largeur, ce nom auquel une valeur est associée grâce au signe = ?",
+    "reponse": "variable",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le caractère # marque le début d'un commentaire : tout ce qui suit sur la même ligne n'est pas exécuté par Python, il sert seulement à expliquer le code pour un lecteur humain. À l'intérieur d'une chaîne comme \"# Ceci n'est pas un commentaire\", ce même caractère ne déclenche pas de commentaire.",
+    "exemple_code": "spam = 1  # et celui-ci aussi\nprint(spam)",
+    "sortie_attendue": "1",
+    "erreur_frequente": "Penser qu'un dièse placé à l'intérieur d'une chaîne de caractères crée un commentaire, alors qu'entre guillemets le texte fait partie de la valeur et sera traité normalement par Python.",
+    "indice": "Pensez à ce qui arrive à une remarque griffonnée en marge d'un texte : personne ne l'exécute.",
+    "mots_cles": [
+      [
+        "ignore"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Syntaxe",
+    "type": "texte",
+    "reponses_acceptees": [
+      "il est ignoré par l'interpréteur",
+      "il est ignoré",
+      "l'interpréteur l'ignore",
+      "ce texte est ignoré, il n'est pas exécuté",
+      "il est ignoré et n'a aucun effet"
+    ],
+    "niveau": 1,
+    "titre": "Le sort réservé au texte placé après un dièse sur une ligne de code",
+    "question": "Dans une ligne de code Python comme spam = 1  # et celui-ci aussi, que fait l'interpréteur du texte situé après le dièse ?",
+    "reponse": "il est ignoré par l'interpréteur",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Chaque valeur en Python appartient à un type (int, float, str...), et ce type détermine le sens des opérations : + additionne deux nombres mais concatène deux chaînes, comme dans 3 * 'un' + 'ium' qui donne 'unununium'. Le type conditionne donc le comportement d'une valeur dans le programme.",
+    "exemple_code": "print(2 + 2)\nprint(3 * 'un' + 'ium')",
+    "sortie_attendue": "4\nunununium",
+    "erreur_frequente": "Croire que + se comporte toujours de la même façon, sans réaliser que son effet dépend du type des valeurs qu'il combine.",
+    "indice": "C'est ce qu'on obtient en interrogeant une valeur avec une fonction dédiée.",
+    "mots_cles": [
+      [
+        "type"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Types de données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "le type",
+      "son type",
+      "le type de la valeur",
+      "un type",
+      "le type de donnée"
+    ],
+    "niveau": 1,
+    "titre": "Ce qui détermine les opérations possibles sur une valeur",
+    "question": "En Python, comment appelle-t-on la catégorie (entier, texte, décimal...) qui détermine quelles opérations sont possibles sur une valeur donnée ?",
+    "reponse": "le type",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Python accepte aussi bien les guillemets simples ('...') que doubles (\"...\") pour délimiter une chaîne, ce qui permet de choisir celui qui n'entre pas en conflit avec une apostrophe dans le texte. Par exemple \"doesn't\" s'écrit plus simplement avec des guillemets doubles.",
+    "exemple_code": "print('spam eggs')\nprint(\"Paris\")",
+    "sortie_attendue": "spam eggs\nParis",
+    "erreur_frequente": "Mélanger le type de guillemet d'ouverture et de fermeture, par exemple écrire 'texte\" ce qui provoque une erreur.",
+    "indice": "Deux symboles au clavier, chacun utilisé deux fois de part et d'autre du texte.",
+    "mots_cles": [
+      [
+        "guillemet",
+        "guillemets"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Chaînes de caractères",
+    "type": "texte",
+    "reponses_acceptees": [
+      "des guillemets simples ou doubles",
+      "des guillemets",
+      "des guillemets simples (') ou doubles (\")",
+      "on utilise des guillemets",
+      "entre guillemets simples ou doubles"
+    ],
+    "niveau": 1,
+    "titre": "Les caractères qui délimitent un texte littéral en Python",
+    "question": "Avec quels caractères doit-on entourer un texte littéral comme Bonjour pour que Python le reconnaisse comme une chaîne de caractères ?",
+    "reponse": "des guillemets simples ou doubles",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'opérateur // effectue une division entière : il calcule le quotient et rejette la partie décimale, alors que / renvoie toujours un résultat décimal. Ainsi 17 // 3 donne 5, sans le reste.",
+    "exemple_code": "print(17 // 3)",
+    "sortie_attendue": "5",
+    "erreur_frequente": "Confondre // avec / et obtenir un résultat décimal alors qu'on voulait un quotient entier tronqué.",
+    "indice": "Deux fois le symbole qui sert normalement à diviser.",
+    "mots_cles": [
+      [
+        "//"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Nombres",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "//",
+      "l'opérateur //",
+      "la double barre oblique //",
+      "// (division entière)",
+      "l'opérateur de division entière //"
+    ],
+    "niveau": 1,
+    "titre": "Le symbole qui donne un quotient entier, sans partie décimale",
+    "question": "Quel opérateur Python permet d'obtenir directement le quotient entier d'une division, en écartant la partie décimale du résultat, comme dans 17 // 3 qui donne 5 ?",
+    "reponse": "//",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "En Python 3, l'opérateur / renvoie toujours un résultat décimal, même si les deux opérandes sont des nombres entiers et que la division tombe juste. Pour obtenir un résultat entier tronqué, il faut utiliser l'opérateur // à la place.",
+    "exemple_code": "print(17 / 3)",
+    "sortie_attendue": "5.666666666666667",
+    "erreur_frequente": "S'attendre à un nombre entier en écrivant 4 / 2, alors que Python renvoie 2.0, un résultat décimal.",
+    "indice": "Regardez le commentaire donné juste après cette opération dans la documentation officielle.",
+    "mots_cles": [
+      [
+        "decimal"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Nombres",
+    "type": "texte",
+    "reponses_acceptees": [
+      "un résultat décimal, même entre deux entiers",
+      "toujours un résultat décimal",
+      "un résultat décimal (float)",
+      "toujours décimal, jamais entier",
+      "un nombre décimal, même si la division tombe juste"
+    ],
+    "niveau": 1,
+    "titre": "Ce que produit toujours l'opérateur / peu importe les nombres utilisés",
+    "question": "En Python, l'opérateur / donne-t-il un résultat entier ou décimal quand on divise deux nombres entiers, par exemple 17 / 3 ?",
+    "reponse": "un résultat décimal, même entre deux entiers",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "print() est la fonction utilisée pour afficher une valeur dans la console ; dans l'exemple de calcul de la suite de Fibonacci, print(a) affiche la valeur de a à chaque tour de la boucle. Sans cet appel, les calculs se feraient sans qu'aucun résultat ne soit visible.",
+    "exemple_code": "a, b = 0, 1\nwhile a < 10:\n    print(a)\n    a, b = b, a + b",
+    "sortie_attendue": "0\n1\n1\n2\n3\n5\n8",
+    "erreur_frequente": "Oublier les parenthèses et écrire print a au lieu de print(a), ce qui provoque une erreur.",
+    "indice": "Cinq lettres, un verbe anglais qui signifie imprimer.",
+    "mots_cles": [
+      [
+        "print"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Instructions de base",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "print",
+      "la fonction print",
+      "print()",
+      "la fonction print()",
+      "l'instruction print"
+    ],
+    "niveau": 1,
+    "titre": "La fonction intégrée qui montre une valeur dans la console",
+    "question": "Quelle fonction intégrée de Python affiche une valeur à l'écran, comme dans une boucle où chaque nombre calculé est montré à l'utilisateur ?",
+    "reponse": "print",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Les opérateurs arithmétiques regroupent tous les symboles utilisés pour calculer sur des nombres : addition, soustraction, multiplication, division, division entière, modulo et puissance. Ce terme désigne la catégorie plutôt qu'un symbole précis.",
+    "exemple_code": "print(2 + 2)\nprint(50 - 5 * 6)",
+    "sortie_attendue": "4\n20",
+    "erreur_frequente": "Répondre avec un seul symbole comme + alors que la question porte sur le nom de toute la catégorie de symboles.",
+    "indice": "Deux mots : un pour dire qu'ils opèrent, un pour dire qu'ils calculent.",
+    "mots_cles": [
+      [
+        "operateur",
+        "operateurs"
+      ],
+      [
+        "arithmetique",
+        "calcul",
+        "mathematique"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "texte",
+    "reponses_acceptees": [
+      "les opérateurs arithmétiques",
+      "des opérateurs arithmétiques",
+      "les opérateurs de calcul",
+      "les opérateurs mathématiques",
+      "des opérateurs de calcul"
+    ],
+    "niveau": 1,
+    "titre": "Le nom donné aux symboles +, -, *, / qui servent à calculer",
+    "question": "Comment appelle-t-on collectivement les symboles comme +, -, *, / ou ** qui permettent d'effectuer des calculs en Python ?",
+    "reponse": "les opérateurs arithmétiques",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Python respecte les priorités usuelles des mathématiques : la multiplication et la division sont calculées avant l'addition et la soustraction. Ainsi 50 - 5 * 6 vaut 50 - 30, soit 20, et non (50 - 5) * 6.",
+    "exemple_code": "print(50 - 5 * 6)",
+    "sortie_attendue": "20",
+    "erreur_frequente": "Calculer les opérations de gauche à droite sans respecter les priorités, ce qui donnerait (50 - 5) * 6 = 270 au lieu de 20.",
+    "indice": "C'est la même règle qu'à l'école pour lire une expression avec plusieurs opérations.",
+    "mots_cles": [
+      [
+        "multiplication"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Opérateurs",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "la multiplication",
+      "la multiplication d'abord",
+      "multiplication avant soustraction",
+      "la multiplication est prioritaire",
+      "on fait la multiplication en premier"
+    ],
+    "niveau": 1,
+    "titre": "Ce qui est calculé en premier dans 50 - 5 * 6",
+    "question": "Dans l'expression 50 - 5 * 6, quelle opération Python effectue-t-il en premier : la soustraction ou la multiplication ?",
+    "reponse": "la multiplication",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "En Python, l'indexation des chaînes commence à 0 : le premier caractère occupe la position 0, comme dans word[0] qui renvoie 'P' pour word = 'Python'. C'est une convention commune à de nombreux langages de programmation.",
+    "exemple_code": "word = 'Python'\nprint(word[0])",
+    "sortie_attendue": "P",
+    "erreur_frequente": "Croire que le premier caractère est à l'indice 1, par habitude de compter à partir de 1 dans la vie courante.",
+    "indice": "Ce n'est pas le chiffre qu'on utilise naturellement pour compter dans la vie de tous les jours.",
+    "mots_cles": [
+      [
+        "0",
+        "zero"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Chaînes de caractères",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "0",
+      "zéro",
+      "l'indice 0",
+      "l'indice zéro",
+      "le chiffre 0"
+    ],
+    "niveau": 1,
+    "titre": "Le numéro attribué au tout premier élément d'une chaîne",
+    "question": "En Python, à partir de quel numéro d'indice commence-t-on à compter la position des caractères d'une chaîne comme word = 'Python' ?",
+    "reponse": "0",
+    "matiere": "python",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le découpage (ou slicing) extrait une sous-chaîne grâce à la notation début:fin, comme word[0:2] qui renvoie les caractères aux positions 0 et 1, la position 2 étant exclue. Contrairement à l'indexation qui cible un seul caractère, le découpage renvoie toujours une nouvelle chaîne.",
+    "exemple_code": "word = 'Python'\nprint(word[0:2])",
+    "sortie_attendue": "Py",
+    "erreur_frequente": "Croire que word[0:2] inclut le caractère à la position 2, alors que la borne de fin est toujours exclue.",
+    "indice": "Deux nombres séparés par un symbole, comme les graduations d'une règle.",
+    "mots_cles": [
+      [
+        "decoupage",
+        "decoupe",
+        "decouper",
+        "tranche",
+        "slicing"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Chaînes de caractères",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "le découpage",
+      "un découpage",
+      "le slicing",
+      "une tranche",
+      "découper la chaîne"
+    ],
+    "niveau": 1,
+    "titre": "Le procédé qui extrait une portion d'une chaîne, plutôt qu'un seul caractère",
+    "question": "Comment appelle-t-on l'opération qui consiste à extraire une sous-partie d'une chaîne, par exemple les deux premiers caractères de word avec word[0:2] ?",
+    "reponse": "le découpage",
+    "matiere": "python",
+    "langue": "fr"
+  }
+]

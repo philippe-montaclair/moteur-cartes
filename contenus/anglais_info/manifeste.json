@@ -1,0 +1,8 @@
+{
+  "matiere": "anglais_info",
+  "nom": "Anglais informatique",
+  "description": "Lire ses messages d'erreur, sa documentation, et éviter les faux amis.",
+  "langue_enseignement": "fr",
+  "langue_cible": "en",
+  "type_defaut": "vocabulaire"
+}

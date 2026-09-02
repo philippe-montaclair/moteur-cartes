@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qualité des questions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { border-bottom: 1px solid var(--bordure); padding: 0.5rem 0.6rem;
+             text-align: left; vertical-align: top; }
+    th { color: var(--texte-doux); font-size: 0.72rem; text-transform: uppercase;
+         letter-spacing: 0.05em; font-weight: 600; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .pastille { border-radius: 999px; padding: 0.1rem 0.55rem; font-size: 0.72rem;
+                display: inline-block; white-space: nowrap; }
+    .haute   { background: rgba(224,104,95,.18);  color: var(--rouge); }
+    .moyenne { background: rgba(224,163,74,.18);  color: var(--orange); }
+    .basse   { background: rgba(153,161,179,.18); color: var(--texte-doux); }
+    .bon     { color: var(--vert); }
+    .alerte  { color: var(--rouge); font-weight: 600; }
+    .attention { color: var(--orange); }
+    .faible  { color: var(--texte-doux); font-style: italic; }
+    .tuiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+              gap: .75rem; margin-bottom: 1.25rem; }
+    .tuile { background: var(--panneau-clair); border: 1px solid var(--bordure);
+             border-radius: var(--rayon); padding: .9rem 1rem; }
+    .tuile .valeur { font-size: 1.6rem; font-weight: 600; display: block;
+                     font-variant-numeric: tabular-nums; }
+    .tuile .libelle { color: var(--texte-doux); font-size: .78rem; }
+    .avertissement { background: rgba(224,163,74,.12); border: 1px solid var(--orange);
+                     border-radius: var(--rayon); padding: .85rem 1rem;
+                     color: var(--orange); margin-bottom: 1.25rem; }
+    details { margin-top: .4rem; }
+    summary { cursor: pointer; color: var(--accent); font-size: .82rem; }
+    code { font-family: var(--police-code); font-size: .85em; }
+  </style>
+</head>
+<body>
+
+  <header class="entete">
+    <h1>Qualité des questions</h1>
+    <p class="sous-titre">Ce que les réponses des apprenants disent des cartes.</p>
+  </header>
+
+  <main class="conteneur">
+    <p id="chargement" class="chargement">Chargement…</p>
+
+    <section id="bloc-resume" class="carte-panneau" hidden>
+      <div class="tuiles" id="tuiles"></div>
+      <p id="message-volume" class="meta"></p>
+      <p><a href="/" class="lien">← Retour à l'application</a></p>
+    </section>
+
+    <section id="bloc-alerte" class="carte-panneau" hidden>
+      <h2>À relire en priorité</h2>
+      <p class="meta">Les cartes signalées par les données, classées par gravité.</p>
+      <table><thead><tr>
+        <th>Gravité</th><th>Carte</th><th>Problème</th><th>Détail</th><th class="num">n</th>
+      </tr></thead><tbody id="corps-alerte"></tbody></table>
+    </section>
+
+    <section id="bloc-niveaux" class="carte-panneau" hidden>
+      <h2>Cohérence interne (KR-20)</h2>
+      <p class="meta">Le niveau mesure-t-il bien une compétence unique ?
+         Au-dessus de 0,70, oui.</p>
+      <table><thead><tr>
+        <th>Niveau</th><th class="num">Cartes</th><th class="num">Sessions complètes</th>
+        <th class="num">KR-20</th><th>Interprétation</th>
+      </tr></thead><tbody id="corps-niveaux"></tbody></table>
+    </section>
+
+    <section id="bloc-cartes" class="carte-panneau" hidden>
+      <h2>Toutes les cartes</h2>
+      <p class="meta">
+        <strong>Difficulté</strong> : part de réussite (utile entre 0,20 et 0,95).
+        <strong>Discrimination</strong> : l'item sépare-t-il les forts des faibles ?
+        Sous 0,20, la question est probablement ambiguë.
+      </p>
+      <table><thead><tr>
+        <th>#</th><th>Carte</th><th class="num">n</th><th class="num">Difficulté</th>
+        <th class="num">Discrim.</th><th class="num">Indice</th>
+        <th class="num">Abandon</th><th>Fiabilité</th>
+      </tr></thead><tbody id="corps-cartes"></tbody></table>
+    </section>
+
+    <p id="erreur" class="erreur" hidden></p>
+  </main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const nb = (v, d = 2) => (v === null || v === undefined) ? '—' : Number(v).toFixed(d);
+
+function cellule(parent, texte, classe) {
+  const td = document.createElement('td');
+  td.textContent = texte;
+  if (classe) td.className = classe;
+  parent.appendChild(td);
+  return td;
+}
+
+function tuile(valeur, libelle) {
+  const d = document.createElement('div');
+  d.className = 'tuile';
+  const v = document.createElement('span'); v.className = 'valeur'; v.textContent = valeur;
+  const l = document.createElement('span'); l.className = 'libelle'; l.textContent = libelle;
+  d.append(v, l);
+  return d;
+}
+
+function classeDiscrimination(d) {
+  if (d === null) return 'faible';
+  if (d < 0.20) return 'alerte';
+  if (d < 0.30) return 'attention';
+  return 'bon';
+}
+
+function classeDifficulte(p) {
+  if (p === null) return 'faible';
+  if (p < 0.20 || p > 0.95) return 'attention';
+  return '';
+}
+
+async function charger() {
+  try {
+    const [qualite, alertes] = await Promise.all([
+      fetch('/api/qualite').then(r => r.json()),
+      fetch('/api/qualite/diagnostics').then(r => r.json()),
+    ]);
+    $('chargement').hidden = true;
+
+    const r = qualite.resume;
+    const t = $('tuiles');
+    t.append(
+      tuile(r.tentatives_totales, 'tentatives'),
+      tuile(r.sessions, 'apprenants'),
+      tuile(`${r.cartes_mesurables}/${r.cartes}`, 'cartes mesurables'),
+      tuile(r.signalements, 'à relire'),
+    );
+    $('message-volume').textContent = r.message;
+    $('bloc-resume').hidden = false;
+
+    // --- Signalements ---
+    if (alertes.length) {
+      const corps = $('corps-alerte');
+      alertes.forEach(a => {
+        const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        const p = document.createElement('span');
+        p.className = `pastille ${a.gravite}`;
+        p.textContent = a.gravite;
+        td.appendChild(p); tr.appendChild(td);
+
+        cellule(tr, `#${a.carte_id} ${a.titre}`);
+        cellule(tr, a.probleme.replace(/_/g, ' '));
+
+        const detail = document.createElement('td');
+        detail.textContent = a.explication;
+        if (a.probleme === 'formulations_a_ajouter' && Array.isArray(a.valeur)) {
+          const d = document.createElement('details');
+          const s = document.createElement('summary');
+          s.textContent = `${a.valeur.length} formulation(s) refusée(s)`;
+          d.appendChild(s);
+          a.valeur.forEach(v => {
+            const li = document.createElement('div');
+            const c = document.createElement('code');
+            c.textContent = v.reponse;
+            li.append(c, document.createTextNode(` — ${v.occurrences}×`));
+            d.appendChild(li);
+          });
+          detail.appendChild(d);
+        } else if (typeof a.valeur === 'number') {
+          detail.appendChild(document.createTextNode(` (${nb(a.valeur)})`));
+        }
+        tr.appendChild(detail);
+        cellule(tr, String(a.reponses), 'num');
+        corps.appendChild(tr);
+      });
+      $('bloc-alerte').hidden = false;
+    }
+
+    // --- KR-20 ---
+    const cn = $('corps-niveaux');
+    (r.kr20_par_niveau || []).forEach(k => {
+      const tr = document.createElement('tr');
+      cellule(tr, `Niveau ${k.niveau}`);
+      cellule(tr, String(k.cartes), 'num');
+      cellule(tr, String(k.sessions_completes), 'num');
+      cellule(tr, nb(k.kr20), 'num');
+      cellule(tr, k.interpretation, k.kr20 === null ? 'faible' : '');
+      cn.appendChild(tr);
+    });
+    $('bloc-niveaux').hidden = false;
+
+    // --- Toutes les cartes ---
+    const cc = $('corps-cartes');
+    qualite.cartes.forEach(c => {
+      const tr = document.createElement('tr');
+      cellule(tr, String(c.carte_id), 'num');
+      cellule(tr, c.titre);
+      cellule(tr, String(c.reponses), 'num');
+      cellule(tr, nb(c.difficulte), `num ${classeDifficulte(c.difficulte)}`);
+      cellule(tr, nb(c.discrimination), `num ${classeDiscrimination(c.discrimination)}`);
+      cellule(tr, c.taux_indice === null ? '—' : `${Math.round(c.taux_indice * 100)} %`, 'num');
+      cellule(tr, c.taux_solution === null ? '—' : `${Math.round(c.taux_solution * 100)} %`, 'num');
+      cellule(tr, c.fiabilite, c.fiabilite === 'insuffisant' ? 'faible' : '');
+      cc.appendChild(tr);
+    });
+    $('bloc-cartes').hidden = false;
+
+  } catch (e) {
+    $('chargement').hidden = true;
+    $('erreur').textContent = `Chargement impossible : ${e.message}`;
+    $('erreur').hidden = false;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', charger);
+</script>
+</body>
+</html>

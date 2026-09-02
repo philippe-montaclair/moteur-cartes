@@ -1,0 +1,8 @@
+{
+  "matiere": "sql",
+  "nom": "SQL",
+  "description": "Interroger et concevoir une base de données relationnelle : SELECT, jointures, agrégations, schéma.",
+  "langue_enseignement": "fr",
+  "langue_cible": "fr",
+  "type_defaut": "texte"
+}

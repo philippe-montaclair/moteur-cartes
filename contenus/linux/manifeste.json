@@ -1,0 +1,8 @@
+{
+  "matiere": "linux",
+  "nom": "Linux",
+  "description": "La ligne de commande Unix : fichiers, permissions, processus, redirections, scripts.",
+  "langue_enseignement": "fr",
+  "langue_cible": "fr",
+  "type_defaut": "texte"
+}

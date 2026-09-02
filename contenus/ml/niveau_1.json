@@ -1,0 +1,914 @@
+[
+  {
+    "explication": "L'entraînement est la phase où le modèle ajuste ses paramètres pour minimiser l'erreur sur les données fournies.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre entraînement avec inférence (l'entraînement crée le modèle, l'inférence l'utilise).",
+    "indice": "11 lettres, synonyme de 'formation'.",
+    "mots_cles": [
+      [
+        "entrainement",
+        "apprentissage"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Processus",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "entraînement",
+      "l'entraînement",
+      "phase d'entraînement",
+      "apprentissage",
+      "training"
+    ],
+    "niveau": 1,
+    "titre": "Phase d'apprentissage du modèle",
+    "question": "Quel terme désigne le processus par lequel un modèle d'IA apprend à partir de données ?",
+    "reponse": "entraînement",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La classification est une tâche supervisée où le modèle apprend à associer des entrées à des catégories prédéfinies (ex : spam/non-spam).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre classification avec clustering (la classification utilise des étiquettes connues, le clustering les découvre).",
+    "indice": "13 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "classification"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Tâches",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "classification",
+      "la classification",
+      "tâche de classification",
+      "catégorisation",
+      "classement automatique"
+    ],
+    "niveau": 1,
+    "titre": "Catégorisation automatique",
+    "question": "Quel terme désigne la tâche consistant à attribuer une étiquette de catégorie à des données d'entrée ?",
+    "reponse": "classification",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La régression est utilisée pour prédire des quantités comme des prix, des températures ou des ventes.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre régression avec classification (la régression prédit des nombres, la classification des catégories).",
+    "indice": "10 lettres, commence par 'r'.",
+    "mots_cles": [
+      [
+        "regression"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Tâches",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "régression",
+      "la régression",
+      "tâche de régression",
+      "prédiction numérique",
+      "modèle de régression"
+    ],
+    "niveau": 1,
+    "titre": "Prédiction de valeurs numériques",
+    "question": "Quel terme désigne la tâche consistant à prédire une valeur numérique continue à partir de données d'entrée ?",
+    "reponse": "régression",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le clustering est une technique non supervisée qui identifie des structures naturelles dans les données (ex : segmenter des clients par comportement).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que le clustering nécessite des étiquettes, alors qu'il les découvre automatiquement.",
+    "indice": "9 lettres, mot anglais.",
+    "mots_cles": [
+      [
+        "clustering"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Tâches",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "clustering",
+      "le clustering",
+      "regroupement",
+      "partitionnement",
+      "segmentation non supervisée"
+    ],
+    "niveau": 1,
+    "titre": "Regroupement de données similaires",
+    "question": "Quel terme désigne la tâche consistant à regrouper des données similaires en clusters sans étiquettes prédéfinies ?",
+    "reponse": "clustering",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La supervision utilise des paires entrée-sortie pour guider l'apprentissage du modèle (ex : images avec étiquettes 'chat'/'chien').",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre supervision avec non-supervision (la première utilise des étiquettes, la seconde non).",
+    "indice": "11 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "supervision",
+        "supervise"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "supervision",
+      "la supervision",
+      "apprentissage supervisé",
+      "supervised learning",
+      "méthode supervisée"
+    ],
+    "niveau": 1,
+    "titre": "Type d'apprentissage avec données étiquetées",
+    "question": "Quel terme désigne le type d'apprentissage où le modèle est entraîné sur des données avec des réponses connues ?",
+    "reponse": "supervision",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'apprentissage supervisé est la méthode la plus courante en IA, utilisée pour des tâches comme la classification ou la régression.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que tous les modèles d'IA utilisent l'apprentissage supervisé (ex : le clustering est non supervisé).",
+    "indice": "Deux mots, le second est un adjectif.",
+    "mots_cles": [
+      [
+        "apprentissage supervise"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "apprentissage supervisé",
+      "supervised learning",
+      "apprentissage avec étiquettes",
+      "méthode supervisée",
+      "entraînement supervisé"
+    ],
+    "niveau": 1,
+    "titre": "Apprentissage avec étiquettes connues",
+    "question": "Quel terme désigne spécifiquement l'entraînement d'un modèle avec des données dont les réponses correctes sont fournies ?",
+    "reponse": "apprentissage supervisé",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'apprentissage non supervisé est utilisé pour des tâches comme le clustering ou la réduction de dimension.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que l'apprentissage non supervisé est moins utile que le supervisé, alors qu'il permet de découvrir des motifs inconnus.",
+    "indice": "Trois mots, le dernier est un adjectif.",
+    "mots_cles": [
+      [
+        "apprentissage non supervise"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "apprentissage non supervisé",
+      "unsupervised learning",
+      "apprentissage sans étiquettes",
+      "méthode non supervisée",
+      "entraînement non supervisé"
+    ],
+    "niveau": 1,
+    "titre": "Apprentissage sans étiquettes",
+    "question": "Quel terme désigne l'entraînement d'un modèle sur des données sans réponses prédéfinies, pour découvrir des structures cachées ?",
+    "reponse": "apprentissage non supervisé",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'apprentissage par renforcement est utilisé pour entraîner des agents à prendre des décisions séquentielles (ex : jeux vidéo, robots).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre apprentissage par renforcement avec apprentissage supervisé (le premier utilise des récompenses, le second des étiquettes).",
+    "indice": "Trois mots, le dernier est un nom.",
+    "mots_cles": [
+      [
+        "apprentissage par renforcement",
+        "reinforcement learning"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Méthodes",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "apprentissage par renforcement",
+      "reinforcement learning",
+      "apprentissage par récompense",
+      "méthode par renforcement",
+      "RL"
+    ],
+    "niveau": 1,
+    "titre": "Apprentissage par essai-erreur",
+    "question": "Quel terme désigne le type d'apprentissage où un agent apprend en interagissant avec un environnement et en recevant des récompenses ?",
+    "reponse": "apprentissage par renforcement",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une variable est une quantité mesurable qui peut prendre différentes valeurs dans un jeu de données.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre variable avec étiquette (la variable est une entrée, l'étiquette est la sortie à prédire).",
+    "indice": "8 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "variable",
+        "feature"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "variable",
+      "une variable",
+      "caractéristique",
+      "feature",
+      "attribut"
+    ],
+    "niveau": 1,
+    "titre": "Élément individuel dans un jeu de données",
+    "question": "Quel terme désigne une caractéristique ou une mesure individuelle dans un jeu de données (ex : âge, taille) ?",
+    "reponse": "variable",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une caractéristique est une variable d'entrée qui aide le modèle à faire des prédictions (ex : le nombre de pièces pour prédire le prix d'une maison).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que plus de caractéristiques garantissent un meilleur modèle (risque de surapprentissage).",
+    "indice": "15 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "caracteristique",
+        "feature"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "caractéristique",
+      "une caractéristique",
+      "feature",
+      "variable d'entrée",
+      "attribut"
+    ],
+    "niveau": 1,
+    "titre": "Attribut utilisé pour l'apprentissage",
+    "question": "Quel terme désigne une propriété ou une mesure utilisée comme entrée pour un modèle d'IA ?",
+    "reponse": "caractéristique",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "L'étiquette est la réponse que le modèle doit prédire pour une entrée donnée (ex : 'chat' pour une image de chat).",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre étiquette avec caractéristique (l'étiquette est la sortie, la caractéristique est l'entrée).",
+    "indice": "8 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "etiquette",
+        "label"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "étiquette",
+      "une étiquette",
+      "label",
+      "classe",
+      "valeur cible"
+    ],
+    "niveau": 1,
+    "titre": "Réponse attendue pour une entrée",
+    "question": "Quel terme désigne la valeur correcte ou la catégorie associée à une entrée dans un jeu de données supervisé ?",
+    "reponse": "étiquette",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le jeu d'entraînement contient les exemples que le modèle utilise pour apprendre les motifs et ajuster ses paramètres.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser le jeu d'entraînement pour évaluer le modèle, ce qui donne une estimation trop optimiste de ses performances.",
+    "indice": "Trois mots, le dernier est un nom.",
+    "mots_cles": [
+      [
+        "jeu d'entrainement",
+        "training set"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Données",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "jeu d'entraînement",
+      "training set",
+      "ensemble d'entraînement",
+      "données d'entraînement",
+      "dataset d'entraînement"
+    ],
+    "niveau": 1,
+    "titre": "Jeu de données pour l'entraînement",
+    "question": "Quel terme désigne l'ensemble de données utilisé pour entraîner un modèle d'IA ?",
+    "reponse": "jeu d'entraînement",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le jeu de validation permet de choisir les meilleurs hyperparamètres et d'éviter le surapprentissage.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre jeu de validation avec jeu de test (le premier sert à ajuster le modèle, le second à l'évaluer finalement).",
+    "indice": "Trois mots, le dernier est un nom.",
+    "mots_cles": [
+      [
+        "jeu de validation",
+        "validation set"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Données",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "jeu de validation",
+      "validation set",
+      "ensemble de validation",
+      "données de validation",
+      "dataset de validation"
+    ],
+    "niveau": 1,
+    "titre": "Jeu de données pour ajuster les hyperparamètres",
+    "question": "Quel terme désigne l'ensemble de données utilisé pour ajuster les hyperparamètres d'un modèle pendant l'entraînement ?",
+    "reponse": "jeu de validation",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le jeu de test simule des données réelles non vues pendant l'entraînement pour estimer la généralisation du modèle.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Utiliser le jeu de test pour ajuster le modèle, ce qui fausse l'évaluation de ses performances réelles.",
+    "indice": "Trois mots, le dernier est un nom.",
+    "mots_cles": [
+      [
+        "jeu de test",
+        "test set"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Données",
+    "type": "vocabulaire",
+    "reponses_acceptees": [
+      "jeu de test",
+      "test set",
+      "ensemble de test",
+      "données de test",
+      "dataset de test"
+    ],
+    "niveau": 1,
+    "titre": "Jeu de données pour l'évaluation finale",
+    "question": "Quel terme désigne l'ensemble de données réservé pour évaluer les performances finales d'un modèle entraîné ?",
+    "reponse": "jeu de test",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le surapprentissage se produit quand un modèle devient trop complexe pour les données disponibles, captant du bruit au lieu de motifs généraux.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser que plus de données résoudra toujours le surapprentissage (il faut aussi simplifier le modèle).",
+    "indice": "15 lettres, commence par 'sur'.",
+    "mots_cles": [
+      [
+        "surapprentissage",
+        "overfitting"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Problèmes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "surapprentissage",
+      "overfitting",
+      "surcharge d'apprentissage",
+      "mémorisation excessive",
+      "sur-ajustement"
+    ],
+    "niveau": 1,
+    "titre": "Problème de mémorisation des données d'entraînement",
+    "question": "Quel terme désigne le phénomène où un modèle apprend par cœur les données d'entraînement au point de perdre en généralisation ?",
+    "reponse": "surapprentissage",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La généralisation est l'objectif ultime d'un modèle : appliquer ce qu'il a appris à de nouvelles situations.",
+    "exemple_code": "",
+    "sortie_attendue": "",
+    "erreur_frequente": "Penser qu'un modèle avec 100% de précision sur l'entraînement généralisera bien (risque de surapprentissage).",
+    "indice": "14 lettres, mot féminin.",
+    "mots_cles": [
+      [
+        "generalisation"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Problèmes",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "généralisation",
+      "la généralisation",
+      "capacité de généralisation",
+      "performance sur données inconnues",
+      "robustesse"
+    ],
+    "niveau": 1,
+    "titre": "Capacité à performer sur de nouvelles données",
+    "question": "Quel terme désigne la capacité d'un modèle à bien performer sur des données non vues pendant l'entraînement ?",
+    "reponse": "généralisation",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "En programmation classique, le développeur code explicitement chaque règle (si telle condition, alors telle action). En machine learning, on fournit de nombreux exemples et un algorithme d'apprentissage en déduit lui-même les règles, sans qu'elles soient écrites à la main.",
+    "exemple_code": "regles_ecrites_a_la_main = 0\nregles_deduites_des_donnees = 1\nprint(\"classique\" if regles_ecrites_a_la_main else \"machine learning\")",
+    "sortie_attendue": "machine learning",
+    "erreur_frequente": "Penser que le machine learning s'appuie encore sur des règles écrites par un développeur, alors que c'est le modèle qui les infère depuis les données.",
+    "indice": "Pense à la source qui remplace le développeur : quelque chose que le modèle observe en grand nombre.",
+    "mots_cles": [
+      [
+        "deduites",
+        "deduit",
+        "automatiquement",
+        "apprises",
+        "apprentissage"
+      ],
+      [
+        "donnees",
+        "exemples"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Fondements du ML",
+    "type": "texte",
+    "reponses_acceptees": [
+      "Elles sont déduites automatiquement à partir d'exemples de données, plutôt qu'écrites à la main.",
+      "elles sont apprises automatiquement à partir de données",
+      "un algorithme les déduit lui-même à partir d'exemples",
+      "elles sont extraites des données par apprentissage, pas écrites par un humain",
+      "on les obtient automatiquement en analysant des exemples de données"
+    ],
+    "niveau": 1,
+    "titre": "Qui rédige les règles, dans cette nouvelle façon de programmer ?",
+    "question": "En programmation classique, une personne écrit les règles pas à pas. En machine learning, comment ces règles sont-elles obtenues à la place ?",
+    "reponse": "Elles sont déduites automatiquement à partir d'exemples de données, plutôt qu'écrites à la main.",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le jeu de données rassemble toutes les observations disponibles, avant tout découpage. On le divise ensuite en parts distinctes pour entraîner puis vérifier un modèle.",
+    "exemple_code": "donnees = [\"obs1\", \"obs2\", \"obs3\", \"obs4\"]\nprint(len(donnees))",
+    "sortie_attendue": "4",
+    "erreur_frequente": "Confondre le jeu de données complet avec le seul échantillon utilisé pour l'entraînement, alors qu'il inclut aussi les données de test et de validation.",
+    "indice": "C'est le tout, avant qu'on le découpe en plusieurs parts pour l'entraînement et les vérifications.",
+    "mots_cles": [
+      [
+        "jeu",
+        "ensemble"
+      ],
+      [
+        "donnees"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Structure des données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "jeu de données",
+      "ensemble de données",
+      "jeu de données complet",
+      "grand ensemble de données",
+      "ensemble complet de données"
+    ],
+    "niveau": 1,
+    "titre": "Le nom de l'ensemble complet d'exemples utilisé par un modèle",
+    "question": "Comment appelle-t-on la collection complète des exemples rassemblés pour entraîner ou tester un modèle de machine learning ?",
+    "reponse": "jeu de données",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une observation représente un cas concret étudié (une personne, un produit, un instant...) et regroupe la valeur de toutes ses variables. Un jeu de données est une collection de plusieurs observations.",
+    "exemple_code": "observations = [[\"chat\", 3], [\"chien\", 5]]\nprint(observations[0])",
+    "sortie_attendue": "['chat', 3]",
+    "erreur_frequente": "Confondre l'observation avec la variable : l'observation est la ligne entière, la variable est une seule colonne du tableau.",
+    "indice": "Pense à une ligne entière du tableau de données, pas à une seule colonne.",
+    "mots_cles": [
+      [
+        "observation",
+        "exemple",
+        "individu",
+        "ligne"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Structure des données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "observation",
+      "une observation",
+      "un exemple",
+      "une ligne du tableau",
+      "un individu statistique"
+    ],
+    "niveau": 1,
+    "titre": "Le terme qui désigne un cas particulier étudié dans un jeu de données",
+    "question": "Dans un jeu de données organisé en tableau, comment appelle-t-on une seule ligne, c'est-à-dire un exemple individuel décrit par plusieurs variables ?",
+    "reponse": "observation",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La cible est la grandeur que le modèle apprend à estimer : un prix en régression, une catégorie en classification. Toutes les autres colonnes du jeu de données servent à la prédire.",
+    "exemple_code": "maison = {\"surface\": 80, \"prix\": 250000}\ncible = \"prix\"\nprint(maison[cible])",
+    "sortie_attendue": "250000",
+    "erreur_frequente": "Confondre la cible avec les caractéristiques : les caractéristiques servent à prédire, la cible est ce qu'on prédit.",
+    "indice": "C'est la colonne à part, celle que toutes les autres servent à deviner.",
+    "mots_cles": [
+      [
+        "cible"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Structure des données",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "variable cible",
+      "cible",
+      "la cible",
+      "valeur cible",
+      "variable cible à prédire"
+    ],
+    "niveau": 1,
+    "titre": "Ce que le modèle cherche à deviner, à partir de toutes les autres colonnes",
+    "question": "En apprentissage supervisé, comment appelle-t-on la variable que l'on cherche à prédire à partir des autres, qu'elle soit un nombre (en régression) ou une catégorie (en classification) ?",
+    "reponse": "variable cible",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un paramètre est une valeur interne du modèle, ajustée automatiquement durant l'entraînement pour minimiser les erreurs. Dans une droite y = a·x + b, a et b sont des paramètres appris.",
+    "exemple_code": "a, b = 2, 1\nx = 3\nprint(a * x + b)",
+    "sortie_attendue": "7",
+    "erreur_frequente": "Confondre paramètre et hyperparamètre : le paramètre est appris automatiquement par le modèle, il n'est pas choisi à l'avance par la personne qui entraîne le modèle.",
+    "indice": "Ce sont des nombres que le modèle trouve tout seul, comme la pente d'une droite.",
+    "mots_cles": [
+      [
+        "parametre",
+        "parametres"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Entraînement d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "paramètre",
+      "un paramètre",
+      "les paramètres",
+      "paramètre du modèle",
+      "paramètre interne appris automatiquement"
+    ],
+    "niveau": 1,
+    "titre": "Ce que le modèle règle lui-même pendant l'entraînement",
+    "question": "Pendant l'entraînement, comment appelle-t-on les valeurs internes qu'un modèle ajuste lui-même pour coller aux données, comme les coefficients d'une droite de régression ?",
+    "reponse": "paramètre",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Un hyperparamètre est fixé par la personne qui configure l'apprentissage, avant que celui-ci ne commence : par exemple le nombre de voisins dans un algorithme des k plus proches voisins. Il ne change pas tout seul pendant l'entraînement.",
+    "exemple_code": "nombre_de_voisins = 5\nprint(nombre_de_voisins)",
+    "sortie_attendue": "5",
+    "erreur_frequente": "Chercher l'hyperparamètre à l'intérieur du modèle entraîné, alors qu'il est fixé avant même que l'entraînement commence.",
+    "indice": "C'est un choix fait avant de lancer l'entraînement, pas un résultat de l'entraînement.",
+    "mots_cles": [
+      [
+        "hyperparametre",
+        "hyperparametres"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Entraînement d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "hyperparamètre",
+      "un hyperparamètre",
+      "les hyperparamètres",
+      "hyperparamètre du modèle",
+      "valeur d'hyperparamètre fixée à l'avance"
+    ],
+    "niveau": 1,
+    "titre": "Le réglage choisi avant l'entraînement, par la personne qui l'entraîne",
+    "question": "Comment appelle-t-on un réglage du modèle qui n'est pas appris à partir des données, mais fixé à l'avance par la personne qui configure l'entraînement, comme le nombre de voisins dans un algorithme des plus proches voisins ?",
+    "reponse": "hyperparamètre",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La fonction de coût chiffre l'erreur globale du modèle sur les données d'entraînement. L'entraînement consiste précisément à ajuster les paramètres pour faire descendre cette valeur.",
+    "exemple_code": "predictions = [3, 5]\nvraies_valeurs = [2, 5]\nerreurs = [(p - v) ** 2 for p, v in zip(predictions, vraies_valeurs)]\ncout = sum(erreurs) / len(erreurs)\nprint(cout)",
+    "sortie_attendue": "0.5",
+    "erreur_frequente": "Confondre la fonction de coût avec une simple métrique de résultat final : elle sert surtout à guider l'ajustement des paramètres pendant l'entraînement, pas seulement à évaluer après coup.",
+    "indice": "Plus sa valeur est petite, mieux le modèle colle aux données observées.",
+    "mots_cles": [
+      [
+        "fonction"
+      ],
+      [
+        "cout",
+        "perte"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Entraînement d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "fonction de coût",
+      "fonction de perte",
+      "fonction coût du modèle",
+      "fonction de perte globale",
+      "fonction coût à minimiser"
+    ],
+    "niveau": 1,
+    "titre": "Ce que l'entraînement cherche à rendre le plus petit possible",
+    "question": "Comment appelle-t-on la fonction qui mesure l'écart entre les prédictions du modèle et les vraies valeurs, et que l'entraînement cherche à minimiser ?",
+    "reponse": "fonction de coût",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La descente de gradient ajuste les paramètres par petites étapes successives, dans la direction qui fait le plus baisser la fonction de coût. Elle s'arrête quand les paramètres ne s'améliorent presque plus.",
+    "exemple_code": "x = 10\nfor _ in range(3):\n    x = x - 0.5 * x\nprint(x)",
+    "sortie_attendue": "1.25",
+    "erreur_frequente": "Croire que la descente de gradient trouve le résultat en une seule fois, alors qu'elle avance par petits pas répétés, en recalculant la direction à chaque étape.",
+    "indice": "Imagine quelqu'un qui descend une pente les yeux fermés, en avançant toujours du côté où ça descend le plus.",
+    "mots_cles": [
+      [
+        "descente"
+      ],
+      [
+        "gradient"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Entraînement d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "descente de gradient",
+      "algorithme de descente de gradient",
+      "méthode de descente de gradient",
+      "descente du gradient",
+      "optimisation par descente de gradient"
+    ],
+    "niveau": 1,
+    "titre": "La méthode qui ajuste les paramètres pas à pas pour réduire l'erreur",
+    "question": "Comment appelle-t-on la méthode qui fait varier progressivement les paramètres d'un modèle, à chaque étape dans la direction qui réduit le plus l'erreur, jusqu'à s'approcher d'un minimum ?",
+    "reponse": "descente de gradient",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "En sous-apprentissage, le modèle est trop simple pour capter les régularités des données : ses erreurs restent élevées même sur les exemples qu'il a servi à l'entraîner. Il faut alors un modèle plus riche ou de meilleures variables.",
+    "exemple_code": "erreur_entrainement = 0.42\nerreur_test = 0.45\nprint(erreur_entrainement > 0.3)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Confondre sous-apprentissage et surapprentissage : dans le sous-apprentissage, le modèle est mauvais même sur les données d'entraînement, il n'a pas encore appris grand-chose.",
+    "indice": "Le problème inverse du modèle qui apprend trop bien les détails : ici, il n'apprend presque rien.",
+    "mots_cles": [
+      [
+        "sous-apprentissage",
+        "sous apprentissage",
+        "underfitting"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Qualité d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "sous-apprentissage",
+      "sous apprentissage",
+      "modèle en sous-apprentissage",
+      "underfitting",
+      "modèle trop simple en sous-apprentissage"
+    ],
+    "niveau": 1,
+    "titre": "Quand le modèle est trop simple pour même bien coller aux données d'entraînement",
+    "question": "Comment appelle-t-on la situation où un modèle est si simple qu'il n'arrive même pas à bien reproduire les données sur lesquelles il a été entraîné ?",
+    "reponse": "sous-apprentissage",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Le biais mesure l'erreur due aux simplifications du modèle : un modèle trop rigide (une droite pour une relation courbe, par exemple) a un biais élevé, quel que soit le nombre d'exemples fournis.",
+    "exemple_code": "vraies_valeurs = [1, 4, 9, 16]\npredictions_modele_lineaire = [1, 2, 3, 4]\nerreurs = [v - p for v, p in zip(vraies_valeurs, predictions_modele_lineaire)]\nprint(erreurs)",
+    "sortie_attendue": "[0, 2, 6, 12]",
+    "erreur_frequente": "Confondre le biais avec le simple fait de se tromper une fois : le biais est une erreur systématique, dans la même direction, due à la façon dont le modèle simplifie la réalité.",
+    "indice": "Pense à des hypothèses de départ trop rigides, qui empêchent le modèle de coller à la réalité même avec beaucoup de données.",
+    "mots_cles": [
+      [
+        "biais"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Qualité d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "biais",
+      "un biais",
+      "le biais du modèle",
+      "biais élevé",
+      "erreur systématique (biais)"
+    ],
+    "niveau": 1,
+    "titre": "L'erreur systématique qui vient d'un modèle trop rigide dans ses hypothèses",
+    "question": "Dans le compromis qui l'oppose à la variance, comment appelle-t-on l'erreur systématique d'un modèle causée par des hypothèses trop simples, qui l'empêchent de capter la réelle complexité des données, même avec beaucoup d'exemples ?",
+    "reponse": "biais",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La variance mesure à quel point les prédictions du modèle changent si l'on change le jeu de données d'entraînement. Un modèle trop complexe peut avoir une variance élevée : il colle aux détails d'un échantillon particulier, au détriment de sa stabilité.",
+    "exemple_code": "predictions_echantillon_1 = [10, 20, 30]\npredictions_echantillon_2 = [12, 5, 45]\necart_max = max(predictions_echantillon_2) - min(predictions_echantillon_2)\nprint(ecart_max)",
+    "sortie_attendue": "40",
+    "erreur_frequente": "Confondre variance et biais : une variance élevée touche des modèles trop complexes, qui collent presque parfaitement aux données d'entraînement mais deviennent instables sur de nouvelles données.",
+    "indice": "Pense à un modèle qui change beaucoup d'avis selon les exemples qu'on lui a montrés.",
+    "mots_cles": [
+      [
+        "variance"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Qualité d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "variance",
+      "une grande variance",
+      "la variance du modèle",
+      "variance élevée",
+      "sensibilité du modèle (variance)"
+    ],
+    "niveau": 1,
+    "titre": "La sensibilité d'un modèle aux petits changements de ses données d'entraînement",
+    "question": "Dans le compromis qui l'oppose au biais, comment appelle-t-on la propriété statistique d'un modèle qui change beaucoup ses prédictions lorsque l'on modifie légèrement le jeu de données d'entraînement, par exemple avec un autre échantillon ?",
+    "reponse": "variance",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une métrique d'évaluation résume la performance d'un modèle en un chiffre facile à comparer, comme un taux de bonnes prédictions. Elle sert surtout à juger et comparer des modèles, une fois l'entraînement terminé.",
+    "exemple_code": "predictions = [\"chat\", \"chien\", \"chat\", \"chat\"]\nvraies_valeurs = [\"chat\", \"chien\", \"chien\", \"chat\"]\nbonnes_reponses = sum(p == v for p, v in zip(predictions, vraies_valeurs))\ntaux = bonnes_reponses / len(predictions)\nprint(taux)",
+    "sortie_attendue": "0.75",
+    "erreur_frequente": "Confondre la métrique d'évaluation avec la fonction de coût : la fonction de coût guide l'entraînement, la métrique sert surtout à juger le résultat final, souvent dans une unité plus parlante.",
+    "indice": "C'est le chiffre qu'on regarde à la fin pour dire si le modèle est bon, pas celui qu'on utilise pendant l'entraînement.",
+    "mots_cles": [
+      [
+        "metrique",
+        "indicateur"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Qualité d'un modèle",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "métrique d'évaluation",
+      "métrique",
+      "indicateur de performance",
+      "métrique de performance",
+      "métrique chiffrée de qualité du modèle"
+    ],
+    "niveau": 1,
+    "titre": "Le chiffre qui sert à juger la qualité des prédictions d'un modèle",
+    "question": "Comment appelle-t-on un indicateur chiffré, comme un taux de bonnes réponses ou un écart moyen, qui permet de juger objectivement la qualité des prédictions d'un modèle ?",
+    "reponse": "métrique d'évaluation",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "Une forte corrélation signale seulement que deux variables évoluent ensemble, pas que l'une provoque l'autre : un facteur caché peut expliquer les deux à la fois. Un modèle qui exploite une corrélation doit donc être interprété avec prudence.",
+    "exemple_code": "ventes_glaces = [10, 20, 30, 40]\nnoyades = [2, 4, 6, 8]\ncorrelation_forte = True\nglace_cause_noyade = False\nprint(correlation_forte and not glace_cause_noyade)",
+    "sortie_attendue": "True",
+    "erreur_frequente": "Conclure qu'une variable cause l'autre uniquement parce qu'un modèle trouve une forte corrélation entre elles, sans preuve d'un mécanisme réel.",
+    "indice": "Deux choses peuvent bouger ensemble sans qu'aucune ne provoque l'autre — pense à une troisième cause cachée.",
+    "mots_cles": [
+      [
+        "correlation"
+      ],
+      [
+        "causalite"
+      ]
+    ],
+    "difficulte": 2,
+    "prerequis": "",
+    "categorie": "Méthode et interprétation",
+    "type": "texte",
+    "reponses_acceptees": [
+      "une corrélation n'implique pas une causalité",
+      "corrélation n'est pas causalité",
+      "la corrélation ne prouve pas la causalité",
+      "deux variables corrélées ne sont pas forcément liées par une causalité",
+      "corrélation différent de causalité"
+    ],
+    "niveau": 1,
+    "titre": "Le piège qui consiste à croire qu'un lien entre deux variables prouve que l'une provoque l'autre",
+    "question": "Deux variables évoluent souvent ensemble dans un jeu de données, sans que l'une soit la cause de l'autre. Comment résume-t-on ce principe de prudence en statistique et en machine learning ?",
+    "reponse": "une corrélation n'implique pas une causalité",
+    "matiere": "ml",
+    "langue": "fr"
+  },
+  {
+    "explication": "La démarche d'un projet de machine learning enchaîne plusieurs étapes : collecte et préparation des données, entraînement, évaluation, puis mise en service du modèle. Suivre cet enchaînement évite d'oublier une étape essentielle, comme la vérification sur des données jamais vues.",
+    "exemple_code": "etapes = [\"collecte\", \"preparation\", \"entrainement\", \"evaluation\", \"deploiement\"]\nprint(len(etapes))",
+    "sortie_attendue": "5",
+    "erreur_frequente": "Croire que l'entraînement du modèle est la seule étape importante, alors que la préparation des données et l'évaluation finale prennent souvent plus de temps et sont tout aussi décisives.",
+    "indice": "Pense au chemin complet suivi par une équipe, de la première donnée collectée jusqu'à la mise en service du modèle.",
+    "mots_cles": [
+      [
+        "demarche",
+        "methodologie",
+        "processus"
+      ]
+    ],
+    "difficulte": 1,
+    "prerequis": "",
+    "categorie": "Méthode et interprétation",
+    "type": "mot_cle",
+    "reponses_acceptees": [
+      "démarche de projet",
+      "démarche",
+      "méthodologie de projet",
+      "processus de projet",
+      "démarche structurée du projet"
+    ],
+    "niveau": 1,
+    "titre": "Le fil conducteur qui organise les grandes étapes, de la collecte des données jusqu'au déploiement du modèle",
+    "question": "Comment appelle-t-on l'enchaînement structuré des grandes étapes (préparation des données, entraînement, évaluation, mise en service...) que l'on suit pour mener à bien un projet de machine learning ?",
+    "reponse": "démarche de projet",
+    "matiere": "ml",
+    "langue": "fr"
+  }
+]

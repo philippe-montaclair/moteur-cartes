@@ -1,0 +1,831 @@
+[
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "name is not defined",
+    "question": "Que signale l'erreur `NameError: name 'total' is not defined` ?",
+    "reponse": "la variable total n'a jamais été définie",
+    "reponses_acceptees": [
+      "la variable total n'a jamais été définie",
+      "total n'existe pas",
+      "la variable n'est pas définie",
+      "total n'a pas été créé"
+    ],
+    "mots_cles": [
+      [
+        "variable",
+        "total",
+        "nom"
+      ],
+      [
+        "defini",
+        "definie",
+        "existe",
+        "cree",
+        "creee"
+      ]
+    ],
+    "explication": "« is not defined » = « n'est pas défini ». Python ne connaît pas ce nom : faute de frappe, ou variable jamais créée.",
+    "exemple_code": "print(total)",
+    "sortie_attendue": "NameError: name 'total' is not defined",
+    "erreur_frequente": "Chercher un bug compliqué alors qu'il s'agit d'une simple faute de frappe dans le nom.",
+    "indice": "« defined » vient du verbe to define : définir."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "list index out of range",
+    "question": "Que signale l'erreur `IndexError: list index out of range` ?",
+    "reponse": "l'indice demandé dépasse la taille de la liste",
+    "reponses_acceptees": [
+      "l'indice demandé dépasse la taille de la liste",
+      "l'indice est trop grand",
+      "on sort de la liste",
+      "l'index dépasse la longueur de la liste"
+    ],
+    "mots_cles": [
+      [
+        "indice",
+        "index"
+      ],
+      [
+        "depasse",
+        "trop grand",
+        "sort",
+        "hors"
+      ]
+    ],
+    "explication": "« out of range » = « hors de la plage ». Une liste de 3 éléments a les indices 0, 1 et 2 : demander [3] sort de la plage.",
+    "exemple_code": "nombres = [1, 2, 3]\nprint(nombres[3])",
+    "sortie_attendue": "IndexError: list index out of range",
+    "erreur_frequente": "Oublier que le dernier indice vaut len(liste) - 1.",
+    "indice": "« range » désigne ici l'étendue des indices valides."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "unexpected indent",
+    "question": "Que signale l'erreur `IndentationError: unexpected indent` ?",
+    "reponse": "une ligne est décalée alors qu'elle ne devrait pas l'être",
+    "reponses_acceptees": [
+      "une ligne est décalée alors qu'elle ne devrait pas l'être",
+      "il y a une indentation en trop",
+      "un décalage inattendu",
+      "une espace en trop en début de ligne"
+    ],
+    "mots_cles": [
+      [
+        "indentation",
+        "decalage",
+        "decalee",
+        "espace"
+      ]
+    ],
+    "explication": "« unexpected » = « inattendu ». Une ligne commence par des espaces alors qu'aucun bloc n'est ouvert.",
+    "exemple_code": "print(\"a\")\n    print(\"b\")",
+    "sortie_attendue": "IndentationError: unexpected indent",
+    "erreur_frequente": "Mélanger tabulations et espaces : l'œil ne voit rien, Python refuse.",
+    "indice": "« indent » est le décalage en début de ligne."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "unsupported operand type",
+    "question": "Que signale `TypeError: unsupported operand type(s) for +: 'int' and 'str'` ?",
+    "reponse": "on essaie d'additionner un nombre et du texte",
+    "reponses_acceptees": [
+      "on essaie d'additionner un nombre et du texte",
+      "on additionne un int et un str",
+      "les types sont incompatibles",
+      "on mélange un entier et une chaîne"
+    ],
+    "mots_cles": [
+      [
+        "additionner",
+        "additionne",
+        "addition",
+        "melange",
+        "melanger",
+        "incompatibles",
+        "+"
+      ],
+      [
+        "int",
+        "entier",
+        "nombre",
+        "str",
+        "texte",
+        "chaine"
+      ]
+    ],
+    "explication": "« unsupported operand » = « opérande non prise en charge ». L'opération + n'existe pas entre ces deux types.",
+    "exemple_code": "age = input(\"Âge : \")\nprint(age + 1)",
+    "sortie_attendue": "TypeError: unsupported operand type(s) for +: 'str' and 'int'",
+    "erreur_frequente": "Oublier que input() renvoie toujours du texte : il faut int(...).",
+    "indice": "« operand » est ce sur quoi l'opérateur travaille."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "permission denied",
+    "question": "Que signale l'erreur `PermissionError: [Errno 13] Permission denied` ?",
+    "reponse": "les droits d'accès au fichier sont insuffisants",
+    "reponses_acceptees": [
+      "les droits d'accès au fichier sont insuffisants",
+      "permission refusée",
+      "on n'a pas les droits",
+      "accès refusé"
+    ],
+    "mots_cles": [
+      [
+        "droit",
+        "droits",
+        "permission",
+        "acces"
+      ]
+    ],
+    "explication": "« denied » = « refusé ». Le fichier existe, mais le système refuse l'accès demandé.",
+    "exemple_code": "open(\"/etc/shadow\").read()",
+    "sortie_attendue": "PermissionError: [Errno 13] Permission denied",
+    "erreur_frequente": "Confondre avec FileNotFoundError : ici le fichier existe bel et bien.",
+    "indice": "« to deny » signifie refuser."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "No such file or directory",
+    "question": "Que signale `FileNotFoundError: [Errno 2] No such file or directory` ?",
+    "reponse": "le fichier ou le dossier n'existe pas au chemin indiqué",
+    "reponses_acceptees": [
+      "le fichier ou le dossier n'existe pas au chemin indiqué",
+      "le fichier n'existe pas",
+      "aucun fichier de ce nom",
+      "le chemin est faux"
+    ],
+    "mots_cles": [
+      [
+        "fichier",
+        "file",
+        "dossier"
+      ],
+      [
+        "existe",
+        "introuvable",
+        "faux",
+        "pas"
+      ]
+    ],
+    "explication": "« No such file » = « aucun fichier de ce type ». Presque toujours un chemin relatif interprété depuis le mauvais dossier.",
+    "exemple_code": "open(\"donnees.csv\")",
+    "sortie_attendue": "FileNotFoundError: [Errno 2] No such file or directory: 'donnees.csv'",
+    "erreur_frequente": "Croire que le chemin part du fichier .py : il part du dossier d'exécution.",
+    "indice": "« such » signifie « de ce genre »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "object has no attribute",
+    "question": "Que signale `AttributeError: 'list' object has no attribute 'push'` ?",
+    "reponse": "la méthode push n'existe pas sur les listes",
+    "reponses_acceptees": [
+      "la méthode push n'existe pas sur les listes",
+      "les listes n'ont pas de méthode push",
+      "push n'existe pas",
+      "cet attribut n'existe pas sur ce type"
+    ],
+    "mots_cles": [
+      [
+        "push"
+      ],
+      [
+        "existe",
+        "pas",
+        "aucun",
+        "inexistant"
+      ]
+    ],
+    "explication": "« has no attribute » = « n'a pas d'attribut ». En Python, on ajoute avec append(), pas push().",
+    "exemple_code": "nombres = [1, 2]\nnombres.push(3)",
+    "sortie_attendue": "AttributeError: 'list' object has no attribute 'push'",
+    "erreur_frequente": "Utiliser le vocabulaire d'un autre langage : push vient de JavaScript.",
+    "indice": "« attribute » désigne ici une méthode ou une propriété."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "invalid literal for int()",
+    "question": "Que signale `ValueError: invalid literal for int() with base 10: 'douze'` ?",
+    "reponse": "le texte fourni ne représente pas un nombre",
+    "reponses_acceptees": [
+      "le texte fourni ne représente pas un nombre",
+      "la chaîne n'est pas convertible en entier",
+      "ce n'est pas un nombre valide",
+      "int() ne peut pas convertir ce texte"
+    ],
+    "mots_cles": [
+      [
+        "convertir",
+        "conversion",
+        "convertible",
+        "numerique",
+        "invalide",
+        "represente"
+      ]
+    ],
+    "explication": "« invalid literal » = « écriture non valide ». int() n'accepte que des chiffres, pas un mot.",
+    "exemple_code": "int(\"douze\")",
+    "sortie_attendue": "ValueError: invalid literal for int() with base 10: 'douze'",
+    "erreur_frequente": "Ne pas vérifier la saisie de l'utilisateur avant de convertir.",
+    "indice": "« literal » désigne la valeur telle qu'elle est écrite."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "No module named",
+    "question": "Que signale `ModuleNotFoundError: No module named 'pandas'` ?",
+    "reponse": "le module pandas n'est pas installé dans cet environnement",
+    "reponses_acceptees": [
+      "le module pandas n'est pas installé dans cet environnement",
+      "pandas n'est pas installé",
+      "la bibliothèque est absente",
+      "le module est introuvable"
+    ],
+    "mots_cles": [
+      [
+        "installe",
+        "installee",
+        "absent",
+        "absente",
+        "introuvable",
+        "manque"
+      ]
+    ],
+    "explication": "« No module named » = « aucun module nommé ». Presque toujours un `pip install` oublié, ou le mauvais environnement virtuel.",
+    "exemple_code": "import pandas",
+    "sortie_attendue": "ModuleNotFoundError: No module named 'pandas'",
+    "erreur_frequente": "Installer dans un environnement et exécuter dans un autre.",
+    "indice": "Le remède commence souvent par pip."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Messages d'erreur",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "expected an indented block",
+    "question": "Que signale `IndentationError: expected an indented block` ?",
+    "reponse": "un bloc indenté est attendu après les deux-points",
+    "reponses_acceptees": [
+      "un bloc indenté est attendu après les deux-points",
+      "il manque l'indentation",
+      "le bloc est vide",
+      "il faut décaler la ligne suivante"
+    ],
+    "mots_cles": [
+      [
+        "bloc",
+        "indentation",
+        "decaler",
+        "decalage",
+        "manque"
+      ]
+    ],
+    "explication": "« expected » = « attendu ». Après un `if:` ou un `def:`, Python exige au moins une ligne décalée.",
+    "exemple_code": "if True:\nprint(\"a\")",
+    "sortie_attendue": "IndentationError: expected an indented block",
+    "erreur_frequente": "Confondre avec « unexpected indent », qui est le problème inverse.",
+    "indice": "« expected » et « unexpected » sont deux erreurs opposées."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 1,
+    "titre": "library",
+    "question": "Que signifie « library » en informatique ? Attention au faux ami.",
+    "reponse": "une bibliothèque de code, pas une librairie",
+    "reponses_acceptees": [
+      "une bibliothèque de code, pas une librairie",
+      "une bibliothèque",
+      "bibliothèque"
+    ],
+    "mots_cles": [
+      [
+        "bibliotheque"
+      ]
+    ],
+    "explication": "« library » se traduit par bibliothèque. Une librairie est un magasin de livres — « bookshop » en anglais.",
+    "exemple_code": "# the requests library\nimport requests",
+    "sortie_attendue": "",
+    "erreur_frequente": "Écrire « la librairie pandas » dans une documentation professionnelle.",
+    "indice": "Le lieu où l'on emprunte des livres, pas celui où on les achète."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "actually",
+    "question": "Que signifie « actually » ? Attention au faux ami.",
+    "reponse": "en réalité, en fait",
+    "reponses_acceptees": [
+      "en réalité, en fait",
+      "en réalité",
+      "en fait",
+      "réellement"
+    ],
+    "mots_cles": [
+      [
+        "realite",
+        "fait",
+        "reellement",
+        "vraiment"
+      ]
+    ],
+    "explication": "« actually » ne signifie PAS « actuellement ». Pour « actuellement », l'anglais dit « currently » ou « at the moment ».",
+    "exemple_code": "# This function actually returns None.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Lire « cette fonction renvoie actuellement None » au lieu de « en réalité ».",
+    "indice": "Rien à voir avec le moment présent."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "eventually",
+    "question": "Que signifie « eventually » ? Attention au faux ami.",
+    "reponse": "finalement, à terme",
+    "reponses_acceptees": [
+      "finalement, à terme",
+      "finalement",
+      "à terme",
+      "au bout du compte"
+    ],
+    "mots_cles": [
+      [
+        "finalement",
+        "terme",
+        "fin",
+        "bout"
+      ]
+    ],
+    "explication": "« eventually » ne signifie PAS « éventuellement ». Pour « éventuellement », l'anglais dit « possibly » ou « if needed ».",
+    "exemple_code": "# The cache will eventually be cleared.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Comprendre « le cache sera éventuellement vidé » (peut-être) au lieu de « finira par être vidé » (certain).",
+    "indice": "Cela finit toujours par arriver — ce n'est pas une hypothèse."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "to support",
+    "question": "Que signifie « to support » en informatique ? Attention au faux ami.",
+    "reponse": "prendre en charge, gérer",
+    "reponses_acceptees": [
+      "prendre en charge, gérer",
+      "prendre en charge",
+      "gérer",
+      "être compatible avec"
+    ],
+    "mots_cles": [
+      [
+        "prendre en charge",
+        "gerer",
+        "compatible",
+        "charge"
+      ]
+    ],
+    "explication": "« Python 3.13 supports this syntax » = « prend en charge », pas « supporte » au sens de tolérer.",
+    "exemple_code": "# This method is supported since version 3.9.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Écrire « ce format n'est pas supporté » : on dit « pas pris en charge ».",
+    "indice": "Ce n'est pas une question de tolérance."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "to achieve",
+    "question": "Que signifie « to achieve » ? Attention au faux ami.",
+    "reponse": "atteindre, parvenir à",
+    "reponses_acceptees": [
+      "atteindre, parvenir à",
+      "atteindre",
+      "parvenir à",
+      "obtenir",
+      "réaliser"
+    ],
+    "mots_cles": [
+      [
+        "atteindre",
+        "parvenir",
+        "obtenir",
+        "realiser"
+      ]
+    ],
+    "explication": "« to achieve » ne signifie pas « achever » au sens de terminer. Pour terminer, l'anglais dit « to complete » ou « to finish ».",
+    "exemple_code": "# To achieve this, use a dictionary.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Lire « pour achever ceci » au lieu de « pour y parvenir ».",
+    "indice": "Il s'agit d'atteindre un but, pas de finir une tâche."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "consistent",
+    "question": "Que signifie « consistent » en informatique ? Attention au faux ami.",
+    "reponse": "cohérent",
+    "reponses_acceptees": [
+      "cohérent",
+      "cohérente",
+      "constant",
+      "uniforme"
+    ],
+    "mots_cles": [
+      [
+        "coherent",
+        "coherente",
+        "constant",
+        "uniforme"
+      ]
+    ],
+    "explication": "« consistent » = cohérent, régulier. Ce n'est pas « consistant » au sens de nourrissant ou épais.",
+    "exemple_code": "# Keep the naming consistent across modules.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Traduire « a consistent state » par « un état consistant » au lieu de « cohérent ».",
+    "indice": "Une base de données peut l'être ou ne pas l'être."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "to assist",
+    "question": "Que signifie « to assist » ? Attention au faux ami.",
+    "reponse": "aider",
+    "reponses_acceptees": [
+      "aider",
+      "assister quelqu'un",
+      "porter assistance",
+      "venir en aide"
+    ],
+    "mots_cles": [
+      [
+        "aider",
+        "aide",
+        "assistance"
+      ]
+    ],
+    "explication": "« to assist » = aider. Cela ne signifie PAS « assister à » un événement — l'anglais dit « to attend ».",
+    "exemple_code": "# This tool assists you in debugging.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Comprendre « assister à la réunion » : ce serait « to attend the meeting ».",
+    "indice": "Le contraire de laisser quelqu'un se débrouiller seul."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Faux amis",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 3,
+    "titre": "deprecated",
+    "question": "Que signifie « deprecated » dans une documentation ?",
+    "reponse": "obsolète, déconseillé mais encore fonctionnel",
+    "reponses_acceptees": [
+      "obsolète, déconseillé mais encore fonctionnel",
+      "obsolète",
+      "déconseillé",
+      "dépréciée",
+      "à ne plus utiliser"
+    ],
+    "mots_cles": [
+      [
+        "obsolete",
+        "deconseille",
+        "deconseillee",
+        "deprecie",
+        "depreciee",
+        "plus utiliser"
+      ]
+    ],
+    "explication": "Un élément « deprecated » fonctionne encore mais disparaîtra : c'est un avertissement, pas une erreur.",
+    "exemple_code": "# Deprecated since version 3.12, will be removed in 3.14.",
+    "sortie_attendue": "DeprecationWarning",
+    "erreur_frequente": "Ignorer l'avertissement jusqu'au jour où la mise à jour casse tout.",
+    "indice": "Ça marche encore… mais plus pour longtemps."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 1,
+    "titre": "lever une exception",
+    "question": "Comment dit-on « lever une exception » en anglais ? (un seul verbe)",
+    "reponse": "raise",
+    "reponses_acceptees": [
+      "raise",
+      "to raise"
+    ],
+    "explication": "`raise` est aussi le mot-clé Python. « raise an exception » = lever une exception.",
+    "exemple_code": "raise ValueError(\"valeur interdite\")",
+    "sortie_attendue": "ValueError: valeur interdite",
+    "erreur_frequente": "Employer « throw », qui est le terme de Java et JavaScript.",
+    "indice": "Cinq lettres, c'est aussi un mot-clé Python."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 2,
+    "titre": "récupérer des données distantes",
+    "question": "Quel verbe anglais désigne le fait d'aller chercher une donnée distante ?",
+    "reponse": "fetch",
+    "reponses_acceptees": [
+      "fetch",
+      "to fetch"
+    ],
+    "explication": "« fetch » = aller chercher et rapporter. C'est le nom de la fonction JavaScript des requêtes HTTP.",
+    "exemple_code": "# Fetch the user profile from the API.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre avec « catch » (attraper une exception), qui n'a rien à voir.",
+    "indice": "Cinq lettres, c'est aussi le nom d'une fonction JavaScript."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 2,
+    "titre": "analyser une syntaxe",
+    "question": "Quel verbe anglais désigne l'analyse d'un texte structuré (JSON, HTML) ?",
+    "reponse": "parse",
+    "reponses_acceptees": [
+      "parse",
+      "to parse"
+    ],
+    "explication": "« to parse » = analyser syntaxiquement. `JSON.parse`, `argparse`, `parser` viennent tous de là.",
+    "exemple_code": "import json\ndonnees = json.loads('{\"a\": 1}')",
+    "sortie_attendue": "{'a': 1}",
+    "erreur_frequente": "Traduire par « parser » en français : on dit « analyser ».",
+    "indice": "On le retrouve dans le nom du module argparse."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 2,
+    "titre": "gérer un cas",
+    "question": "Quel verbe anglais signifie « gérer, prendre en charge » un cas ou une erreur ?",
+    "reponse": "handle",
+    "reponses_acceptees": [
+      "handle",
+      "to handle"
+    ],
+    "explication": "« handle an error » = gérer une erreur. On parle d'un « error handler » : un gestionnaire d'erreurs.",
+    "exemple_code": "# Handle the case where the list is empty.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre « handle » (gérer) et « handler » (le gestionnaire lui-même).",
+    "indice": "Six lettres, la racine de « handler »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 3,
+    "titre": "redéfinir une méthode",
+    "question": "Quel verbe anglais désigne le fait de redéfinir une méthode héritée ?",
+    "reponse": "override",
+    "reponses_acceptees": [
+      "override",
+      "to override"
+    ],
+    "explication": "« to override » = redéfinir, supplanter. La méthode de la classe fille remplace celle de la classe mère.",
+    "exemple_code": "class Chien(Animal):\n    def crier(self):   # override\n        print(\"ouaf\")",
+    "sortie_attendue": "ouaf",
+    "erreur_frequente": "Confondre avec « overload » (surcharge), qui désigne autre chose.",
+    "indice": "Le préfixe « over » suivi du verbe « rider »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 2,
+    "titre": "renvoyer une valeur",
+    "question": "Quel verbe anglais signifie « renvoyer une valeur » ? (mot-clé Python)",
+    "reponse": "return",
+    "reponses_acceptees": [
+      "return",
+      "to return"
+    ],
+    "explication": "`return` renvoie une valeur ET met fin à la fonction. Le même mot sert en anglais courant et en Python.",
+    "exemple_code": "def double(n):\n    return n * 2",
+    "sortie_attendue": "",
+    "erreur_frequente": "Traduire par « retourner » un objet : en français on dit « renvoyer ».",
+    "indice": "C'est aussi le nom d'une touche du clavier."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Verbes de la doc",
+    "type": "vocabulaire",
+    "difficulte": 3,
+    "titre": "envelopper une fonction",
+    "question": "Quel verbe anglais signifie « envelopper » une fonction dans une autre ?",
+    "reponse": "wrap",
+    "reponses_acceptees": [
+      "wrap",
+      "to wrap"
+    ],
+    "explication": "« to wrap » = emballer. Un décorateur Python enveloppe une fonction dans une autre — d'où `functools.wraps`.",
+    "exemple_code": "from functools import wraps",
+    "sortie_attendue": "",
+    "erreur_frequente": "Confondre « wrapper » (l'enveloppe) et « wrap » (l'action).",
+    "indice": "Quatre lettres, ce qu'on fait d'un cadeau."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Structures de doc",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "unless",
+    "question": "Que signifie « unless » dans une phrase de documentation ?",
+    "reponse": "sauf si, à moins que",
+    "reponses_acceptees": [
+      "sauf si, à moins que",
+      "sauf si",
+      "à moins que",
+      "sauf"
+    ],
+    "mots_cles": [
+      [
+        "sauf",
+        "moins que"
+      ]
+    ],
+    "explication": "« unless » introduit une exception à la règle énoncée. « Raises an error unless the file exists » = sauf si le fichier existe.",
+    "exemple_code": "# Returns None unless a match is found.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Lire « unless » comme « if » : le sens est exactement inverse.",
+    "indice": "C'est la négation de « if »."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Structures de doc",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "whether",
+    "question": "Que signifie « whether » dans une documentation ?",
+    "reponse": "si (au sens de « ou non »)",
+    "reponses_acceptees": [
+      "si (au sens de « ou non »)",
+      "si oui ou non",
+      "si ou non",
+      "si… ou non"
+    ],
+    "mots_cles": [
+      [
+        "si"
+      ],
+      [
+        "ou non",
+        "oui",
+        "ou"
+      ]
+    ],
+    "explication": "« whether » introduit une alternative : « indicates whether the file exists » = indique si le fichier existe ou non.",
+    "exemple_code": "# Returns a boolean indicating whether the key is present.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Le confondre avec « weather » (la météo), qui se prononce pareil.",
+    "indice": "Se prononce comme le mot désignant le temps qu'il fait."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Structures de doc",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 2,
+    "titre": "provided that",
+    "question": "Que signifie « provided that » dans une documentation ?",
+    "reponse": "à condition que",
+    "reponses_acceptees": [
+      "à condition que",
+      "à condition",
+      "pourvu que",
+      "si tant est que"
+    ],
+    "mots_cles": [
+      [
+        "condition",
+        "pourvu"
+      ]
+    ],
+    "explication": "« provided that the list is sorted » = à condition que la liste soit triée. C'est un prérequis, pas une garantie.",
+    "exemple_code": "# Runs in O(log n), provided that the list is sorted.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Ignorer la condition et s'étonner que l'algorithme donne un mauvais résultat.",
+    "indice": "Le verbe « to provide » signifie fournir — ici, fournir une garantie."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Structures de doc",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 3,
+    "titre": "as of version",
+    "question": "Que signifie « as of version 3.10 » dans une documentation ?",
+    "reponse": "à partir de la version 3.10",
+    "reponses_acceptees": [
+      "à partir de la version 3.10",
+      "à partir de la version 3.10 incluse",
+      "depuis la version 3.10",
+      "à partir de la 3.10"
+    ],
+    "mots_cles": [
+      [
+        "partir",
+        "depuis"
+      ],
+      [
+        "3 10",
+        "3.10"
+      ]
+    ],
+    "explication": "« as of » = à compter de. La version citée est incluse : le comportement décrit vaut dès la 3.10.",
+    "exemple_code": "# As of version 3.10, match/case is available.",
+    "sortie_attendue": "",
+    "erreur_frequente": "Comprendre « jusqu'à la version 3.10 » : c'est l'inverse.",
+    "indice": "Le point de départ, pas le point d'arrivée."
+  },
+  {
+    "niveau": 1,
+    "categorie": "Structures de doc",
+    "type": "texte",
+    "langue": "fr",
+    "difficulte": 3,
+    "titre": "keyword-only argument",
+    "question": "Que désigne un « keyword-only argument » dans une signature Python ?",
+    "reponse": "un argument qui doit obligatoirement être nommé à l'appel",
+    "reponses_acceptees": [
+      "un argument qui doit obligatoirement être nommé à l'appel",
+      "un argument obligatoirement nommé",
+      "un argument qu'on doit nommer",
+      "un paramètre passé uniquement par son nom"
+    ],
+    "mots_cles": [
+      [
+        "nomme",
+        "nommer",
+        "nom"
+      ],
+      [
+        "argument",
+        "parametre"
+      ]
+    ],
+    "explication": "Après une `*` dans la signature, les arguments ne peuvent plus être passés par position : il faut écrire `nom=valeur`.",
+    "exemple_code": "def trier(donnees, *, ordre=\"croissant\"):\n    ...\n\ntrier([3, 1], ordre=\"decroissant\")",
+    "sortie_attendue": "",
+    "erreur_frequente": "Passer la valeur par position et récupérer un TypeError incompréhensible.",
+    "indice": "« keyword » désigne ici le nom du paramètre, pas un mot-clé du langage."
+  }
+]

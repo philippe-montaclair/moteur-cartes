@@ -1,0 +1,34 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Base régénérable à tout moment : python database.py
+prompt_app.db
+
+# Les sauvegardes manuelles n'ont pas leur place dans le dépôt :
+# c'est git qui fait ce travail.
+*.backup
+*.bak
+*.sauvegarde
+*.avant_*
+*_backup_*
+*_corrompu_*
+
+.DS_Store
+.env
+
+# --- ajouté le 19 août 2026, avant le premier git init ---
+
+# Quarantaine et archives manuelles : c'est git qui fait ce travail désormais
+_a_supprimer_*/
+_avant_refonte_*/
+
+# Journaux d'exécution
+*.log
+
+# Dernière base de l'ancienne série ; les autres sont déjà prises par *_backup_*
+prompt_app_final_*.db
+
+# Corbeille du 02/09/2026 — à vider
+_corbeille_*/
