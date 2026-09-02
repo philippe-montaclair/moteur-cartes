@@ -182,9 +182,9 @@ développeur :
 sources/
   python/niveau_2.md        extraits de la doc officielle française
   python/niveau_3.md         (docs.python.org/fr/3), ~12 000 car. par niveau
-  rag/*.md                   extraits de METHODE_montage_RAG_client,
-                             rag-vs-wiki/protocole.md, demonstrateur_*
-  anglais_info/*.md          messages d'erreur réels relevés dans tes dépôts
+  rag/*.md                   notes de méthode privées — NON PUBLIÉES
+                             (voir « État réel » dans le README)
+  anglais_info/*.md          messages d'erreur réels relevés dans des dépôts
 ```
 
 Pour le RAG, la source est **déjà écrite et elle est à toi** : c'est le seul
