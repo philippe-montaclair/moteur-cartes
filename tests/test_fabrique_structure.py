@@ -341,13 +341,27 @@ def test_un_filet_rattrape_par_les_mots_cles_ne_declenche_rien():
 
 
 def test_un_filet_qui_accepte_la_reponse_d_une_voisine_est_signale():
+    """
+    Cas d'espèce changé le 02/09/2026, et c'est une BONNE nouvelle.
+
+    Il opposait une carte attendant « la boucle for » (mots-clés `for`) à une
+    voisine répondant « for i in range(3): pass ». Ce filet-là ne mord plus :
+    la garde des expressions courtes, désormais posée sur les DEUX chemins
+    d'acceptation, refuse « for » noyé dans six mots porteurs. Le défaut que
+    ce test fabriquait n'existe plus — il fallait donc en fabriquer un autre,
+    pas affaiblir la garde.
+
+    Le nouveau cas est un vrai filet trop large : « liste » est un mot long,
+    il tolère la variation de terminaison, et la carte accepte donc la
+    réponse de sa voisine sur les compréhensions de liste.
+    """
     from fabrique.verificateurs import verifier_filets
 
-    a = {**CARTE, "id": 1, "matiere": "python", "reponse": "la boucle for",
-         "reponses_acceptees": ["la boucle for", "for"], "mots_cles": [["for"]]}
+    a = {**CARTE, "id": 1, "matiere": "python", "reponse": "une liste",
+         "reponses_acceptees": ["une liste", "liste"], "mots_cles": [["liste"]]}
     b = {**CARTE, "id": 2, "matiere": "python", "titre": "Autre",
-         "reponse": "for i in range(3): pass",
-         "reponses_acceptees": ["for i in range(3): pass"], "mots_cles": []}
+         "reponse": "une liste en compréhension",
+         "reponses_acceptees": ["une liste en compréhension"], "mots_cles": []}
     problemes = {s["probleme"] for s in verifier_filets([a, b])}
     assert problemes & {"filet_trop_large", "filet_englobant"}
 

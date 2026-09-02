@@ -356,14 +356,36 @@ def _contient_expression(texte_normalise: str, attendu: str) -> bool:
     if len(attendu) >= LONGUEUR_EXPRESSION_SURE:
         return True
 
-    # Ici, l'expression attendue fait moins de quatre caractères. Deux cas,
-    # et deux seulement, où la trouver ne prouve rien.
-    #
-    # La première version de cette garde comparait les longueurs — refusée
-    # par les tests en trois minutes : « le type est int » est cinq fois plus
-    # long que « int » et reste la bonne réponse. Le rapport de longueur ne
-    # discrimine pas ; la FORME de la réponse, si.
-    mots = texte_normalise.split()
+    return preuve_courte_suffisante(texte_normalise, attendu)
+
+
+def preuve_courte_suffisante(texte_normalise: str, attendu: str) -> bool:
+    """
+    Une expression courte trouvée dans une réponse en est-elle une PREUVE ?
+
+    Au-delà de `LONGUEUR_EXPRESSION_SURE`, oui : un mot de cinq lettres ne
+    se trouve pas par hasard. En dessous, deux cas — et deux seulement — où
+    la trouver ne prouve rien.
+
+    La première version de cette garde comparait les longueurs — refusée par
+    les tests en trois minutes : « le type est int » est cinq fois plus long
+    que « int » et reste la bonne réponse. Le rapport de longueur ne
+    discrimine pas ; la FORME de la réponse, si.
+
+    ⚠️ **Cette fonction est appelée par les DEUX chemins d'acceptation**, et
+    c'est le motif de son extraction, le 2 septembre 2026. Écrite le 21 août
+    à l'intérieur de `_contient_expression`, elle ne protégeait que le chemin
+    des `reponses_acceptees`. Le chemin des `mots_cles` avait sa propre
+    comparaison et acceptait toujours : sur la carte réelle attendant « str »,
+    « int, float, str et bool » était noté **correct**, c'est-à-dire
+    exactement le défaut que le 21 août déclarait corrigé.
+
+    C'est la troisième fois sur ce projet qu'une règle vraie dans un chemin
+    est fausse dans l'autre. La leçon est toujours la même : **une garde se
+    pose là où la décision se prend, pas là où on l'a remarquée.**
+    """
+    if len(attendu) >= LONGUEUR_EXPRESSION_SURE:
+        return True
 
     # 1. Un mot de liaison. « ou » se trouve dans n'importe quelle phrase :
     #    « valeur truthy ou falsy » n'est pas une réponse à « quel opérateur
@@ -402,9 +424,15 @@ def _couverture_mots_cles(reponse_normalisee: str, groupes: list[list[str]]) -> 
                 motif = r"(?<!\w)" + re.escape(cible)
             else:
                 motif = r"(?<!\w)" + re.escape(cible) + r"(?!\w)"
-            if re.search(motif, reponse_normalisee):
-                trouves += 1
-                break
+            if not re.search(motif, reponse_normalisee):
+                continue
+            # La même garde que sur l'autre chemin, et au même endroit :
+            # trouver « str » dans « int, float, str et bool » ne prouve pas
+            # que l'apprenant a répondu « str ». Corrigé le 02/09/2026.
+            if not preuve_courte_suffisante(reponse_normalisee, cible):
+                continue
+            trouves += 1
+            break
     return trouves / len(groupes)
 
 

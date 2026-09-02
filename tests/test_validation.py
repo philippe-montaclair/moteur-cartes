@@ -6,6 +6,8 @@ tort dans la version précédente. Ce sont des tests de non-régression :
 tant qu'ils passent, la panne ne peut pas revenir.
 """
 
+import json
+
 from conftest import carte_par_titre, fausse_carte
 
 from database import (
@@ -258,3 +260,68 @@ def test_une_reponse_sans_negation_reste_acceptee_normalement():
     carte = _carte("une liste", ["une liste", "liste"], [["liste"]])
     assert valider_reponse("c'est une liste", carte)["correct"] is True
     assert valider_reponse("la liste", carte)["correct"] is True
+
+
+# ---------------------------------------------------------------------------
+# La garde des expressions courtes — sur les DEUX chemins d'acceptation
+# ---------------------------------------------------------------------------
+#
+# Défaut trouvé le 2 septembre 2026 en écrivant `demonstration.py`, sur une
+# carte réellement livrée. La garde avait été écrite le 21 août à l'intérieur
+# de `_contient_expression` : elle protégeait le chemin des
+# `reponses_acceptees` et pas celui des `mots_cles`, qui avait sa propre
+# comparaison. Résultat : la carte attendant « str » notait CORRECT la
+# réponse « int, float, str et bool » — le défaut même que la passation du
+# 21 août déclarait corrigé.
+
+def _carte_courte(reponse, mots_cles=None, acceptees=None):
+    return {
+        "id": 0, "type": "mot_cle", "reponse": reponse,
+        "reponses_acceptees": json.dumps(acceptees or [reponse]),
+        "mots_cles": json.dumps(mots_cles or []),
+    }
+
+
+def test_une_enumeration_n_est_pas_une_reponse_par_les_mots_cles():
+    """LE test de non-régression du 02/09. Sans lui, rien ne retient la garde
+    du côté `mots_cles`."""
+    carte = _carte_courte("str", mots_cles=[["str"]])
+    assert not valider_reponse("int, float, str et bool", carte)["correct"]
+
+
+def test_une_enumeration_n_est_pas_une_reponse_par_les_acceptees():
+    carte = _carte_courte("str", acceptees=["str"])
+    assert not valider_reponse("int, float, str et bool", carte)["correct"]
+
+
+def test_les_deux_chemins_rendent_le_meme_verdict():
+    """La thèse du projet est « une seule correction ». Deux chemins qui
+    divergent sur la même réponse, c'est la même faute qu'en août — la
+    correction en deux exemplaires."""
+    enonce = "int, float, str et bool"
+    par_mots_cles = valider_reponse(enonce, _carte_courte("str",
+                                                          mots_cles=[["str"]]))
+    par_acceptees = valider_reponse(enonce, _carte_courte("str",
+                                                          acceptees=["str"]))
+    assert par_mots_cles["correct"] == par_acceptees["correct"]
+
+
+def test_une_reponse_courte_et_juste_reste_acceptee():
+    """Le pendant : à trop serrer la garde, on refuse du juste. « le type est
+    int » compte deux mots porteurs, pas quatre."""
+    carte = _carte_courte("int", mots_cles=[["int"]])
+    assert valider_reponse("int", carte)["correct"]
+    assert valider_reponse("le type est int", carte)["correct"]
+
+
+def test_un_mot_long_n_est_pas_concerne_par_la_garde():
+    """La garde ne vise que les expressions de moins de quatre caractères :
+    « dictionnaire » ne se trouve pas par hasard dans une phrase."""
+    carte = _carte_courte("dictionnaire", mots_cles=[["dictionnaire"]])
+    assert valider_reponse(
+        "un dictionnaire, une liste, un tuple et un ensemble", carte)["correct"]
+
+
+def test_un_mot_de_liaison_ne_prouve_rien_par_les_mots_cles():
+    carte = _carte_courte("or", mots_cles=[["or"]])
+    assert not valider_reponse("une valeur truthy ou falsy", carte)["correct"]
