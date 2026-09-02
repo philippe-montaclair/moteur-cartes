@@ -171,7 +171,7 @@ contenus/<mat>/    manifeste.json + plan.json + niveau_N.json
 ```
 
 **La règle qui tient tout : ajouter une matière ne modifie aucun fichier `.py`.**
-La thèse est vérifiée sur huit paquets, dont deux en langue étrangère — et un
+La thèse est vérifiée sur sept paquets, dont deux en langue étrangère — et un
 test fabrique un paquet **en allemand**, une langue que le moteur n'a jamais
 rencontrée, pour vérifier qu'il le corrige correctement sans qu'une ligne de
 `database.py` ne change. Le jour où il faut toucher au code pour ajouter une
